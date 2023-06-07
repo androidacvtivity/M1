@@ -1,0 +1,49 @@
+Cod eroare: 05-031 (Cap.1). Cod CAEM nu trebuie sa se repete
+Cod eroare: 05-021 (Cap.1). Pentru orice Col. cu date exista Cod. CAEM
+Cod eroare: 05-003 (Cap.1). Rind 71 <= rind 70
+Cod eroare: 05-004 (Cap.1). Rind 72 <= rind 70
+Cod eroare: 05-021 (Cap.1). Pentru orice Col. cu date exista Cod. CAEM'
+Cod eroare: 05-023 Atentionare (Cap.1). Daca exista Rind.30 trebuie sa fie si Rind.50
+Cod eroare: 05-005 (Cap.1). Rind 73 <= rind 70
+Cod eroare: 05-006 (Cap.1). Rind 74 <= rind 70
+Cod eroare: 05-007 Atentionare (Cap.1). Suma rinduri(71,72,73,74) <= rind 70
+Cod eroare: 05-009 Atentionare (Cap.1). Rind 20 <= rind 10
+Cod eroare: 05-010 Atentionare (Cap.1). Rind 40 <= rind 30
+Cod eroare: 05-012 Atentionare (Cap.1). Rind 50*1000/ sum(rind 30+rind 40) <= 570 si > 420
+Cod eroare: 05-013 Atentionare (Cap.1). Daca exista rindul 30 trebuie sa fie si rindul 70
+Cod eroare: 05-013 Atentionare (Cap.1). Daca exista rindul 70 trebuie sa fie si rindul 30
+Cod eroare: 05-030 (Cap.1). Daca exista rindul 40 trebuie sa fie si rindul 73
+Cod eroare: 05-030 (Cap.1). Daca exista rindul 73 trebuie sa fie si rindul 40
+Cod eroare: 05-040 (Cap.1). Daca este Rind.10 atunci trebuie sa fie si Rind.30 pe toate coloanele.
+Cod eroare: 05-042 (Cap.1). Rind 51 Cap.I > Rind 52 Cap.I
+Cod eroare: 05-043 Atentionare (Cap.1). Daca Rind.40 > 0 si Rind.30 = 0, atunci Rind.70 = Rind.73 și invers
+Cod eroare: 05-043 Atentionare (Cap.1). Daca Rind.70 = Rind.73, atunci Rind.40 > 0 si Rind.30 = 0 și invers
+Cod eroare: 05-044 Atentionare (Cap.1). ((Rind.70 - Rind.74) * 1000 / (Rind.30 - Rind.31))/3  > 1000
+Cod eroare: 05-036 Atentionare (Cap.1). (Rind.70 - Rind.73) * 1000 / Rind.30 /3  > 2000, si < 10000 valoarea
+Cod eroare: 05-014 (Cap.1). Rind 31 <= rind 30
+Cod eroare: 05-037 Atentionare (Cap.1). (Rind.74 * 1000 / Rind.31)/3 >3000 si <10000
+Cod eroare: 05-039 Atentionare (Cap.1). (Rind.73 * 1000 / Rind.40)/3 > 2000 si <10000
+Cod eroare: 05-025 Atentionare (Cap.1).  Daca exista rindul 31 trebuie sa fie si rindul 74
+Cod eroare: 05-025 Atentionare (Cap.1). Daca exista rindul 74 trebuie sa fie si rindul 31
+Cod eroare: 05-022 Atentionare (Cap.1). Daca este Col.1 trebuie sa fie Col.2 Rind.70
+Cod eroare: 05-022 Atentionare (Cap.1). Daca este Col.1 trebuie sa fie Col.2 Rind.30
+Cod eroare: 05-028 Atentionare (Cap.1). Col.1 Rind.30 <= Rind.10
+05-024
+
+Cod eroare: 05-024 Atentionare (Cap.1). Rind 31  se introduce, daca Activitatea Principala CAEM = {Q86,Q87,P85}, in afara de P856, P8553 si P8559
+Cod eroare: 05-024 Atentionare (Cap.1). Rind 74  se introduce, daca Activitatea Principala CAEM = {Q86,Q87,P85}, in afara de P856, P8553 si P8559
+Cod eroare: 05-015 Atentionare (Cap.1). Rind 31  se introduce, daca Activitatea Secundara CAEM = {Q86,Q87,P85}, in afara de P856, P8553 si P8559'
+Cod eroare: 05-015 Atentionare (Cap.1). Rind 74  se introduce, daca Activitatea Secundara CAEM = {Q86,Q87,P85}, in afara de P856, P8553 si P8559
+
+
+1000*(([dec_table_row_r30c1] == 0 ? 0 : ([dec_table_row_r70c1]-[dec_table_row_r73c1])/[dec_table_row_r30c1])/3)=[dec_table_row_r120c1]msg();
+1000*(([dec_table_row_r30c2] == 0 ? 0 : ([dec_table_row_r70c2]-[dec_table_row_r73c2])/[dec_table_row_r30c2])/3)=[dec_table_row_r120c2]msg();
+
+
+
+
+
+
+
+
+
