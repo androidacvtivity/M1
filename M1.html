@@ -1,0 +1,875 @@
+<h3 class="webform-center">
+    ["MUNCA-1"]<br />
+    ["Raport statistic trimestrial"]. ["Cîştigurile salariale în"]
+</h3>
+<p class="webform-center">
+    ["Trimestrul"] @nalogPeriodType;@nalogPeriodLetter;T/@nalogPeriodQuarter;/@nalogPeriodYear;
+</p>
+<br>
+<h3>
+    ["BIROUL NAŢIONAL DE STATISTICĂ"]
+</h3>
+<br>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Date de identificare"] </span>
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Denumirea"]:</span> @dec_fiscCod_name;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Adresa"]:</span>
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Raionul(municipiul)"]:</span>@dec_fiscCod_fisc;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Sat(comuna/sector)"]:</span>@dec_fiscCod_cuatm;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Strada"]:</span>@dec_group2_adres;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Cod CUIÎO"]:</span> @dec_fiscCod_cuio;
+</p>
+<div class="webform-padding-sm webform-select2-inline">
+    <span class="webform-bold webform-right-sm">["Forma de proprietate"]:</span>@dec_fiscCod_cfp;
+</div>
+<div class="webform-padding-sm webform-select2-inline">
+    <span class="webform-bold webform-right-sm">["Forma organizatorico-juridică"]:</span>@dec_fiscCod_cfoj;
+</div>
+<div class="webform-padding-sm webform-select2-inline">
+    <span class="webform-bold webform-right-sm">["Activitatea principală"]:</span>@dec_fiscCod_caem;
+</div>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Cod IDNO"]:</span>@dec_fiscCod_fiscal;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Conducătorul"]:</span>@dec_director_director;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Executantul"]:</span> @dec_table_row_anexeint;
+</p>
+<p class="webform-padding-sm">
+    <span class="webform-bold webform-right-sm">["Telefon"]:</span>@dec_fiscCod_telefon;
+</p>
+</br>
+<table id="tab_con" border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr align="center">
+            <td rowspan="2" width="36">
+                <p>["Nr. rd."]</p>
+            </td>
+            <td rowspan="2" width="491">
+                <p>["Indicatorii"]</p>
+            </td>
+            <td rowspan="2" width="66">
+                <p>["COD CAEM"]</p>
+            </td>
+            <td width="76">
+                <p>["Total unitate"]</p>
+            </td>
+            <td width="76">
+                <p>["Activitatea principală"]</p>
+            </td>
+            <td colspan="10" width="299">
+                <p>["Activităţi secundare"] (["col"]. 3 &divide; ["col"].7)<sup>1)</sup></p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="76">
+                <p>0000</p>
+            </td>
+            <td width="76">
+                <p>@dec_caem_c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_caem_c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p><strong>A</strong></p>
+            </td>
+            <td width="491">
+                <p><strong>B</strong></p>
+            </td>
+            <td width="66">
+                <p><strong>&nbsp;</strong></p>
+            </td>
+            <td width="76">
+                <p><strong>1</strong></p>
+            </td>
+            <td width="76">
+                <p><strong>2</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>3</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>4</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>5</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>6</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>7</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>8</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>9</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>10</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>11</strong></p>
+            </td>
+            <td width="75">
+                <p><strong>12</strong></p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>10</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Efectivul salariaților la sfârșitul trimestrului (exclusiv salariații cu contract individual de
+                    muncă/raport de serviciu suspendat și cumularzi externi)"]</p>
+            </td>
+            <td width="66">
+                <p>["persoane"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r10c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r10c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r10c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>20</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Efectivul salariaților la sfârșitul trimestrului cu contract individual de muncă / raport de
+                    serviciu suspendat"]</p>
+            </td>
+            <td width="66">
+                <p>["persoane"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r20c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r20c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r20c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>30</p>
+            </td>
+            <td width="491" align="left">
+                <p><strong>["Numărul mediu al salariaților</strong> (exclusiv salariații cu contract individual de
+                    muncă/raport de serviciu suspendat și cumularzi externi)"]</p>
+            </td>
+            <td width="66">
+                <p>["persoane"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r30c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r30c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r30c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>31</p>
+            </td>
+            <td width="491" align="left">
+                <p>["din rândul 30 cadre didactice/medici"]</p>
+            </td>
+            <td width="66">
+                <p>["persoane"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r31c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r31c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r31c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>40</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Numărul mediu al cumularzilor externi"]</p>
+            </td>
+            <td width="66">
+                <p>["persoane"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r40c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r40c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r40c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>50</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Timpul efectiv lucrat de salariați, inclusiv cumularzi externi"] (51+52)</p>
+            </td>
+            <td width="66">
+                <p>["mii ore-om"] </p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r50c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r50c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r50c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>51</p>
+            </td>
+            <td width="491" align="left">
+                <p>["În timp normal"]</p>
+            </td>
+            <td width="66">
+                <p>["mii ore-om"] </p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r51c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r51c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r51c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>52</p>
+            </td>
+            <td width="491" align="left">
+                <p>["În timp suplimentar"]</p>
+            </td>
+            <td width="66">
+                <p>["mii ore-om"] </p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r52c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r52c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r52c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>70</p>
+            </td>
+            <td width="491" align="left">
+                <p><strong>["Remunerații personal"]</strong>, ["total"]</p>
+                <p>["din care"]:</p>
+            </td>
+            <td width="66">
+                <p>["mii lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r70c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r70c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r70c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>71</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Sume calculate pentru timpul nelucrat"]</p>
+            </td>
+            <td width="66">
+                <p>["mii lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r71c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r71c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r71c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>72</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Drepturi în natură"]</p>
+            </td>
+            <td width="66">
+                <p>["mii lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r72c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r72c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r72c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>73</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Sume calculate cumularzilor externi"]</p>
+            </td>
+            <td width="66">
+                <p>["mii lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r73c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r73c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r73c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>74</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Sume calculate cadrelor didactice/medicilor"]</p>
+            </td>
+            <td width="66">
+                <p>["mii lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r74c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r74c2;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c3;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c4;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c5;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c6;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c7;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c8;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c9;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c10;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c11;</p>
+            </td>
+            <td width="75">
+                <p>@dec_table_row_r74c12;</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>120</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Câștigul salarial mediu lunar"] {[((rd.70 - rd.73) : rd.30) : 3] x 1000}</p>
+            </td>
+            <td width="66">
+                <p>["lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r120c1;</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r120c2;</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="36">
+                <p>130</p>
+            </td>
+            <td width="491" align="left">
+                <p>["Salariul tarifar pentru I categorie de calificare"] </p>
+            </td>
+            <td width="66">
+                <p>["lei"]</p>
+            </td>
+            <td width="76">
+                <p>@dec_table_row_r130c1;</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+            <td width="75" align="center">
+                <p>x</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>["Notă"]:</strong> ["Unitățile cu autonomie financiară cu numărul mediu de salariați sub 50 pot completa doar
+    datele corespunzătoare coloanei „Total unitate”, fără detaliere pe activități"].</p>
