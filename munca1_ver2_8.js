@@ -195,7 +195,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
 
 //Cod eroare: 05-050 (Cap.1). Rind 10 <> rind 20
 
-            if (col10 !== col20) {
+            if (col10 == col20 && !(col10 == 0 &&  col20 == 0 ) ) {
 
                 webform.errors.push({
                     'fieldName': 'dec_table_row_r20c' + arr1_inputs[i],
@@ -374,7 +374,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
 
 //Rind.70≠Rind.71+Rind.73+Rind.74
 
-            if (col70 !== col71 + col73 + col74) {
+            if (col70 == col71 + col73 + col74 && !(col70 == 0 && col71 == 0 && col73 == 0 && col74 == 0)) {
                 webform.errors.push({
                     'fieldName': 'dec_table_row_r70c' + arr1_inputs[i],
                     'weight': 74,
