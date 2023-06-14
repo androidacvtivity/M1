@@ -197,10 +197,10 @@ webform.validators.munca1 = function (v, allowOverpass) {
 
             if (col10 == col20 && !(col10 == 0 &&  col20 == 0 ) ) {
 
-                webform.errors.push({
+                webform.warnings.push({
                     'fieldName': 'dec_table_row_r20c' + arr1_inputs[i],
                     'weight': 73,
-                    'msg': Drupal.t('Cod eroare: 05-050 (Cap.1). Rind 10 <> rind 20')
+                    'msg': Drupal.t('Cod eroare: 05-050 Rind.10≠Rind.20 pe fiecare col')
                 });
 
 
@@ -375,7 +375,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
 //Rind.70≠Rind.71+Rind.73+Rind.74
 
             if (col70 == col71 + col73 + col74 && !(col70 == 0 && col71 == 0 && col73 == 0 && col74 == 0)) {
-                webform.errors.push({
+                webform.warnings.push({
                     'fieldName': 'dec_table_row_r70c' + arr1_inputs[i],
                     'weight': 74,
                     'msg': Drupal.t('Cod eroare:05-051 Rind.70≠Rind.71+Rind.73+Rind.74')
@@ -453,7 +453,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
                     webform.warnings.push({
                         'fieldName': 'dec_table_row_r50c' + arr1_inputs[i],
                         'weight': 12,
-                        'msg': Drupal.t('Cod eroare: 05-012 Atentionare (Cap.1). Rind 50*1000/ sum(rind 30+rind 40) <= 570 si > 420  (@sum)', {
+                        'msg': Drupal.t('Cod eroare: 05-012 Atentionare (Cap.1). Rind 50*1000/ sum(rind 30+rind 40) <= 570 si > 450  (@sum)', {
                             '@sum': calcul
                         })
                     });
@@ -533,7 +533,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
                     webform.warnings.push({
                         'fieldName': 'dec_table_row_r70c' + arr1_inputs[i],
                         'weight': 44,
-                        'msg': Drupal.t('Cod eroare: 05-044 Atentionare (Cap.1). ((Rind.70 - Rind.74) * 1000 / (Rind.30 - Rind.31))/3  > 1000, valoarea = @sum', {
+                        'msg': Drupal.t('Cod eroare: 05-044 Atentionare (Cap.1). ((Rind.70 - Rind.74) * 1000 / (Rind.30 - Rind.31))/3  > 2000, valoarea = @sum', {
                             '@sum': calcul2
                         })
                     });
@@ -547,7 +547,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
                     webform.warnings.push({
                         'fieldName': 'dec_table_row_r70c' + arr1_inputs[i],
                         'weight': 36,
-                        'msg': Drupal.t('Cod eroare: 05-036 Atentionare (Cap.1). (Rind.70 - Rind.73) * 1000 / Rind.30 /3  > 2000, si < 10000 valoarea = @sum', {
+                        'msg': Drupal.t('Cod eroare: 05-036 Atentionare (Cap.1). (Rind.70 - Rind.73) * 1000 / Rind.30 /3  > 4000, si < 15000 valoarea = @sum', {
                             '@sum': calcul3
                         })
                     });
@@ -569,7 +569,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
                     webform.warnings.push({
                         'fieldName': 'dec_table_row_r74c' + arr1_inputs[i],
                         'weight': 37,
-                        'msg': Drupal.t('Cod eroare: 05-037 Atentionare (Cap.1). (Rind.74 * 1000 / Rind.31)/3 >3000 si <10000, valoarea = @sum', {
+                        'msg': Drupal.t('Cod eroare: 05-037 Atentionare (Cap.1). (Rind.74 * 1000 / Rind.31)/3 >6000 si <15000, valoarea = @sum', {
                             '@sum': calcul1
                         })
                     });
@@ -583,7 +583,7 @@ webform.validators.munca1 = function (v, allowOverpass) {
                     webform.warnings.push({
                         'fieldName': 'dec_table_row_r73c' + arr1_inputs[i],
                         'weight': 39,
-                        'msg': Drupal.t('Cod eroare: 05-039 Atentionare (Cap.1). (Rind.73 * 1000 / Rind.40)/3 > 2000 si <10000, valoarea = @sum', {
+                        'msg': Drupal.t('Cod eroare: 05-039 Atentionare (Cap.1). (Rind.73 * 1000 / Rind.40)/3 > 4000 si <15000, valoarea = @sum', {
                             '@sum': calcul4
                         })
                     });
