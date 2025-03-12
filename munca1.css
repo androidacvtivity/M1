@@ -1,7 +1,11 @@
-#dec_group2_adres {
+#STREET {
     width: 100ch;
 }
 
-#dec_fiscCod_fiscal {
+#IDNO {
     text-align: left !important;
+}
+
+.container-scroll-x {
+    overflow-x: scroll;
 }
