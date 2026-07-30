@@ -1,0 +1,6165 @@
+{
+    "name": "Genuri de activitate <= 2026",
+    "machine_name": "vocabulary_118",
+    "description": "",
+    "hierarchy": "0",
+    "module": "taxonomy",
+    "weight": "7",
+    "language": "und",
+    "i18n_mode": "0",
+    "base_i18n_mode": "0",
+    "base_language": "und",
+    "fields": [],
+    "terms": [
+        {
+            "tid": "132590",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea cerealelor (exclusiv orez), plantelor leguminoase si a plantelor producatoare de seminte oleaginoase",
+            "description": "0111",
+            "format": "plain_text",
+            "weight": "1",
+            "language": "und"
+        },
+        {
+            "tid": "132591",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea orezului",
+            "description": "0112",
+            "format": "plain_text",
+            "weight": "2",
+            "language": "und"
+        },
+        {
+            "tid": "132592",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea legumelor si a pepenilor, a radacinoaselor si tuberculilor",
+            "description": "0113",
+            "format": "plain_text",
+            "weight": "3",
+            "language": "und"
+        },
+        {
+            "tid": "132593",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea trestiei de zahar",
+            "description": "0114",
+            "format": "plain_text",
+            "weight": "4",
+            "language": "und"
+        },
+        {
+            "tid": "132594",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea tutunului",
+            "description": "0115",
+            "format": "plain_text",
+            "weight": "5",
+            "language": "und"
+        },
+        {
+            "tid": "132595",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea plantelor pentru fibre textile",
+            "description": "0116",
+            "format": "plain_text",
+            "weight": "6",
+            "language": "und"
+        },
+        {
+            "tid": "132596",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea altor plante din culturi nepermanente",
+            "description": "0119",
+            "format": "plain_text",
+            "weight": "7",
+            "language": "und"
+        },
+        {
+            "tid": "132597",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea strugurilor",
+            "description": "0121",
+            "format": "plain_text",
+            "weight": "8",
+            "language": "und"
+        },
+        {
+            "tid": "132598",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea fructelor tropicale si subtropicale",
+            "description": "0122",
+            "format": "plain_text",
+            "weight": "9",
+            "language": "und"
+        },
+        {
+            "tid": "132599",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea fructelor citrice",
+            "description": "0123",
+            "format": "plain_text",
+            "weight": "10",
+            "language": "und"
+        },
+        {
+            "tid": "132600",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea fructelor semintoase si simburoase",
+            "description": "0124",
+            "format": "plain_text",
+            "weight": "11",
+            "language": "und"
+        },
+        {
+            "tid": "132601",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea arbustilor fructiferi, capsunilor, nuciferilor si a altor pomi fructiferi",
+            "description": "0125",
+            "format": "plain_text",
+            "weight": "12",
+            "language": "und"
+        },
+        {
+            "tid": "132602",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea fructelor oleaginoase",
+            "description": "0126",
+            "format": "plain_text",
+            "weight": "13",
+            "language": "und"
+        },
+        {
+            "tid": "132603",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea plantelor pentru prepararea bauturilor",
+            "description": "0127",
+            "format": "plain_text",
+            "weight": "14",
+            "language": "und"
+        },
+        {
+            "tid": "132604",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea condimentelor, plantelor aromatice, medicinale si a plantelor de uz farmaceutic",
+            "description": "0128",
+            "format": "plain_text",
+            "weight": "15",
+            "language": "und"
+        },
+        {
+            "tid": "132605",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea altor plante din culturi permanente",
+            "description": "0129",
+            "format": "plain_text",
+            "weight": "16",
+            "language": "und"
+        },
+        {
+            "tid": "132606",
+            "code": "A",
+            "vid": "17",
+            "name": "Cultivarea plantelor pentru inmultire",
+            "description": "0130",
+            "format": "plain_text",
+            "weight": "17",
+            "language": "und"
+        },
+        {
+            "tid": "132607",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea bovinelor de lapte",
+            "description": "0141",
+            "format": "plain_text",
+            "weight": "18",
+            "language": "und"
+        },
+        {
+            "tid": "132608",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea altor bovine",
+            "description": "0142",
+            "format": "plain_text",
+            "weight": "19",
+            "language": "und"
+        },
+        {
+            "tid": "132609",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea cailor si a altor cabaline",
+            "description": "0143",
+            "format": "plain_text",
+            "weight": "20",
+            "language": "und"
+        },
+        {
+            "tid": "132610",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea camilelor si a camelidelor",
+            "description": "0144",
+            "format": "plain_text",
+            "weight": "21",
+            "language": "und"
+        },
+        {
+            "tid": "132611",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea ovinelor si caprinelor",
+            "description": "0145",
+            "format": "plain_text",
+            "weight": "22",
+            "language": "und"
+        },
+        {
+            "tid": "132612",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea porcinelor",
+            "description": "0146",
+            "format": "plain_text",
+            "weight": "23",
+            "language": "und"
+        },
+        {
+            "tid": "132613",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea pasarilor",
+            "description": "0147",
+            "format": "plain_text",
+            "weight": "24",
+            "language": "und"
+        },
+        {
+            "tid": "132614",
+            "code": "A",
+            "vid": "17",
+            "name": "Cresterea altor specii de animale",
+            "description": "0149",
+            "format": "plain_text",
+            "weight": "25",
+            "language": "und"
+        },
+        {
+            "tid": "132615",
+            "code": "A",
+            "vid": "17",
+            "name": "Activitati in ferme mixte (cultura vegetala combinata cu cresterea animalelor)",
+            "description": "0150",
+            "format": "plain_text",
+            "weight": "26",
+            "language": "und"
+        },
+        {
+            "tid": "132616",
+            "code": "A",
+            "vid": "17",
+            "name": "Activitati auxiliare pentru productia vegetala",
+            "description": "0161",
+            "format": "plain_text",
+            "weight": "27",
+            "language": "und"
+        },
+        {
+            "tid": "132617",
+            "code": "A",
+            "vid": "17",
+            "name": "Activitati auxiliare pentru cresterea animalelor",
+            "description": "0162",
+            "format": "plain_text",
+            "weight": "28",
+            "language": "und"
+        },
+        {
+            "tid": "132618",
+            "code": "A",
+            "vid": "17",
+            "name": "Activitati dupa recoltare",
+            "description": "0163",
+            "format": "plain_text",
+            "weight": "29",
+            "language": "und"
+        },
+        {
+            "tid": "132619",
+            "code": "A",
+            "vid": "17",
+            "name": "Pregatirea semintelor in vederea insamintarii",
+            "description": "0164",
+            "format": "plain_text",
+            "weight": "30",
+            "language": "und"
+        },
+        {
+            "tid": "132620",
+            "code": "A",
+            "vid": "17",
+            "name": "Vinatoare, capturarea cu capcane a vinatului si activitati de servicii anexe vinatorii",
+            "description": "0170",
+            "format": "plain_text",
+            "weight": "31",
+            "language": "und"
+        },
+        {
+            "tid": "132621",
+            "code": "A",
+            "vid": "17",
+            "name": "Silvicultura si alte activitati forestiere",
+            "description": "0210",
+            "format": "plain_text",
+            "weight": "32",
+            "language": "und"
+        },
+        {
+            "tid": "132622",
+            "code": "A",
+            "vid": "17",
+            "name": "Exploatarea forestiera",
+            "description": "0220",
+            "format": "plain_text",
+            "weight": "33",
+            "language": "und"
+        },
+        {
+            "tid": "132623",
+            "code": "A",
+            "vid": "17",
+            "name": "Colectarea produselor forestiere nelemnoase din flora spontana",
+            "description": "0230",
+            "format": "plain_text",
+            "weight": "34",
+            "language": "und"
+        },
+        {
+            "tid": "132624",
+            "code": "A",
+            "vid": "17",
+            "name": "Activitati de servicii anexe silviculturii",
+            "description": "0240",
+            "format": "plain_text",
+            "weight": "35",
+            "language": "und"
+        },
+        {
+            "tid": "132625",
+            "code": "A",
+            "vid": "17",
+            "name": "Pescuitul maritim",
+            "description": "0311",
+            "format": "plain_text",
+            "weight": "36",
+            "language": "und"
+        },
+        {
+            "tid": "132626",
+            "code": "A",
+            "vid": "17",
+            "name": "Pescuitul in ape dulci",
+            "description": "0312",
+            "format": "plain_text",
+            "weight": "37",
+            "language": "und"
+        },
+        {
+            "tid": "132627",
+            "code": "A",
+            "vid": "17",
+            "name": "Acvacultura  maritima",
+            "description": "0321",
+            "format": "plain_text",
+            "weight": "38",
+            "language": "und"
+        },
+        {
+            "tid": "132628",
+            "code": "A",
+            "vid": "17",
+            "name": "Acvacultura in ape dulci",
+            "description": "0322",
+            "format": "plain_text",
+            "weight": "39",
+            "language": "und"
+        },
+        {
+            "tid": "132629",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia carbunelui superior (PCS=>23865 kJ/kg)",
+            "description": "0510",
+            "format": "plain_text",
+            "weight": "40",
+            "language": "und"
+        },
+        {
+            "tid": "132630",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia carbunelui inferior (PCS<23865 kJ/kg)",
+            "description": "0520",
+            "format": "plain_text",
+            "weight": "41",
+            "language": "und"
+        },
+        {
+            "tid": "132631",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia petrolului brut",
+            "description": "0610",
+            "format": "plain_text",
+            "weight": "42",
+            "language": "und"
+        },
+        {
+            "tid": "132632",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia gazelor naturale",
+            "description": "0620",
+            "format": "plain_text",
+            "weight": "43",
+            "language": "und"
+        },
+        {
+            "tid": "132633",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia minereurilor feroase",
+            "description": "0710",
+            "format": "plain_text",
+            "weight": "44",
+            "language": "und"
+        },
+        {
+            "tid": "132634",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia minereurilor de uraniu si toriu",
+            "description": "0721",
+            "format": "plain_text",
+            "weight": "45",
+            "language": "und"
+        },
+        {
+            "tid": "132635",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia altor minereuri metalifere neferoase",
+            "description": "0729",
+            "format": "plain_text",
+            "weight": "46",
+            "language": "und"
+        },
+        {
+            "tid": "132636",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia pietrei ornamentale si a pietrei pentru constructii, extractia pietrei calcaroase, ghipsului, cretei si a ardeziei",
+            "description": "0811",
+            "format": "plain_text",
+            "weight": "47",
+            "language": "und"
+        },
+        {
+            "tid": "132637",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia pietrisului si nisipului, extractia argilei si caolinului",
+            "description": "0812",
+            "format": "plain_text",
+            "weight": "48",
+            "language": "und"
+        },
+        {
+            "tid": "132638",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia mineralelor pentru industria chimica si a ingrasamintelor naturale",
+            "description": "0891",
+            "format": "plain_text",
+            "weight": "49",
+            "language": "und"
+        },
+        {
+            "tid": "132639",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia si aglomerarea turbei",
+            "description": "0892",
+            "format": "plain_text",
+            "weight": "50",
+            "language": "und"
+        },
+        {
+            "tid": "132640",
+            "code": "B",
+            "vid": "17",
+            "name": "Extractia sarii",
+            "description": "0893",
+            "format": "plain_text",
+            "weight": "51",
+            "language": "und"
+        },
+        {
+            "tid": "132641",
+            "code": "B",
+            "vid": "17",
+            "name": "Alte activitati extractive n.c.a.",
+            "description": "0899",
+            "format": "plain_text",
+            "weight": "52",
+            "language": "und"
+        },
+        {
+            "tid": "132642",
+            "code": "B",
+            "vid": "17",
+            "name": "Activitati de servicii anexe extractiei petrolului brut si gazelor naturale",
+            "description": "0910",
+            "format": "plain_text",
+            "weight": "53",
+            "language": "und"
+        },
+        {
+            "tid": "132643",
+            "code": "B",
+            "vid": "17",
+            "name": "Activitati de servicii anexe pentru extractia altor minerale",
+            "description": "0990",
+            "format": "plain_text",
+            "weight": "54",
+            "language": "und"
+        },
+        {
+            "tid": "132644",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia, prelucrarea si conservarea carnii",
+            "description": "1011",
+            "format": "plain_text",
+            "weight": "55",
+            "language": "und"
+        },
+        {
+            "tid": "132645",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea si conservarea carnii de pasare",
+            "description": "1012",
+            "format": "plain_text",
+            "weight": "56",
+            "language": "und"
+        },
+        {
+            "tid": "132646",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din carne (inclusiv din carne de pasare)",
+            "description": "1013",
+            "format": "plain_text",
+            "weight": "57",
+            "language": "und"
+        },
+        {
+            "tid": "132647",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea si conservarea pestelui, crustaceelor si molustelor",
+            "description": "1020",
+            "format": "plain_text",
+            "weight": "58",
+            "language": "und"
+        },
+        {
+            "tid": "132648",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea si conservarea cartofilor",
+            "description": "1031",
+            "format": "plain_text",
+            "weight": "59",
+            "language": "und"
+        },
+        {
+            "tid": "132649",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea sucurilor de fructe si legume",
+            "description": "1032",
+            "format": "plain_text",
+            "weight": "60",
+            "language": "und"
+        },
+        {
+            "tid": "132650",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea si conservarea fructelor si legumelor, cu exceptia cartofilor",
+            "description": "1039",
+            "format": "plain_text",
+            "weight": "61",
+            "language": "und"
+        },
+        {
+            "tid": "132651",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea uleiurilor si grasimilor",
+            "description": "1041",
+            "format": "plain_text",
+            "weight": "62",
+            "language": "und"
+        },
+        {
+            "tid": "132652",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea margarinei si a altor produse comestibile similare",
+            "description": "1042",
+            "format": "plain_text",
+            "weight": "63",
+            "language": "und"
+        },
+        {
+            "tid": "132653",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor lactate si a brinzeturilor",
+            "description": "1051",
+            "format": "plain_text",
+            "weight": "64",
+            "language": "und"
+        },
+        {
+            "tid": "132654",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea inghetatei",
+            "description": "1052",
+            "format": "plain_text",
+            "weight": "65",
+            "language": "und"
+        },
+        {
+            "tid": "132655",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor de morarit",
+            "description": "1061",
+            "format": "plain_text",
+            "weight": "66",
+            "language": "und"
+        },
+        {
+            "tid": "132656",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea amidonului si a produselor din amidon",
+            "description": "1062",
+            "format": "plain_text",
+            "weight": "67",
+            "language": "und"
+        },
+        {
+            "tid": "132657",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea piinii, fabricarea prajiturilor si a produselor proaspete de patiserie",
+            "description": "1071",
+            "format": "plain_text",
+            "weight": "68",
+            "language": "und"
+        },
+        {
+            "tid": "132658",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea biscuitilor si piscoturilor, fabricarea prajiturilor si a  produselor conservate de patiserie",
+            "description": "1072",
+            "format": "plain_text",
+            "weight": "69",
+            "language": "und"
+        },
+        {
+            "tid": "132659",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea macaroanelor, taiteilor, cus-cus-ului si a altor produse fainoase similare",
+            "description": "1073",
+            "format": "plain_text",
+            "weight": "70",
+            "language": "und"
+        },
+        {
+            "tid": "132660",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea zaharului",
+            "description": "1081",
+            "format": "plain_text",
+            "weight": "71",
+            "language": "und"
+        },
+        {
+            "tid": "132661",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din cacao, a ciocolatei  si a produselor zaharoase",
+            "description": "1082",
+            "format": "plain_text",
+            "weight": "72",
+            "language": "und"
+        },
+        {
+            "tid": "132662",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea ceaiului si cafelei",
+            "description": "1083",
+            "format": "plain_text",
+            "weight": "73",
+            "language": "und"
+        },
+        {
+            "tid": "132663",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea condimentelor si ingredientelor",
+            "description": "1084",
+            "format": "plain_text",
+            "weight": "74",
+            "language": "und"
+        },
+        {
+            "tid": "132664",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de mincaruri preparate",
+            "description": "1085",
+            "format": "plain_text",
+            "weight": "75",
+            "language": "und"
+        },
+        {
+            "tid": "132665",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea preparatelor alimentare omogenizate si alimentelor dietetice",
+            "description": "1086",
+            "format": "plain_text",
+            "weight": "76",
+            "language": "und"
+        },
+        {
+            "tid": "132666",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse alimentare n.c.a.",
+            "description": "1089",
+            "format": "plain_text",
+            "weight": "77",
+            "language": "und"
+        },
+        {
+            "tid": "132667",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea preparatelor pentru hrana animalelor de ferma",
+            "description": "1091",
+            "format": "plain_text",
+            "weight": "78",
+            "language": "und"
+        },
+        {
+            "tid": "132668",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea preparatelor pentru hrana animalelor de companie",
+            "description": "1092",
+            "format": "plain_text",
+            "weight": "79",
+            "language": "und"
+        },
+        {
+            "tid": "132669",
+            "code": "C",
+            "vid": "17",
+            "name": "Distilarea, rafinarea si mixarea bauturilor alcoolice",
+            "description": "1101",
+            "format": "plain_text",
+            "weight": "80",
+            "language": "und"
+        },
+        {
+            "tid": "132670",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea vinurilor din struguri",
+            "description": "1102",
+            "format": "plain_text",
+            "weight": "81",
+            "language": "und"
+        },
+        {
+            "tid": "132671",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea cidrului si a altor vinuri din fructe",
+            "description": "1103",
+            "format": "plain_text",
+            "weight": "82",
+            "language": "und"
+        },
+        {
+            "tid": "132672",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor bauturi nedistilate, obtinute prin fermentare",
+            "description": "1104",
+            "format": "plain_text",
+            "weight": "83",
+            "language": "und"
+        },
+        {
+            "tid": "132673",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea berii",
+            "description": "1105",
+            "format": "plain_text",
+            "weight": "84",
+            "language": "und"
+        },
+        {
+            "tid": "132674",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea maltului",
+            "description": "1106",
+            "format": "plain_text",
+            "weight": "85",
+            "language": "und"
+        },
+        {
+            "tid": "132675",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de bauturi racoritoare nealcoolice, productia de ape minerale si alte ape imbuteliate",
+            "description": "1107",
+            "format": "plain_text",
+            "weight": "86",
+            "language": "und"
+        },
+        {
+            "tid": "132676",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din tutun",
+            "description": "1200",
+            "format": "plain_text",
+            "weight": "87",
+            "language": "und"
+        },
+        {
+            "tid": "132677",
+            "code": "C",
+            "vid": "17",
+            "name": "Pregatirea fibrelor si filarea fibrelor textile",
+            "description": "1310",
+            "format": "plain_text",
+            "weight": "88",
+            "language": "und"
+        },
+        {
+            "tid": "132678",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de tesaturi",
+            "description": "1320",
+            "format": "plain_text",
+            "weight": "89",
+            "language": "und"
+        },
+        {
+            "tid": "132679",
+            "code": "C",
+            "vid": "17",
+            "name": "Finisarea materialelor textile",
+            "description": "1330",
+            "format": "plain_text",
+            "weight": "90",
+            "language": "und"
+        },
+        {
+            "tid": "132680",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de metraje prin tricotare sau crosetare",
+            "description": "1391",
+            "format": "plain_text",
+            "weight": "91",
+            "language": "und"
+        },
+        {
+            "tid": "132681",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de articole confectionate din textile (cu exceptia imbracamintei si lenjeriei de corp)",
+            "description": "1392",
+            "format": "plain_text",
+            "weight": "92",
+            "language": "und"
+        },
+        {
+            "tid": "132682",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de covoare si mochete",
+            "description": "1393",
+            "format": "plain_text",
+            "weight": "93",
+            "language": "und"
+        },
+        {
+            "tid": "132683",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de odgoane, fringhii, sfori si plase",
+            "description": "1394",
+            "format": "plain_text",
+            "weight": "94",
+            "language": "und"
+        },
+        {
+            "tid": "132684",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de textile netesute si articole din acestea, cu exceptia confectiilor de imbracaminte",
+            "description": "1395",
+            "format": "plain_text",
+            "weight": "95",
+            "language": "und"
+        },
+        {
+            "tid": "132685",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole tehnice si industriale din textile",
+            "description": "1396",
+            "format": "plain_text",
+            "weight": "96",
+            "language": "und"
+        },
+        {
+            "tid": "132686",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole textile n.c.a.",
+            "description": "1399",
+            "format": "plain_text",
+            "weight": "97",
+            "language": "und"
+        },
+        {
+            "tid": "132687",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de imbracaminte din piele",
+            "description": "1411",
+            "format": "plain_text",
+            "weight": "98",
+            "language": "und"
+        },
+        {
+            "tid": "132688",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de imbracaminte pentru lucru",
+            "description": "1412",
+            "format": "plain_text",
+            "weight": "99",
+            "language": "und"
+        },
+        {
+            "tid": "132689",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole de imbracaminte (exclusiv lenjeria de corp)",
+            "description": "1413",
+            "format": "plain_text",
+            "weight": "100",
+            "language": "und"
+        },
+        {
+            "tid": "132690",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de articole de lenjerie de corp",
+            "description": "1414",
+            "format": "plain_text",
+            "weight": "101",
+            "language": "und"
+        },
+        {
+            "tid": "132691",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole de imbracaminte si accesorii n.c.a.",
+            "description": "1419",
+            "format": "plain_text",
+            "weight": "102",
+            "language": "und"
+        },
+        {
+            "tid": "132692",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor din blana",
+            "description": "1420",
+            "format": "plain_text",
+            "weight": "103",
+            "language": "und"
+        },
+        {
+            "tid": "132693",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea prin tricotare sau crosetare a ciorapilor si articolelor de galanterie",
+            "description": "1431",
+            "format": "plain_text",
+            "weight": "104",
+            "language": "und"
+        },
+        {
+            "tid": "132694",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea prin tricotare sau crosetare a altor articole de imbracaminte",
+            "description": "1439",
+            "format": "plain_text",
+            "weight": "105",
+            "language": "und"
+        },
+        {
+            "tid": "132695",
+            "code": "C",
+            "vid": "17",
+            "name": "Tabacirea si finisarea pieilor, prepararea si vopsirea blanurilor",
+            "description": "1511",
+            "format": "plain_text",
+            "weight": "106",
+            "language": "und"
+        },
+        {
+            "tid": "132696",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de voiaj si marochinarie, a articolelor de harnasament si a altor articole din piele",
+            "description": "1512",
+            "format": "plain_text",
+            "weight": "107",
+            "language": "und"
+        },
+        {
+            "tid": "132697",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea incaltamintei",
+            "description": "1520",
+            "format": "plain_text",
+            "weight": "108",
+            "language": "und"
+        },
+        {
+            "tid": "132698",
+            "code": "C",
+            "vid": "17",
+            "name": "Taierea si rindeluirea lemnului",
+            "description": "1610",
+            "format": "plain_text",
+            "weight": "109",
+            "language": "und"
+        },
+        {
+            "tid": "132699",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de furnire si a panourilor din lemn",
+            "description": "1621",
+            "format": "plain_text",
+            "weight": "110",
+            "language": "und"
+        },
+        {
+            "tid": "132700",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea parchetului asamblat in panouri",
+            "description": "1622",
+            "format": "plain_text",
+            "weight": "111",
+            "language": "und"
+        },
+        {
+            "tid": "132701",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor elemente de dulgherie si timplarie, pentru constructii",
+            "description": "1623",
+            "format": "plain_text",
+            "weight": "112",
+            "language": "und"
+        },
+        {
+            "tid": "132702",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea ambalajelor din lemn",
+            "description": "1624",
+            "format": "plain_text",
+            "weight": "113",
+            "language": "und"
+        },
+        {
+            "tid": "132703",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse din lemn, fabricarea articolelor din pluta, paie si din alte materiale vegetale impletite",
+            "description": "1629",
+            "format": "plain_text",
+            "weight": "114",
+            "language": "und"
+        },
+        {
+            "tid": "132704",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea celulozei",
+            "description": "1711",
+            "format": "plain_text",
+            "weight": "115",
+            "language": "und"
+        },
+        {
+            "tid": "132705",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea hirtiei si cartonului",
+            "description": "1712",
+            "format": "plain_text",
+            "weight": "116",
+            "language": "und"
+        },
+        {
+            "tid": "132706",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea hirtiei si cartonului ondulat si a ambalajelor din hirtie si carton",
+            "description": "1721",
+            "format": "plain_text",
+            "weight": "117",
+            "language": "und"
+        },
+        {
+            "tid": "132707",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor de uz gospodaresc si sanitar, din hirtie sau carton",
+            "description": "1722",
+            "format": "plain_text",
+            "weight": "118",
+            "language": "und"
+        },
+        {
+            "tid": "132708",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de papetarie",
+            "description": "1723",
+            "format": "plain_text",
+            "weight": "119",
+            "language": "und"
+        },
+        {
+            "tid": "132709",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea tapetului",
+            "description": "1724",
+            "format": "plain_text",
+            "weight": "120",
+            "language": "und"
+        },
+        {
+            "tid": "132710",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole din hirtie si carton n.c.a.",
+            "description": "1729",
+            "format": "plain_text",
+            "weight": "121",
+            "language": "und"
+        },
+        {
+            "tid": "132711",
+            "code": "C",
+            "vid": "17",
+            "name": "Tiparirea ziarelor",
+            "description": "1811",
+            "format": "plain_text",
+            "weight": "122",
+            "language": "und"
+        },
+        {
+            "tid": "132712",
+            "code": "C",
+            "vid": "17",
+            "name": "Alte activitati de tiparire n.c.a.",
+            "description": "1812",
+            "format": "plain_text",
+            "weight": "123",
+            "language": "und"
+        },
+        {
+            "tid": "132713",
+            "code": "C",
+            "vid": "17",
+            "name": "Servicii pregatitoare pentru tiparire",
+            "description": "1813",
+            "format": "plain_text",
+            "weight": "124",
+            "language": "und"
+        },
+        {
+            "tid": "132714",
+            "code": "C",
+            "vid": "17",
+            "name": "Legatorie si servicii conexe",
+            "description": "1814",
+            "format": "plain_text",
+            "weight": "125",
+            "language": "und"
+        },
+        {
+            "tid": "132715",
+            "code": "C",
+            "vid": "17",
+            "name": "Reproducerea inregistrarilor",
+            "description": "1820",
+            "format": "plain_text",
+            "weight": "126",
+            "language": "und"
+        },
+        {
+            "tid": "132716",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati ale agentiilor de colectare a platilor si a birourilor (oficiilor) de raportare a creditului",
+            "description": "8291",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132717",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati ale agentiilor de plasare a fortei de munca",
+            "description": "7810",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132718",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati ale agentiilor de publicitate",
+            "description": "7311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132719",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati ale agentiilor de stiri",
+            "description": "6391",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132720",
+            "code": "L",
+            "vid": "17",
+            "name": "Activitati ale agentiilor imobiliare",
+            "description": "6831",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132721",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati ale agentiilor turistice",
+            "description": "7911",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132722",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati ale agentilor si broker-ilor de asigurari",
+            "description": "6622",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132723",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale altor organizatii n.c.a.",
+            "description": "9499",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132724",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati ale Bancii Nationale (centrale)",
+            "description": "6411",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132725",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale bazelor sportive",
+            "description": "9311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132726",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale bibliotecilor si arhivelor",
+            "description": "9101",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132727",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati ale caminelor de batrini si ale caminelor pentru persoane aflate in incapacitate de a se ingriji singure",
+            "description": "8730",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132728",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale centrelor de fitness",
+            "description": "9313",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132729",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati ale centrelor de ingrijire medicala",
+            "description": "8710",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132730",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati ale centrelor de intermediere telefonica (call center)",
+            "description": "8220",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132731",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati ale centrelor de recuperare psihica si de dezintoxicare, exclusiv spitale",
+            "description": "8720",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132732",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale cluburilor sportive",
+            "description": "9312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132733",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati ale directiilor administrative centralizate",
+            "description": "7010",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132734",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati ale fondurilor de pensii, cu exceptia celor din sistemul public de asigurari sociale",
+            "description": "6530",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132735",
+            "code": "T",
+            "vid": "17",
+            "name": "Activitati ale gospodariilor private de producere de bunuri destinate consumului propriu",
+            "description": "9810",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132736",
+            "code": "T",
+            "vid": "17",
+            "name": "Activitati ale gospodariilor private de producere de servicii pentru scopuri proprii",
+            "description": "9820",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132737",
+            "code": "T",
+            "vid": "17",
+            "name": "Activitati ale gospodariilor private in calitate de angajator de personal casnic",
+            "description": "9700",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132738",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale gradinilor zoologice, botanice si ale rezervatiilor naturale",
+            "description": "9104",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132739",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati ale holdingurilor",
+            "description": "6420",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132740",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati ale muzeelor",
+            "description": "9102",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132741",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale organizatiilor economice si patronale",
+            "description": "9411",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132742",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale organizatiilor politice",
+            "description": "9492",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132743",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale organizatiilor profesionale",
+            "description": "9412",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132744",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale organizatiilor religioase",
+            "description": "9491",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132745",
+            "code": "U",
+            "vid": "17",
+            "name": "Activitati ale organizatiilor si organismelor extrateritoriale",
+            "description": "9900",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132746",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati ale portalurilor web",
+            "description": "6312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132747",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati ale sindicatelor salariatilor",
+            "description": "9420",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132748",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati ale tur-operatorilor",
+            "description": "7912",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132749",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati auxiliare intermedierilor financiare, exclusiv activitati de asigurari si fonduri de pensii",
+            "description": "6619",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132750",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati combinate de secretariat",
+            "description": "8211",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132751",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati de administrare a fondurilor",
+            "description": "6630",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132752",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de afaceri externe",
+            "description": "8421",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132753",
+            "code": "I",
+            "vid": "17",
+            "name": "Activitati de alimentatie (catering) pentru evenimente",
+            "description": "5621",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132754",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de ambalare",
+            "description": "8292",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132755",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de aparare nationala",
+            "description": "8422",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132756",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de arhitectura",
+            "description": "7111",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132757",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati de asigurari de viata",
+            "description": "6511",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132758",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de asistenta medicala generala",
+            "description": "8621",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132759",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de asistenta medicala specializata",
+            "description": "8622",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132760",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de asistenta sociala, fara cazare, pentru batrini si pentru persoane cu dizabilitati",
+            "description": "8810",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132761",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de asistenta spitaliceasca",
+            "description": "8610",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132762",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de asistenta stomatologica",
+            "description": "8623",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132763",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de comunicatii electronice prin retele cu cablu",
+            "description": "6110",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132764",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de comunicatii electronice prin retele fara cablu (exclusiv prin satelit)",
+            "description": "6120",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132765",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de comunicatii electronice prin satelit",
+            "description": "6130",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132766",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de consultanta in domeniul relatiilor publice si al comunicarii",
+            "description": "7021",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132767",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de consultanta in tehnologia informatiei",
+            "description": "6202",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132768",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de consultanta pentru afaceri si management",
+            "description": "7022",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132769",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de contabilitate si audit financiar, consultanta in domeniul fiscal",
+            "description": "6920",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132770",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de contractare, pe baze temporare, a personalului",
+            "description": "7820",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132771",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati de creatie artistica",
+            "description": "9003",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132772",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de design specializat",
+            "description": "7410",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132773",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de difuzare a programelor de radio",
+            "description": "6010",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132774",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de distributie a filmelor cinematografice, video si a programelor de televiziune",
+            "description": "5913",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132775",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare a altor produse software",
+            "description": "5829",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132776",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare a cartilor",
+            "description": "5811",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132777",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare a jocurilor de calculator",
+            "description": "5821",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132778",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare a revistelor si periodicelor",
+            "description": "5814",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132779",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare a ziarelor",
+            "description": "5813",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132780",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de editare de ghiduri, liste de adrese si similare",
+            "description": "5812",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132781",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati de evaluare a riscului de asigurare si a pagubelor",
+            "description": "6621",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132782",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de fotocopiere, de pregatire a documentelor si alte activitati specializate de secretariat",
+            "description": "8219",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132783",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati de gestionare a salilor de spectacole",
+            "description": "9004",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132784",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de alte bunuri personale si gospodaresti n.c.a.",
+            "description": "7729",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132785",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de autoturisme si autovehicule rutiere usoare",
+            "description": "7711",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132786",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de autovehicule rutiere grele",
+            "description": "7712",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132787",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de bunuri recreationale si echipament sportiv",
+            "description": "7721",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132788",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de echipamente de transport aerian",
+            "description": "7735",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132789",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de echipamente de transport pe apa",
+            "description": "7734",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132790",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de masini si echipamente agricole",
+            "description": "7731",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132791",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de masini si echipamente de birou (inclusiv calculatoare)",
+            "description": "7733",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132792",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchiriere si leasing de masini si echipamente pentru constructii",
+            "description": "7732",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132793",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de inchirierea si leasing de alte masini,  echipamente si bunuri tangibile n.c.a.",
+            "description": "7739",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132794",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de inginerie si consultanta tehnica legate de acestea",
+            "description": "7112",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132795",
+            "code": "Q",
+            "vid": "17",
+            "name": "Activitati de ingrijire zilnica pentru copii",
+            "description": "8891",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132796",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati de intermediere (brokeraj) a tranzactiilor financiare",
+            "description": "6612",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132797",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati de interpretare artistica (spectacole)",
+            "description": "9001",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132798",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati de intretinere corporala",
+            "description": "9604",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132799",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de intretinere peisagistica",
+            "description": "8130",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132800",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de investigatii",
+            "description": "8030",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132801",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati de jocuri de noroc si pariuri",
+            "description": "9200",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132802",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de justitie",
+            "description": "8423",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132803",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de lupta impotriva incendiilor si de prevenire a acestora",
+            "description": "8425",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132804",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de management (gestiune si exploatare) a mijloacelor de calcul",
+            "description": "6203",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132805",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de ordine publica si de protectie civila",
+            "description": "8424",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132806",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de organizare a expozitiilor, tirgurilor si congreselor",
+            "description": "8230",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132807",
+            "code": "S",
+            "vid": "17",
+            "name": "Activitati de pompe funebre si similare",
+            "description": "9603",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132808",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de post-productie cinematografica, video si de programe de televiziune",
+            "description": "5912",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132809",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de producere si difuzare a programelor de televiziune",
+            "description": "6020",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132810",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de productie cinematografica, video si de programe de televiziune",
+            "description": "5911",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132811",
+            "code": "O",
+            "vid": "17",
+            "name": "Activitati de protectie sociala obligatorie",
+            "description": "8430",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132812",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de realizare a inregistrarilor audio si activitati de editare muzicala",
+            "description": "5920",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132813",
+            "code": "J",
+            "vid": "17",
+            "name": "Activitati de realizare a soft-ului la comanda (software orientat client)",
+            "description": "6201",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132814",
+            "code": "K",
+            "vid": "17",
+            "name": "Activitati de reasigurare",
+            "description": "6520",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132815",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de securitate privata",
+            "description": "8010",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132816",
+            "code": "H",
+            "vid": "17",
+            "name": "Activitati de servicii anexe pentru transporturi terestre",
+            "description": "5221",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132817",
+            "code": "H",
+            "vid": "17",
+            "name": "Activitati de servicii anexe transporturilor aeriene",
+            "description": "5223",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132818",
+            "code": "H",
+            "vid": "17",
+            "name": "Activitati de servicii anexe transporturilor pe apa",
+            "description": "5222",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132819",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de servicii privind sistemele de securizare",
+            "description": "8020",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132820",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati de servicii suport combinate",
+            "description": "8110",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132821",
+            "code": "P",
+            "vid": "17",
+            "name": "Activitati de servicii suport pentru invatamint",
+            "description": "8560",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132822",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de studiere a pietei si de sondare a opiniei publice",
+            "description": "7320",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132823",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de testare si analize tehnice",
+            "description": "7120",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132824",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati de traducere scrisa si orala (interpreti)",
+            "description": "7430",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132825",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati fotografice",
+            "description": "7420",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132826",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati generale (nespecializate) de curatenie interioara a cladirilor",
+            "description": "8121",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132827",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati juridice",
+            "description": "6910",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132828",
+            "code": "H",
+            "vid": "17",
+            "name": "Activitati postale desfasurate sub obligativitatea serviciului universal",
+            "description": "5310",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132829",
+            "code": "E",
+            "vid": "17",
+            "name": "Activitati si servicii de decontaminare",
+            "description": "3900",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132830",
+            "code": "N",
+            "vid": "17",
+            "name": "Activitati specializate de curatenie a cladirilor, mijloacelor de transport, masinilor si utilajelor",
+            "description": "8122",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132831",
+            "code": "R",
+            "vid": "17",
+            "name": "Activitati suport pentru interpretarea artistica (spectacole)",
+            "description": "9002",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132832",
+            "code": "M",
+            "vid": "17",
+            "name": "Activitati veterinare",
+            "description": "7500",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132833",
+            "code": "L",
+            "vid": "17",
+            "name": "Administrarea imobilelor pe baza de tarife sau contract",
+            "description": "6832",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132834",
+            "code": "K",
+            "vid": "17",
+            "name": "Administrarea pietelor financiare",
+            "description": "6611",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132835",
+            "code": "H",
+            "vid": "17",
+            "name": "Alte activitati anexe transporturilor",
+            "description": "5229",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132836",
+            "code": "K",
+            "vid": "17",
+            "name": "Alte activitati auxiliare de asigurari si fonduri de pensii",
+            "description": "6629",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132837",
+            "code": "I",
+            "vid": "17",
+            "name": "Alte activitati de alimentatie",
+            "description": "5629",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132838",
+            "code": "K",
+            "vid": "17",
+            "name": "Alte activitati de asigurari (exceptind asigurarile de viata)",
+            "description": "6512",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132839",
+            "code": "Q",
+            "vid": "17",
+            "name": "Alte activitati de asistenta sociala, cu cazare n.c.a.",
+            "description": "8790",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132840",
+            "code": "Q",
+            "vid": "17",
+            "name": "Alte activitati de asistenta sociala, fara cazare, n.c.a.",
+            "description": "8899",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132841",
+            "code": "J",
+            "vid": "17",
+            "name": "Alte activitati de comunicatii electronice",
+            "description": "6190",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132842",
+            "code": "K",
+            "vid": "17",
+            "name": "Alte activitati de creditare",
+            "description": "6492",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132843",
+            "code": "N",
+            "vid": "17",
+            "name": "Alte activitati de curatenie n.c.a.",
+            "description": "8129",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132844",
+            "code": "J",
+            "vid": "17",
+            "name": "Alte activitati de editare",
+            "description": "5819",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132845",
+            "code": "K",
+            "vid": "17",
+            "name": "Alte activitati de intermedieri monetare",
+            "description": "6419",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132846",
+            "code": "J",
+            "vid": "17",
+            "name": "Alte activitati de servicii informationale n.c.a",
+            "description": "6399",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132847",
+            "code": "S",
+            "vid": "17",
+            "name": "Alte activitati de servicii personale n.c.a.",
+            "description": "9609",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132848",
+            "code": "J",
+            "vid": "17",
+            "name": "Alte activitati de servicii privind tehnologia informatiei",
+            "description": "6209",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132849",
+            "code": "N",
+            "vid": "17",
+            "name": "Alte activitati de servicii suport pentru intreprinderi n.c.a.",
+            "description": "8299",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132850",
+            "code": "H",
+            "vid": "17",
+            "name": "Alte activitati postale si de curier",
+            "description": "5320",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132851",
+            "code": "M",
+            "vid": "17",
+            "name": "Alte activitati profesionale, stiintifice si tehnice n.c.a.",
+            "description": "7490",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132852",
+            "code": "R",
+            "vid": "17",
+            "name": "Alte activitati recreative si distractive n.c.a.",
+            "description": "9329",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132853",
+            "code": "Q",
+            "vid": "17",
+            "name": "Alte activitati referitoare la sanatatea umana",
+            "description": "8690",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132854",
+            "code": "R",
+            "vid": "17",
+            "name": "Alte activitati sportive",
+            "description": "9319",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132855",
+            "code": "P",
+            "vid": "17",
+            "name": "Alte forme de invatamint n.c.a.",
+            "description": "8559",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132856",
+            "code": "K",
+            "vid": "17",
+            "name": "Alte intermedieri financiare n.c.a.",
+            "description": "6499",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132857",
+            "code": "F",
+            "vid": "17",
+            "name": "Alte lucrari de finisare",
+            "description": "4339",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132858",
+            "code": "F",
+            "vid": "17",
+            "name": "Alte lucrari de instalatii pentru constructii",
+            "description": "4329",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132859",
+            "code": "F",
+            "vid": "17",
+            "name": "Alte lucrari speciale de constructii n.c.a.",
+            "description": "4399",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132860",
+            "code": "I",
+            "vid": "17",
+            "name": "Alte servicii de cazare",
+            "description": "5590",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132861",
+            "code": "N",
+            "vid": "17",
+            "name": "Alte servicii de furnizare a fortei de munca",
+            "description": "7830",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132862",
+            "code": "N",
+            "vid": "17",
+            "name": "Alte servicii de rezervare si asistenta turistica",
+            "description": "7990",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132863",
+            "code": "H",
+            "vid": "17",
+            "name": "Alte transporturi terestre de calatori n.c.a.",
+            "description": "4939",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132864",
+            "code": "I",
+            "vid": "17",
+            "name": "Baruri si alte activitati de servire a bauturilor",
+            "description": "5630",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132865",
+            "code": "C",
+            "vid": "17",
+            "name": "Baterea monedelor",
+            "description": "3211",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132866",
+            "code": "E",
+            "vid": "17",
+            "name": "Captarea, tratarea si distributia apei",
+            "description": "3600",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132867",
+            "code": "M",
+            "vid": "17",
+            "name": "Cercetare-dezvoltare in alte stiinte naturale si inginerie",
+            "description": "7219",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132868",
+            "code": "M",
+            "vid": "17",
+            "name": "Cercetare-dezvoltare in biotehnologie",
+            "description": "7211",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132869",
+            "code": "M",
+            "vid": "17",
+            "name": "Cercetare-dezvoltare in stiinte sociale si umaniste",
+            "description": "7220",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132870",
+            "code": "S",
+            "vid": "17",
+            "name": "Coafura si alte activitati de infrumusetare",
+            "description": "9602",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132871",
+            "code": "E",
+            "vid": "17",
+            "name": "Colectarea deseurilor nepericuloase",
+            "description": "3811",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132872",
+            "code": "E",
+            "vid": "17",
+            "name": "Colectarea deseurilor periculoase",
+            "description": "3812",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132873",
+            "code": "E",
+            "vid": "17",
+            "name": "Colectarea si epurarea apelor uzate",
+            "description": "3700",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132874",
+            "code": "D",
+            "vid": "17",
+            "name": "Comercializarea combustibililor gazosi, prin conducte",
+            "description": "3523",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132875",
+            "code": "D",
+            "vid": "17",
+            "name": "Comercializarea energiei electrice",
+            "description": "3514",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132876",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu  autoturisme si autovehicule usoare (sub 3,5 tone)",
+            "description": "4511",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132877",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu  ridicata al animalelor vii",
+            "description": "4623",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132878",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu alte autovehicule",
+            "description": "4519",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132879",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al altor bunuri noi, in magazine specializate",
+            "description": "4778",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132880",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al altor produse alimentare, in magazine specializate",
+            "description": "4729",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132881",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al articolelor de fierarie, al articolelor din sticla si a celor pentru vopsit, in magazine specializate",
+            "description": "4752",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132882",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al articolelor medicale si ortopedice, in magazine specializate",
+            "description": "4774",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132883",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al articolelor si aparatelor electrocasnice, in magazine specializate",
+            "description": "4754",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132884",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al bauturilor, in magazine specializate",
+            "description": "4725",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132885",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al bunurilor de ocazie vindute prin magazine",
+            "description": "4779",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132886",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al calculatoarelor, unitatilor periferice si software-lui in magazine specializate",
+            "description": "4741",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132887",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al carburantilor pentru autovehicule in magazine specializate",
+            "description": "4730",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132888",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al carnii si al produselor din carne, in magazine specializate",
+            "description": "4722",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132889",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al cartilor, in magazine specializate",
+            "description": "4761",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132890",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al ceasurilor si bijuteriilor, in magazine specializate",
+            "description": "4777",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132891",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al covoarelor, carpetelor, tapetelor si a altor acoperitoare de podea, in magazine specializate",
+            "description": "4753",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132892",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al echipamentelor audio/video in magazine specializate",
+            "description": "4743",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132893",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al echipamentelor sportive, in magazine specializate",
+            "description": "4764",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132894",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al echipamentului pentru  telecomunicatii in magazine specializate",
+            "description": "4742",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132895",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al florilor, plantelor si semintelor, comert cu amanuntul al animalelor de companie si a hranei pentru acestea, in magazine specializate",
+            "description": "4776",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132896",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al fructelor si legumelor proaspete, in magazine specializate",
+            "description": "4721",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132897",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al imbracamintei, in magazine specializate",
+            "description": "4771",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132898",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al incaltamintei si articolelor din piele, in magazine specializate",
+            "description": "4772",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132899",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al inregistrarilor muzicale si video, in magazine specializate",
+            "description": "4763",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132900",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al jocurilor si jucariilor, in magazine specializate",
+            "description": "4765",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132901",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al mobilei, al articolelor de iluminat si al articolelor de uz casnic n.c.a., in magazine specializate",
+            "description": "4759",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132902",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al pestelui, crustaceelor si molustelor, in magazine specializate",
+            "description": "4723",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132903",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al piinii, produselor de patiserie si produselor zaharoase, in magazine specializate",
+            "description": "4724",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132904",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al produselor alimentare, bauturilor si produselor din tutun efectuat prin standuri, chioscuri si piete",
+            "description": "4781",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132905",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al produselor cosmetice si de parfumerie, in magazine specializate",
+            "description": "4775",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132906",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al produselor din tutun, in magazine specializate",
+            "description": "4726",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132907",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al produselor farmaceutice, in magazine specializate",
+            "description": "4773",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132908",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al textilelor, imbracamintei si incaltamintei efectuat prin standuri, chioscuri si piete",
+            "description": "4782",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132909",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al textilelor, in magazine specializate",
+            "description": "4751",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132910",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul al ziarelor si articolelor de papetarie, in magazine specializate",
+            "description": "4762",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132911",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul de piese si accesorii pentru autovehicule",
+            "description": "4532",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132912",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul efectuat in afara magazinelor, standurilor, chioscurilor si pietelor",
+            "description": "4799",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132913",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul in magazine nespecializate, cu vinzare predominanta de produse alimentare, bauturi si tutun",
+            "description": "4711",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132914",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul in magazine nespecializate, cu vinzare predominanta de produse nealimentare",
+            "description": "4719",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132915",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul prin intermediul caselor de comenzi sau prin Internet",
+            "description": "4791",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132916",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu amanuntul prin standuri, chioscuri si piete al altor produse",
+            "description": "4789",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132917",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu motociclete, piese si accesorii aferente, intretinerea si repararea motocicletelor",
+            "description": "4540",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132918",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al altor bunuri de uz gospodaresc",
+            "description": "4649",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132919",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al altor masini si echipamente",
+            "description": "4669",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132920",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al altor masini si echipamente de birou",
+            "description": "4666",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132921",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al altor produse intermediare",
+            "description": "4676",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132922",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al aparatelor electrice de uz gospodaresc, al aparatelor de radio si televizoarelor",
+            "description": "4643",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132923",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al bauturilor",
+            "description": "4634",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132924",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al blanurilor, pieilor brute si al pieilor prelucrate",
+            "description": "4624",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132925",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al calculatoarelor, echipamentelor periferice si software-lui",
+            "description": "4651",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132926",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al carnii si produselor din carne",
+            "description": "4632",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132927",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al ceasurilor si bijuteriilor",
+            "description": "4648",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132928",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al cerealelor, semintelor, furajelor si tutunului neprelucrat",
+            "description": "4621",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132929",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al combustibililor solizi, lichizi si gazosi si al produselor derivate",
+            "description": "4671",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132930",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al deseurilor si resturilor",
+            "description": "4677",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132931",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al echipamentelor si furniturilor de fierarie pentru instalatii sanitare si de incalzire",
+            "description": "4674",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132932",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al florilor si al plantelor",
+            "description": "4622",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132933",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al fructelor si legumelor",
+            "description": "4631",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132934",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al imbracamintei si incaltamintei",
+            "description": "4642",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132935",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al masinilor agricole, echipamentelor si furniturilor",
+            "description": "4661",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132936",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al masinilor pentru industria miniera si constructii",
+            "description": "4663",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132937",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al masinilor pentru industria textila si al masinilor de cusut si de tricotat",
+            "description": "4664",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132938",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al masinilor-unelte",
+            "description": "4662",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132939",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al materialului lemnos si al materialelor de constructie si echipamentelor sanitare",
+            "description": "4673",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132940",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al metalelor si minereurilor metalice",
+            "description": "4672",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132941",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al mobilei de birou",
+            "description": "4665",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132942",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al mobilei, covoarelor si a articolelor de iluminat",
+            "description": "4647",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132943",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor chimice",
+            "description": "4675",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132944",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor cosmetice si de parfumerie",
+            "description": "4645",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132945",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor din ceramica, sticlarie si al produselor de intretinere",
+            "description": "4644",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132946",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor din tutun",
+            "description": "4635",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132947",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor farmaceutice",
+            "description": "4646",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132948",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor lactate, oualor, uleiurilor si grasimilor comestibile",
+            "description": "4633",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132949",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al produselor textile",
+            "description": "4641",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132950",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata al zaharului, ciocolatei si produselor zaharoase",
+            "description": "4636",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132951",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata cu cafea, ceai, cacao si condimente",
+            "description": "4637",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132952",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata de componente si echipamente electronice si de telecomunicatii",
+            "description": "4652",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132953",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata de piese si accesorii pentru autovehicule",
+            "description": "4531",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132954",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata nespecializat",
+            "description": "4690",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132955",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata nespecializat de produse alimentare, bauturi si tutun",
+            "description": "4639",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132956",
+            "code": "G",
+            "vid": "17",
+            "name": "Comert cu ridicata specializat al altor alimente, inclusiv peste, crustacee si moluste",
+            "description": "4638",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132957",
+            "code": "C",
+            "vid": "17",
+            "name": "Constructia de ambarcatiuni sportive si de agrement",
+            "description": "3012",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132958",
+            "code": "C",
+            "vid": "17",
+            "name": "Constructia de nave si structuri plutitoare",
+            "description": "3011",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132959",
+            "code": "F",
+            "vid": "17",
+            "name": "Constructia de poduri si tuneluri",
+            "description": "4213",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132960",
+            "code": "F",
+            "vid": "17",
+            "name": "Constructii hidrotehnice",
+            "description": "4291",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132961",
+            "code": "L",
+            "vid": "17",
+            "name": "Cumpararea si vinzarea de bunuri imobiliare proprii",
+            "description": "6810",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132962",
+            "code": "E",
+            "vid": "17",
+            "name": "Demontarea (dezasamblarea) masinilor si a echipamentelor scoase din uz pentru recuperarea materialelor",
+            "description": "3831",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132963",
+            "code": "H",
+            "vid": "17",
+            "name": "Depozitari",
+            "description": "5210",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132964",
+            "code": "F",
+            "vid": "17",
+            "name": "Dezvoltare (promovare) imobiliara",
+            "description": "4110",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132965",
+            "code": "D",
+            "vid": "17",
+            "name": "Distributia combustibililor gazosi prin conducte",
+            "description": "3522",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132966",
+            "code": "D",
+            "vid": "17",
+            "name": "Distributia energiei electrice",
+            "description": "3513",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132967",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole din beton, ciment si ipsos",
+            "description": "2369",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132968",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor articole din metal n.c.a.",
+            "description": "2599",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132969",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor componente electronice",
+            "description": "2612",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132970",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor echipamente electrice",
+            "description": "2790",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132971",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor fire si cabluri electrice si electronice",
+            "description": "2732",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132972",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor masini si utilaje de utilizare generala n.c.a.",
+            "description": "2829",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132973",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor masini si utilaje specifice n.c.a.",
+            "description": "2899",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132974",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor masini-unelte n.c.a.",
+            "description": "2849",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132975",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor mijloace de transport n.c.a.",
+            "description": "3099",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132976",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor piese si accesorii pentru autovehicule",
+            "description": "2932",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132977",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse ceramice n.c.a.",
+            "description": "2349",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132978",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse chimice anorganice, de baza",
+            "description": "2013",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132979",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse chimice n.c.a.",
+            "description": "2059",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132980",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse chimice organice, de baza",
+            "description": "2014",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132981",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse din cauciuc",
+            "description": "2219",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132982",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse din material plastic",
+            "description": "2229",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132983",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse din minerale nemetalice, n.c.a.",
+            "description": "2399",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132984",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse manufacturiere n.c.a.",
+            "description": "3299",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132985",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea altor produse tehnice din ceramica",
+            "description": "2344",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132986",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea ambalajelor din metale usoare",
+            "description": "2592",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132987",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea anvelopelor si a camerelor de aer, resaparea si refacerea anvelopelor",
+            "description": "2211",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132988",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea aparatelor de distributie si control a electricitatii",
+            "description": "2712",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132989",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea armamentului si munitiei",
+            "description": "2540",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132990",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor ceramice pentru uz gospodaresc si ornamental",
+            "description": "2341",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132991",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de ambalaj din material plastic",
+            "description": "2222",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132992",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor de feronerie (lacate si balamale)",
+            "description": "2572",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132993",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor din fire metalice, fabricarea de lanturi si arcuri",
+            "description": "2593",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132994",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor din material plastic pentru constructii",
+            "description": "2223",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132995",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor din sticla",
+            "description": "2313",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132996",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea articolelor pentru sport",
+            "description": "3230",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132997",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea autovehiculelor de transport rutier",
+            "description": "2910",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132998",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea betonului",
+            "description": "2363",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "132999",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea bijuteriilor si articolelor similare din metale si pietre pretioase",
+            "description": "3212",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133000",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea calculatoarelor si a echipamentelor periferice",
+            "description": "2620",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133001",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea caramizilor, tiglelor si altor produse pentru constructii, din argila arsa",
+            "description": "2332",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133002",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea cauciucului sintetic in forme primare",
+            "description": "2017",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133003",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea cimentului",
+            "description": "2351",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133004",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea cleiurilor",
+            "description": "2052",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133005",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea colorantilor si a pigmentilor",
+            "description": "2012",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133006",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea componentelor electronice (module)",
+            "description": "2611",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133007",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea cuptoarelor, furnalelor si arzatoarelor",
+            "description": "2821",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133008",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de acumulatori si baterii",
+            "description": "2720",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133009",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de aeronave si nave spatiale",
+            "description": "3030",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133010",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de alte pompe si compresoare",
+            "description": "2813",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133011",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de alte robinete si valve",
+            "description": "2814",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133012",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de aparate electrocasnice",
+            "description": "2751",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133013",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de biciclete si de vehicule pentru invalizi",
+            "description": "3092",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133014",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de cabluri cu fibre optica",
+            "description": "2731",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133015",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de constructii metalice si parti componente ale structurilor metalice",
+            "description": "2511",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133016",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de dispozitive, aparate si instrumente medicale stomatologice",
+            "description": "3250",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133017",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de echipamente casnice neelectrice",
+            "description": "2752",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133018",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de echipamente electrice de iluminat",
+            "description": "2740",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133019",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de echipamente electrice si electronice pentru autovehicule",
+            "description": "2931",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133020",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de echipamente hidraulice",
+            "description": "2812",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133021",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de echipamente pentru radiologie, electrodiagnostic si electroterapie",
+            "description": "2660",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133022",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de instrumente optice si echipamente fotografice",
+            "description": "2670",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133023",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de instrumente si dispozitive pentru masura, verificare, control, navigatie",
+            "description": "2651",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133024",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de mobila n.c.a.",
+            "description": "3109",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133025",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de mobila pentru birouri si magazine",
+            "description": "3101",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133026",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de mobila pentru bucatarii",
+            "description": "3102",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133027",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de motoare si turbine (cu exceptia celor pentru avioane, autovehicule si motociclete)",
+            "description": "2811",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133028",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de motociclete",
+            "description": "3091",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133029",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de obiecte sanitare din ceramica",
+            "description": "2342",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133030",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de produse abrazive",
+            "description": "2391",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133031",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de produse refractare",
+            "description": "2320",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133032",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de recipiente, containere si alte produse similare din otel",
+            "description": "2591",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133033",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de saltele",
+            "description": "3103",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133034",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de sticlarie tehnica",
+            "description": "2319",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133035",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de suruburi, buloane si alte articole filetate, fabricarea de nituri si saibe",
+            "description": "2594",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133036",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea de uti si ferestre din metal",
+            "description": "2512",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133037",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea dispozitivelor de conexiune pentru fire si cabluri electrice si electronice",
+            "description": "2733",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133038",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea echipamentelor de comunicatii",
+            "description": "2630",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133039",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea echipamentelor de ridicat si manipulat",
+            "description": "2822",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133040",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea echipamentelor de ventilatie si frigorifice, exclusiv a echipamentelor de uz casnic",
+            "description": "2825",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133041",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea explozivilor",
+            "description": "2051",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133042",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea fibrelor din sticla",
+            "description": "2314",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133043",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea fibrelor sintetice si artificiale",
+            "description": "2060",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133044",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea gazelor industriale",
+            "description": "2011",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133045",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea imitatiilor de bijuterii si articole similare",
+            "description": "3213",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133046",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea ingrasamintelor si produselor azotoase",
+            "description": "2015",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133047",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea instrumentelor muzicale",
+            "description": "3220",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133048",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea izolatorilor si pieselor izolante din ceramica",
+            "description": "2343",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133049",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea jocurilor si jucariilor",
+            "description": "3240",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133050",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea lagarelor, angrenajelor, cutiilor de viteza si a elementelor mecanice de transmisie",
+            "description": "2815",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133051",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea masinilor si echipamentelor de birou (exclusiv fabricarea calculatoarelor si a echipamentelor periferice)",
+            "description": "2823",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133052",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea masinilor si utilajelor pentru agricultura si exploatari forestiere",
+            "description": "2830",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133053",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea masinilor-unelte portabile actionate mecanic",
+            "description": "2824",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133054",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea materialelor plastice in forme primare",
+            "description": "2016",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133055",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea materialului rulant",
+            "description": "3020",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133056",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea maturilor si periilor",
+            "description": "3291",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133057",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea mortarului",
+            "description": "2364",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133058",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea motoarelor, generatoarelor si transformatoarelor electrice",
+            "description": "2711",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133059",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea parfumurilor si a produselor cosmetice (de toaleta)",
+            "description": "2042",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133060",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea pesticidelor si a altor produse agrochimice",
+            "description": "2020",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133061",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea placilor si dalelor din ceramica",
+            "description": "2331",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133062",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea placilor, foliilor, tuburilor si profilelor din material plastic",
+            "description": "2221",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133063",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea preparatelor farmaceutice",
+            "description": "2120",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133064",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor de cocserie",
+            "description": "1910",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133065",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor de taiat",
+            "description": "2571",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133066",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din azbociment",
+            "description": "2365",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133067",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din beton pentru constructii",
+            "description": "2361",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133068",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor din ipsos pentru constructii",
+            "description": "2362",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133069",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor electronice de larg consum",
+            "description": "2640",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133070",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor farmaceutice de baza",
+            "description": "2110",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133071",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor metalice obtinute prin forjare, presare, stantare si laminare, metalurgia pulberilor",
+            "description": "2550",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133072",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea produselor obtinute din prelucrarea titeiului",
+            "description": "1920",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133073",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea sapunurilor, detergentilor si a produselor de intretinere",
+            "description": "2041",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133074",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea sticlei plate",
+            "description": "2311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133075",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea suportilor magnetici si optici destinati inregistrarilor",
+            "description": "2680",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133076",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea uleiurilor esentiale",
+            "description": "2053",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133077",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea uneltelor",
+            "description": "2573",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133078",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru extractie si constructii",
+            "description": "2892",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133079",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru industria hirtiei si cartonului",
+            "description": "2895",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133080",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru industria textila, a imbracamintei si a pielariei",
+            "description": "2894",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133081",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru metalurgie",
+            "description": "2891",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133082",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru prelucrarea maselor plastice si a cauciucului",
+            "description": "2896",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133083",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor pentru prelucrarea produselor alimentare, bauturilor si tutunului",
+            "description": "2893",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133084",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea utilajelor si a masinilor-unelte pentru prelucrarea metalelor",
+            "description": "2841",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133085",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea varului si ipsosului",
+            "description": "2352",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133086",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea vehiculelor militare de lupta",
+            "description": "3040",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133087",
+            "code": "C",
+            "vid": "17",
+            "name": "Fabricarea vopselelor, lacurilor, cernelii tipografice si masticurilor",
+            "description": "2030",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133088",
+            "code": "I",
+            "vid": "17",
+            "name": "Facilitati de cazare pentru vacante si perioade de scurta durata",
+            "description": "5520",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133089",
+            "code": "K",
+            "vid": "17",
+            "name": "Fonduri mutuale si alte entitati financiare similare",
+            "description": "6430",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133090",
+            "code": "D",
+            "vid": "17",
+            "name": "Furnizarea de abur si aer conditionat",
+            "description": "3530",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133091",
+            "code": "R",
+            "vid": "17",
+            "name": "Gestionarea monumentelor, cladirilor istorice si a altor obiective de interes turistic",
+            "description": "9103",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133092",
+            "code": "I",
+            "vid": "17",
+            "name": "Hoteluri si alte facilitati de cazare similare",
+            "description": "5510",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133093",
+            "code": "N",
+            "vid": "17",
+            "name": "Inchirierea de casete video si discuri (CD-uri, DVD-uri)",
+            "description": "7722",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133094",
+            "code": "L",
+            "vid": "17",
+            "name": "Inchirierea si exploatarea bunurilor imobiliare proprii sau inchiriate",
+            "description": "6820",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133095",
+            "code": "C",
+            "vid": "17",
+            "name": "Instalarea masinilor si echipamentelor industriale",
+            "description": "3320",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133096",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu combustibili, minereuri, metale si produse chimice pentru industrie",
+            "description": "4612",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133097",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu masini, echipamente industriale, nave si avioane",
+            "description": "4614",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133098",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu material lemnos si materiale de constructii",
+            "description": "4613",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133099",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu materii prime agricole, animale vii, materii prime textile si cu semifabricate",
+            "description": "4611",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133100",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu mobila, articole de menaj si de fierarie",
+            "description": "4615",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133101",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu produse alimentare, inclusiv bauturi, si tutun",
+            "description": "4617",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133102",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu produse diverse",
+            "description": "4619",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133103",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul cu textile, confectii din blana, incaltaminte si articole din piele",
+            "description": "4616",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133104",
+            "code": "G",
+            "vid": "17",
+            "name": "Intermedieri in comertul specializat in vinzarea produselor cu caracter specific, n.c.a.",
+            "description": "4618",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133105",
+            "code": "G",
+            "vid": "17",
+            "name": "Intretinerea si repararea autovehiculelor",
+            "description": "4520",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133106",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint artistic (muzica, teatru, coreografie, arte plastice si altele)",
+            "description": "8552",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133107",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint in domeniul sportiv si recreational",
+            "description": "8551",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133108",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint prescolar",
+            "description": "8510",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133109",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint primar",
+            "description": "8520",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133110",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint secundar general",
+            "description": "8531",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133111",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint secundar, tehnic sau profesional",
+            "description": "8532",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133112",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint superior non-universitar",
+            "description": "8541",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133113",
+            "code": "P",
+            "vid": "17",
+            "name": "Invatamint superior universitar",
+            "description": "8542",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133114",
+            "code": "C",
+            "vid": "17",
+            "name": "Laminare la rece a benzilor inguste",
+            "description": "2432",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133115",
+            "code": "N",
+            "vid": "17",
+            "name": "Leasing de proprietati intelectuale si productie similara (exclusiv bunuri cu drept de autor)",
+            "description": "7740",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133116",
+            "code": "K",
+            "vid": "17",
+            "name": "Leasing financiar",
+            "description": "6491",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133117",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a altor proiecte ingineresti n.c.a.",
+            "description": "4299",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133118",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a cailor ferate de suprafata si subterane",
+            "description": "4212",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133119",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a cladirilor rezidentiale si nerezidentiale",
+            "description": "4120",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133120",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a drumurilor si autostrazilor",
+            "description": "4211",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133121",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a proiectelor utilitare pentru electricitate si telecomunicatii",
+            "description": "4222",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133122",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de constructii a proiectelor utilitare pentru fluide",
+            "description": "4221",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133123",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de demolare a constructiilor",
+            "description": "4311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133124",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de foraj si sondaj pentru constructii",
+            "description": "4313",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133125",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de instalatii electrice",
+            "description": "4321",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133126",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de instalatii tehnico-sanitare, de alimentare cu gaze, de incalzire si de aer conditionat",
+            "description": "4322",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133127",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de invelitori, sarpante si terase la constructii",
+            "description": "4391",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133128",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de pardosire si placare a peretilor",
+            "description": "4333",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133129",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de pregatire a terenului de constructii",
+            "description": "4312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133130",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de tencuire",
+            "description": "4331",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133131",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de timplarie si dulgherie",
+            "description": "4332",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133132",
+            "code": "F",
+            "vid": "17",
+            "name": "Lucrari de vopsitorie, zugraveli si  montari de geamuri",
+            "description": "4334",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133133",
+            "code": "H",
+            "vid": "17",
+            "name": "Manipulari",
+            "description": "5224",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133134",
+            "code": "C",
+            "vid": "17",
+            "name": "Operatiuni de mecanica generala",
+            "description": "2562",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133135",
+            "code": "I",
+            "vid": "17",
+            "name": "Parcuri pentru rulote, campinguri si  tabere",
+            "description": "5530",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133136",
+            "code": "R",
+            "vid": "17",
+            "name": "Parcuri tematice (bilciuri) si parcuri de distractii",
+            "description": "9321",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133137",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea combustibililor nucleari",
+            "description": "2446",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133138",
+            "code": "J",
+            "vid": "17",
+            "name": "Prelucrarea datelor, administrarea paginilor web si activitati conexe",
+            "description": "6311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133139",
+            "code": "C",
+            "vid": "17",
+            "name": "Prelucrarea si fasonarea sticlei plate",
+            "description": "2312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133140",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia altor metale neferoase",
+            "description": "2445",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133141",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia aluminiului",
+            "description": "2442",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133142",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia cuprului",
+            "description": "2444",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133143",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de caroserii pentru autovehicule, fabricarea de  remorci si semiremorci",
+            "description": "2920",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133144",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de ceasuri",
+            "description": "2652",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133145",
+            "code": "D",
+            "vid": "17",
+            "name": "Productia de energie electrica",
+            "description": "3511",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133146",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de metale feroase sub forme primare si de feroaliaje",
+            "description": "2410",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133147",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de profile obtinute la rece prin stantare sau faltuire",
+            "description": "2433",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133148",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de radiatoare si cazane pentru incalzire centrala",
+            "description": "2521",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133149",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de rezervoare, cisterne si containere metalice",
+            "description": "2529",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133150",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia de tuburi, tevi, profile tubulare si accesorii pentru acestea, din otel",
+            "description": "2420",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133151",
+            "code": "D",
+            "vid": "17",
+            "name": "Productia gazelor",
+            "description": "3521",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133152",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia generatoarelor de aburi (cu exceptia cazanelor pentru incalzire centrala)",
+            "description": "2530",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133153",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia metalelor pretioase",
+            "description": "2441",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133154",
+            "code": "C",
+            "vid": "17",
+            "name": "Productia plumbului, zincului si cositorului",
+            "description": "2443",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133155",
+            "code": "J",
+            "vid": "17",
+            "name": "Proiectia de filme cinematografice",
+            "description": "5914",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133156",
+            "code": "E",
+            "vid": "17",
+            "name": "Recuperarea materialelor reciclabile sortate",
+            "description": "3832",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133157",
+            "code": "O",
+            "vid": "17",
+            "name": "Reglementarea activitatilor organismelor care presteaza servicii in domeniul ingrijirii sanatatii, invatamintului,culturii si al altor activitati sociale,exclusiv protectia sociala",
+            "description": "8412",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133158",
+            "code": "O",
+            "vid": "17",
+            "name": "Reglementarea si eficientizarea activitatilor economice",
+            "description": "8413",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133159",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea altor echipamente",
+            "description": "3319",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133160",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea aparatelor electronice de uz casnic",
+            "description": "9521",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133161",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea articolelor de uz personal si gospodaresc n.c.a.",
+            "description": "9529",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133162",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea articolelor fabricate din metal",
+            "description": "3311",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133163",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea calculatoarelor si a echipamentelor periferice",
+            "description": "9511",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133164",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea ceasurilor si a bijuteriilor",
+            "description": "9525",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133165",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea dispozitivelor de uz gospodaresc si a echipamentelor pentru casa si gradina",
+            "description": "9522",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133166",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea echipamentelor de comunicatii",
+            "description": "9512",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133167",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea echipamentelor electrice",
+            "description": "3314",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133168",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea echipamentelor electronice si optice",
+            "description": "3313",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133169",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea incaltamintei si a articolelor din piele",
+            "description": "9523",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133170",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea masinilor",
+            "description": "3312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133171",
+            "code": "S",
+            "vid": "17",
+            "name": "Repararea mobilei si a furniturilor casnice",
+            "description": "9524",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133172",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea si intretinerea aeronavelor si navelor spatiale",
+            "description": "3316",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133173",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea si intretinerea altor echipamente de transport",
+            "description": "3317",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133174",
+            "code": "C",
+            "vid": "17",
+            "name": "Repararea si intretinerea navelor si barcilor",
+            "description": "3315",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133175",
+            "code": "I",
+            "vid": "17",
+            "name": "Restaurante",
+            "description": "5610",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133176",
+            "code": "P",
+            "vid": "17",
+            "name": "Scoli de conducere (pilotaj)",
+            "description": "8553",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133177",
+            "code": "O",
+            "vid": "17",
+            "name": "Servicii de administratie publica generala",
+            "description": "8411",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133178",
+            "code": "H",
+            "vid": "17",
+            "name": "Servicii de mutare",
+            "description": "4942",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133179",
+            "code": "M",
+            "vid": "17",
+            "name": "Servicii de reprezentare media",
+            "description": "7312",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133180",
+            "code": "S",
+            "vid": "17",
+            "name": "Spalarea si curatarea (uscata) articolelor textile si a produselor din  blana",
+            "description": "9601",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133181",
+            "code": "C",
+            "vid": "17",
+            "name": "Taierea, fasonarea si finisarea pietrei",
+            "description": "2370",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133182",
+            "code": "C",
+            "vid": "17",
+            "name": "Tragere la rece a barelor",
+            "description": "2431",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133183",
+            "code": "H",
+            "vid": "17",
+            "name": "Transportul de marfa pe cai navigabile interioare",
+            "description": "5040",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133184",
+            "code": "H",
+            "vid": "17",
+            "name": "Transportul de pasageri pe cai navigabile interioare",
+            "description": "5030",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133185",
+            "code": "D",
+            "vid": "17",
+            "name": "Transportul energiei electrice",
+            "description": "3512",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133186",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi aeriene de marfa",
+            "description": "5121",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133187",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi aeriene de pasageri",
+            "description": "5110",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133188",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi cu taxiuri",
+            "description": "4932",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133189",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi de marfa pe calea ferata",
+            "description": "4920",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133190",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi interurbane de calatori pe calea ferata",
+            "description": "4910",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133191",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi maritime si costiere de marfa",
+            "description": "5020",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133192",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi maritime si costiere de pasageri",
+            "description": "5010",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133193",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi prin conducte",
+            "description": "4950",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133194",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi rutiere de marfuri",
+            "description": "4941",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133195",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi spatiale",
+            "description": "5122",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133196",
+            "code": "H",
+            "vid": "17",
+            "name": "Transporturi urbane terestre si suburbane de calatori",
+            "description": "4931",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133197",
+            "code": "C",
+            "vid": "17",
+            "name": "Tratarea si acoperirea metalelor",
+            "description": "2561",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133198",
+            "code": "E",
+            "vid": "17",
+            "name": "Tratarea si eliminarea deseurilor nepericuloase",
+            "description": "3821",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133199",
+            "code": "E",
+            "vid": "17",
+            "name": "Tratarea si eliminarea deseurilor periculoase",
+            "description": "3822",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133200",
+            "code": "C",
+            "vid": "17",
+            "name": "Trefilarea firelor la rece",
+            "description": "2434",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133201",
+            "code": "C",
+            "vid": "17",
+            "name": "Turnarea altor metale neferoase",
+            "description": "2454",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133202",
+            "code": "C",
+            "vid": "17",
+            "name": "Turnarea fontei",
+            "description": "2451",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133203",
+            "code": "C",
+            "vid": "17",
+            "name": "Turnarea metalelor neferoase usoare",
+            "description": "2453",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        },
+        {
+            "tid": "133204",
+            "code": "C",
+            "vid": "17",
+            "name": "Turnarea otelului",
+            "description": "2452",
+            "format": "plain_text",
+            "weight": "127",
+            "language": "und"
+        }
+    ]
+}
