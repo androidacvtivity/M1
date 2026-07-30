@@ -1,0 +1,69 @@
+name: Generate M1 0470
+
+on:
+  push:
+    paths:
+      - '.github/workflows/generate-m1-0470.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate complete validator
+        shell: python
+        run: |
+          from pathlib import Path
+
+          source = Path('M1_TRIM_3_2026/M1_0469.js')
+          target = Path('M1_TRIM_2_2026_OLD_VERS/M1_0470.js')
+          text = source.read_text(encoding='utf-8')
+
+          replacements = {
+              "var arr_CAP2_L = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100', '110', '120'];":
+                  "var arr_CAP2_L = ['10', '20', '30', '40', '60', '70', '80', '90', '100', '110', '120'];",
+              "var sum_CAP_R020_120 = CAP2_R20 + CAP2_R30 + CAP2_R40 + CAP2_R50 + CAP2_R60 + CAP2_R70 + CAP2_R80 + CAP2_R90 + CAP2_R100 + CAP2_R110 + CAP2_R120;":
+                  "var sum_CAP_R020_120 = CAP2_R20 + CAP2_R30 + CAP2_R40 + CAP2_R60 + CAP2_R70 + CAP2_R80 + CAP2_R90 + CAP2_R100 + CAP2_R110 + CAP2_R120;",
+              "var min_CAP2_R30 = 5500 * CAP2_R30;": "var min_CAP2_R30 = 6300 * CAP2_R30;",
+              "var min_CAP2_R40 = 5500 * CAP2_R40;": "var min_CAP2_R40 = 6300 * CAP2_R40;",
+              "var min_CAP2_R50 = 6000 * CAP2_R50;": "var min_CAP2_R50 = 0; // R.50 eliminat în 2026",
+              "var max_CAP2_R20 = 5500 * CAP2_R20;": "var max_CAP2_R20 = 6300 * CAP2_R20;",
+              "var max_CAP2_R30 = 5500 * CAP2_R30;": "var max_CAP2_R30 = 6300 * CAP2_R30;",
+              "var max_CAP2_R40 = 6000 * CAP2_R40;": "var max_CAP2_R40 = 7000 * CAP2_R40;",
+              "var max_CAP2_R50 = 7000 * CAP2_R50;": "var max_CAP2_R50 = 0; // R.50 eliminat în 2026",
+              "Salariul minim = 5500 lei.": "Salariul minim = 6300 lei.",
+          }
+
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f'Nu a fost găsit textul pentru înlocuire: {old}')
+              text = text.replace(old, new)
+
+          target.write_text(text, encoding='utf-8')
+
+          line_count = len(text.splitlines())
+          if line_count < 1400:
+              raise SystemExit(f'Fișier incomplet: numai {line_count} linii')
+
+          if 'typeof webform.validators.m1' in text[:1500]:
+              raise SystemExit('A rămas varianta greșită de tip extensie')
+
+          print(f'Generated {target} with {line_count} lines')
+
+      - name: Commit generated validator
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add M1_TRIM_2_2026_OLD_VERS/M1_0470.js
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Fix M1_0470 as complete validator"
+            git push
+          fi
