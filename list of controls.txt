@@ -46,4 +46,6 @@ Cod eroare: 05-015 Atentionare (Cap.1). Rind 74  se introduce, daca Activitatea 
 
 
 
-
+Buna ziua colegi. 
+Actualizati va rog pe test - pe platforma noua si pe cea veche clasificatorul (vocabulary_18) sa fie acelasi ca si pe productie.
+La moment pe test   pe test "code": null, - dar pe productie    "code": "A", - i-in code - este litarea la CAEM2 - si la selectarea caem2 nu se afiseaza litera pe test.  
