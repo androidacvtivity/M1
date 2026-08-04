@@ -1094,25 +1094,14 @@ webform.validators.m1 = function (v, allowOverpass) {
                         });
                     }
                 }
-                // End 05-021
 
-                // // Start 07-007
-                // var sum_CAP_R020_120 = CAP2_R20 + CAP2_R30 + CAP2_R40 + CAP2_R60 + CAP2_R70 + CAP2_R80 + CAP2_R90 + CAP2_R100 + CAP2_R110 + CAP2_R120;
-                // sum_CAP_R020_120 = roundToDecimal(sum_CAP_R020_120, 1);
-                // if ((CAP2_R10 < (sum_CAP_R020_120)) || (CAP2_R10 > (sum_CAP_R020_120))) {
-                //     webform.errors.push({
-                //         'fieldName': 'CAP2_R10_C' + arr_CAP2_inputs_2[i],
-                //         'weight': 7,
-                //         'msg': Drupal.t('Cod eroare: 07-007 - Cap.2: SUM(R..20, ..., 120) = R.10, pe toate coloanele. -> [@sum_CAP_R020_120] = [@CAP2_R10]', { '@sum_CAP_R020_120': sum_CAP_R020_120, '@CAP2_R10': CAP2_R10 })
-                //     });
-                // }
-                // // End 07-007
 
                 // Start 07-007
                 var sum_CAP_R020_110 =
                     CAP2_R20 +
                     CAP2_R30 +
                     CAP2_R40 +
+                    CAP2_R50 +
                     CAP2_R60 +
                     CAP2_R70 +
                     CAP2_R80 +

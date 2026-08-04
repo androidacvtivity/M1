@@ -49,3 +49,6 @@ Cod eroare: 05-015 Atentionare (Cap.1). Rind 74  se introduce, daca Activitatea 
 Buna ziua colegi. 
 Actualizati va rog pe test - pe platforma noua si pe cea veche clasificatorul (vocabulary_18) sa fie acelasi ca si pe productie.
 La moment pe test   pe test "code": null, - dar pe productie    "code": "A", - i-in code - este litarea la CAEM2 - si la selectarea caem2 nu se afiseaza litera pe test.  
+
+https://github.com/androidacvtivity/M1/tree/master/M1_TRIM_2_2026_OLD_VERS
+Verifica M1.html - adauga scroll pentru cap 1 si cap 2 - sa fie dupa  primul tabel - este clar ce solicit eu ? 
