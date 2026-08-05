@@ -1,0 +1,192 @@
+Explicația validărilor 07-009 și 07-018 pentru statistician
+
+VALIDAREA 07-009
+Cap.2: Verificarea la minimum și maximum
+
+Scopul validării
+
+Validarea 07-009 verifică dacă suma remunerațiilor declarată la rândul 160 este plauzibilă în raport cu numărul salariaților repartizați pe intervalele salariale din rândurile 20–110.
+
+Pentru fiecare coloană, sistemul calculează:
+- valoarea minimă posibilă a remunerațiilor;
+- valoarea maximă posibilă a remunerațiilor.
+
+Rândul 160 trebuie să se încadreze între aceste două limite.
+
+Limitele folosite la calcul
+
+R.20:
+- minim: 0 lei;
+- maxim: 6300 lei.
+
+R.30:
+- minim: 6300,01 lei;
+- maxim: 6300 lei.
+
+R.40:
+- minim: 6300,01 lei;
+- maxim: 7000 lei.
+
+R.50:
+- minim: 7000,01 lei;
+- maxim: 8000 lei.
+
+R.60:
+- minim: 8000,01 lei;
+- maxim: 10000 lei.
+
+R.70:
+- minim: 10000,01 lei;
+- maxim: 15000 lei.
+
+R.80:
+- minim: 15000,01 lei;
+- maxim: 20000 lei.
+
+R.90:
+- minim: 20000,01 lei;
+- maxim: 25000 lei.
+
+R.100:
+- minim: 25000,01 lei;
+- maxim: 30000 lei.
+
+R.110:
+- minim: 30000,01 lei;
+- maxim: 40000 lei.
+
+Formula minimului
+
+Minim =
+(
+R.20 × 0 +
+R.30 × 6300,01 +
+R.40 × 6300,01 +
+R.50 × 7000,01 +
+R.60 × 8000,01 +
+R.70 × 10000,01 +
+R.80 × 15000,01 +
+R.90 × 20000,01 +
+R.100 × 25000,01 +
+R.110 × 30000,01
+) / 1000
+
+Formula maximului
+
+Maxim =
+(
+R.20 × 6300 +
+R.30 × 6300 +
+R.40 × 7000 +
+R.50 × 8000 +
+R.60 × 10000 +
+R.70 × 15000 +
+R.80 × 20000 +
+R.90 × 25000 +
+R.100 × 30000 +
+R.110 × 40000
+) / 1000
+
+Împărțirea la 1000 se face deoarece rândul 160 este exprimat în mii lei.
+
+Când apare validarea
+
+Validarea se execută dacă în coloana respectivă R.10 este mai mare decât zero.
+
+Atenționarea apare dacă:
+
+R.160 < minimul calculat
+
+sau
+
+R.160 > maximul calculat.
+
+În cuvinte:
+
+Dacă suma remunerațiilor declarată la R.160 este mai mică decât suma minimă posibilă ori mai mare decât suma maximă posibilă, ținând cont de repartizarea salariaților pe intervale salariale, sistemul afișează atenționarea 07-009.
+
+Exemplu
+
+Presupunem că într-o coloană sunt completate:
+
+R.30 = 1 salariat
+R.40 = 2 salariați
+R.50 = 1 salariat
+R.70 = 1 salariat
+R.80 = 1 salariat
+R.90 = 1 salariat
+R.100 = 1 salariat
+R.110 = 1 salariat
+R.160 = 158,9 mii lei
+
+Minimul calculat este:
+
+1 × 6300,01
++ 2 × 6300,01
++ 1 × 7000,01
++ 1 × 10000,01
++ 1 × 15000,01
++ 1 × 20000,01
++ 1 × 25000,01
++ 1 × 30000,01
+= 125900,09 lei
+= 125,9 mii lei
+
+Maximul calculat este:
+
+1 × 6300
++ 2 × 7000
++ 1 × 8000
++ 1 × 15000
++ 1 × 20000
++ 1 × 25000
++ 1 × 30000
++ 1 × 40000
+= 158300 lei
+= 158,3 mii lei
+
+Cum R.160 = 158,9 mii lei, iar 158,9 > 158,3, apare atenționarea:
+
+Col.3 (158,9 mii lei) nu aparține intervalului [125,9 - 158,3].
+
+Scopul statistic
+
+Validarea depistează situațiile în care suma remunerațiilor declarată nu corespunde structurii salariaților pe intervale salariale.
+
+
+VALIDAREA 07-018
+Cap.2: Verificarea existenței salariaților cu salariu până la nivelul minim de 6300 lei
+
+Scopul validării
+
+Validarea 07-018 atrage atenția asupra cazurilor în care există salariați declarați la rândul 20.
+
+Rândul 20 reprezintă salariații cu salarii de până la 6300 lei.
+
+Când apare validarea
+
+Atenționarea apare dacă:
+
+R.20 > 0
+
+În cuvinte:
+
+Dacă în coloana respectivă este declarat cel puțin un salariat la rândul 20, sistemul solicită verificarea corectitudinii datelor, deoarece salariul minim de referință este 6300 lei.
+
+Exemplu
+
+Dacă într-o coloană:
+
+R.20 = 2
+
+atunci sistemul afișează atenționarea 07-018, deoarece sunt declarați doi salariați cu salarii de până la 6300 lei.
+
+Dacă:
+
+R.20 = 0
+
+validarea nu apare.
+
+Scopul statistic
+
+Validarea nu interzice completarea rândului 20. Ea este o atenționare prin care statisticianul sau respondentul este rugat să verifice dacă existența salariaților cu salarii de până la 6300 lei este justificată și corect raportată.

@@ -1,101 +1,684 @@
 (function ($) {
     Drupal.behaviors.m1 = {
+        
+      //--------------------  
+        //--------------------
         attach: function (context, settings) {
-            jQuery('#mywebform-edit-form').on('mywebform:gridRefreshField', 'input.dynamic-region', function () {
-                var val = jQuery(this).val();  // Get the value without converting to String first
+            var $form = jQuery('#mywebform-edit-form');
 
-                // Ensure val is not null or undefined before proceeding
-                if (val !== null && val !== undefined) {
-                    var processed_val = String(val).trim();  // Safely convert to string and trim
+            $form.on(
+                'mywebform:gridRefreshField',
+                'input.dynamic-region',
+                function () {
+                    var val = jQuery(this).val();
 
-                    // Use strict comparison to avoid type coercion
-                    if (val !== processed_val) {
-                        jQuery(this).val(processed_val).trigger('change');
-                    }
-                } else {
-                    console.warn("Input value is null or undefined");
-                }
-            });
+                    if (val !== null && val !== undefined) {
+                        var processed_val = String(val).trim();
 
-            jQuery('#mywebform-edit-form', context).on('keypress', 'input.numeric, input.money, input.float', function (event) {
-                if (isNumberPressed(this, event) === false) {
-                    event.preventDefault();
-                }
-            });
-
-            //
-            jQuery('#mywebform-edit-form', context).on('paste', 'input.numeric, input.money, input.float', function (event) {
-                var obj = event.originalEvent || event;
-
-                if (typeof obj.clipboardData !== 'undefined') {
-                    var value = obj.clipboardData.getData('text/plain').trim();  // Trim whitespace to handle cases like " 123 "
-
-                    // Use regex to validate if the pasted value is a valid number (allows decimals)
-                    var isNumeric = /^[+-]?\d+(\.\d+)?$/.test(value);
-                    var number = isNumeric ? Number(value) : NaN;  // Convert to number if valid, otherwise set to NaN
-
-                    if (!isNumeric || isNaN(number) || is_negative(number)) {  // Prevent invalid number or negati
-                        event.preventDefault();
-                        console.warn("Pasted value is not a valid number or is negative:", value);
+                        if (val !== processed_val) {
+                            jQuery(this)
+                                .val(processed_val)
+                                .trigger('change');
+                        }
                     } else {
-                        jQuery(this).val(number);  // Set valid number to input field
+                        console.warn(
+                            'Input value is null or undefined'
+                        );
                     }
                 }
-            });
+            );
 
-            //
+            jQuery('#mywebform-edit-form', context).on(
+                'keypress',
+                'input.numeric, input.money, input.float',
+                function (event) {
+                    if (isNumberPressed(this, event) === false) {
+                        event.preventDefault();
+                    }
+                }
+            );
 
-            jQuery('#mywebform-edit-form').on('mywebform:sync', 'input', function () {
-                var $this = jQuery(this);
-                var fieldName = $this.attr('field');
-            });
+            jQuery('#mywebform-edit-form', context).on(
+                'paste',
+                'input.numeric, input.money, input.float',
+                function (event) {
+                    var obj = event.originalEvent || event;
 
-            jQuery('#mywebform-edit-form').on('mywebform:sync', 'select.Section-caem', function () {
-                //fill_section2_caem_fields(jQuery(this));
-            });
+                    if (
+                        typeof obj.clipboardData !== 'undefined'
+                    ) {
+                        var value = obj.clipboardData
+                            .getData('text/plain')
+                            .trim();
 
-            // Hide Cap2  Start
-            // Funcție pentru a ascunde sau afișa capitolul 1.2 în funcție de TRIM
-            function toggleCap2(trimValue) {
-                if (trimValue == 1 || trimValue == 2 || trimValue == 4) {
-                    // Ascundere capitol 1.2 dacă TRIM nu este 3
-                    jQuery('#header-1-2').hide();  // Ascunde headerul capitolului 1.2
-                    jQuery('#CAP2').hide();        // Ascunde tabelul corespunzător capitolului 1.2
-                    jQuery('#row-header-1, #row-header-2, #row-header-3, #row-10, #row-30, #row-40, #row-50, #row-60, #row-70, #row-80, #row-90, #row-100, #row-110, #row-120, #row-160, #Caption_Cap2').hide();
+                        var isNumeric =
+                            /^[+-]?\d+(\.\d+)?$/.test(value);
 
-                    // Curățăm toate valorile input-urilor din capitolul 1.2
-                    jQuery('input[name^="CAP2"]').val('');
+                        var number = isNumeric
+                            ? Number(value)
+                            : NaN;
 
-                    // Deselectăm valorile select2 și setăm tabindex la 0
-                    jQuery('select[name^="CAP2_CAEM"]').each(function () {
-                        jQuery(this).val('').trigger('change');  // Deselectăm valorile CAEM2
-                        jQuery(this).next('.select2-container').find('.select2-selection--single').attr('tabindex', '0');  // Setăm tabindex la 0
-                    });
+                        if (
+                            !isNumeric ||
+                            isNaN(number) ||
+                            is_negative(number)
+                        ) {
+                            event.preventDefault();
 
-                } else if (trimValue == 3) {
-                    // Afișăm capitolul 1.2 dacă TRIM este 3
-                    jQuery('#header-1-2').show();  // Afișează headerul capitolului 1.2
-                    jQuery('#CAP2').show();        // Afișează tabelul corespunzător capitolului 1.2
-                    jQuery('#row-header-1, #row-header-2, #row-header-3, #row-10, #row-30, #row-40, #row-50, #row-60, #row-70, #row-80, #row-90, #row-100, #row-110, #row-120, #row-160, #Caption_Cap2').show();
+                            console.warn(
+                                'Pasted value is not a valid number or is negative:',
+                                value
+                            );
+                        } else {
+                            jQuery(this).val(number);
+                        }
+                    }
+                }
+            );
 
-                    // Afișăm și lăsăm formularul să funcționeze implicit fără a face modificări
+            $form.on(
+                'mywebform:sync',
+                'input',
+                function () {
+                    var $this = jQuery(this);
+                    var fieldName = $this.attr('field');
+                }
+            );
+
+            $form.on(
+                'mywebform:sync',
+                'select.Section-caem',
+                function () {
+                    // fill_section2_caem_fields(jQuery(this));
+                }
+            );
+
+            // =====================================================
+            // Funcții generale pentru Select2 și valorile interne
+            // =====================================================
+
+            function setSelect2Value(
+                fieldSelector,
+                value
+            ) {
+                var $field = jQuery(fieldSelector);
+
+                if (!$field.length) {
+                    return;
+                }
+
+                $field
+                    .myWebformSelect2SetVal(value)
+                    .trigger('change');
+            }
+
+            function updateInternalFieldValue(
+                fieldName,
+                value
+            ) {
+                if (
+                    Drupal.settings &&
+                    Drupal.settings.mywebform &&
+                    Drupal.settings.mywebform.values
+                ) {
+                    Drupal.settings.mywebform.values[
+                        fieldName
+                    ] = value;
                 }
             }
 
-            // Eveniment pentru a detecta schimbarea valorii select TRIM
-            jQuery('select[name="TRIM"]').change(function () {
-                var trimValue = jQuery(this).val();
-                toggleCap2(trimValue);
-            });
+            // =====================================================
+            // Start sincronizare CAEM din foaia de titlu
+            // =====================================================
 
-            // Apelează funcția toggleCap2 inițial dacă este nevoie
-            var initialTrimValue = jQuery('select[name="TRIM"]').val();
-            toggleCap2(initialTrimValue);
+            function fillMainCaemFieldsM1() {
+                var caem = jQuery('#CAEM').val() || '';
 
-            // Hide Cap2  End
+                var trimValue = Number(
+                    jQuery('select[name="TRIM"]').val()
+                );
+
+                // CAEM din foaia de titlu
+                // se copiază în Cap.1, col.2.
+                setSelect2Value(
+                    '#CAP1_CAEM_C2',
+                    caem
+                );
+
+                updateInternalFieldValue(
+                    'CAP1_CAEM_C2',
+                    caem
+                );
+
+                // Pentru trimestrul III se copiază
+                // și în Cap.2, col.2.
+                if (trimValue === 3) {
+                    setSelect2Value(
+                        '#CAP2_CAEM_C2',
+                        caem
+                    );
+
+                    updateInternalFieldValue(
+                        'CAP2_CAEM_C2',
+                        caem
+                    );
+                }
+            }
+
+            jQuery('#CAEM').on(
+                'mywebform:sync',
+                function () {
+                    fillMainCaemFieldsM1();
+                }
+            );
+
+            jQuery('#CAEM')
+                .once('m1-main-caem-sync')
+                .on(
+                    'change select2:select',
+                    function () {
+                        var caem =
+                            jQuery(this).val() || '';
+
+                        updateInternalFieldValue(
+                            'CAEM',
+                            caem
+                        );
+
+                        fillMainCaemFieldsM1();
+                    }
+                );
+
+            // =====================================================
+            // End sincronizare CAEM din foaia de titlu
+            // =====================================================
 
 
+            // =====================================================
+            // Start sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+            function syncCap1CaemToCap2(
+                columnNumber
+            ) {
+                var trimValue = Number(
+                    jQuery('select[name="TRIM"]').val()
+                );
+
+                // Capitolul II este activ numai în trimestrul III.
+                if (trimValue !== 3) {
+                    return;
+                }
+
+                var sourceFieldName =
+                    'CAP1_CAEM_C' + columnNumber;
+
+                var targetFieldName =
+                    'CAP2_CAEM_C' + columnNumber;
+
+                var sourceSelector =
+                    '#' + sourceFieldName;
+
+                var targetSelector =
+                    '#' + targetFieldName;
+
+                var caem =
+                    jQuery(sourceSelector).val() || '';
+
+                setSelect2Value(
+                    targetSelector,
+                    caem
+                );
+
+                updateInternalFieldValue(
+                    targetFieldName,
+                    caem
+                );
+            }
+
+            function syncAllCap1CaemToCap2() {
+                for (
+                    var columnNumber = 2;
+                    columnNumber <= 12;
+                    columnNumber++
+                ) {
+                    syncCap1CaemToCap2(
+                        columnNumber
+                    );
+                }
+            }
+
+            function getCap1CaemColumn($element) {
+                var fieldName =
+                    $element.attr('name') ||
+                    $element.attr('id') ||
+                    $element.attr('field') ||
+                    '';
+
+                var matches = fieldName.match(
+                    /^CAP1_CAEM_C(\d+)$/
+                );
+
+                if (!matches) {
+                    return null;
+                }
+
+                return Number(matches[1]);
+            }
+
+            $form
+                .once('m1-cap1-cap2-caem-sync')
+                .on(
+                    'change select2:select select2:unselect',
+                    'select[name^="CAP1_CAEM_C"]',
+                    function () {
+                        var columnNumber =
+                            getCap1CaemColumn(
+                                jQuery(this)
+                            );
+
+                        if (
+                            columnNumber !== null &&
+                            columnNumber >= 2 &&
+                            columnNumber <= 12
+                        ) {
+                            syncCap1CaemToCap2(
+                                columnNumber
+                            );
+                        }
+                    }
+                );
+
+            $form.on(
+                'mywebform:sync',
+                'select[name^="CAP1_CAEM_C"]',
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            // =====================================================
+            // End sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+
+            // =====================================================
+            // Start verificare inline CAEM2 duplicate în Cap.1
+            // =====================================================
+
+            // =====================================================
+            // Start verificare inline CAEM2 duplicate în Cap.1 și Cap.2
+            // =====================================================
+
+            function removeCaemDuplicateMessages(chapterPrefix) {
+                jQuery(
+                    '.m1-caem-duplicate-message-' + chapterPrefix
+                ).remove();
+
+                jQuery(
+                    'select[name^="' + chapterPrefix + '_CAEM_C"]'
+                ).removeClass(
+                    'm1-caem-duplicate-field'
+                );
+
+                jQuery(
+                    'select[name^="' + chapterPrefix + '_CAEM_C"]'
+                )
+                    .next('.select2-container')
+                    .find('.select2-selection--single')
+                    .css({
+                        border: '',
+                        boxShadow: ''
+                    });
+            }
+
+            function showCaemDuplicateMessage(
+                chapterPrefix,
+                columnNumber,
+                duplicateColumnNumber
+            ) {
+                var fieldSelector =
+                    '#' +
+                    chapterPrefix +
+                    '_CAEM_C' +
+                    columnNumber;
+
+                var $field =
+                    jQuery(fieldSelector);
+
+                if (!$field.length) {
+                    return;
+                }
+
+                $field.addClass(
+                    'm1-caem-duplicate-field'
+                );
+
+                var $select2Container =
+                    $field.next('.select2-container');
+
+                if ($select2Container.length) {
+                    $select2Container
+                        .find(
+                            '.select2-selection--single'
+                        )
+                        .css({
+                            border: '1px solid #b94a48',
+                            boxShadow:
+                                '0 0 3px rgba(185, 74, 72, 0.5)'
+                        });
+                }
+
+                var message =
+                    '<div ' +
+                    'class="m1-caem-duplicate-message-' +
+                    chapterPrefix +
+                    '" ' +
+                    'style="' +
+                    'color: #b94a48;' +
+                    'font-size: 12px;' +
+                    'font-weight: bold;' +
+                    'line-height: 1.3;' +
+                    'margin-top: 4px;' +
+                    '">' +
+                    'Codul CAEM2 este deja selectat ' +
+                    'în coloana ' +
+                    duplicateColumnNumber +
+                    '.' +
+                    '</div>';
+
+                if ($select2Container.length) {
+                    $select2Container.after(
+                        message
+                    );
+                } else {
+                    $field.after(
+                        message
+                    );
+                }
+            }
+
+            function validateCaemDuplicatesInline(
+                chapterPrefix
+            ) {
+                removeCaemDuplicateMessages(
+                    chapterPrefix
+                );
+
+                var selectedCaemColumns = {};
+
+                for (
+                    var columnNumber = 2;
+                    columnNumber <= 12;
+                    columnNumber++
+                ) {
+                    var fieldSelector =
+                        '#' +
+                        chapterPrefix +
+                        '_CAEM_C' +
+                        columnNumber;
+
+                    var caem =
+                        jQuery(fieldSelector).val() ||
+                        '';
+
+                    caem = String(caem).trim();
+
+                    if (caem === '') {
+                        continue;
+                    }
+
+                    if (
+                        selectedCaemColumns.hasOwnProperty(
+                            caem
+                        )
+                    ) {
+                        if (columnNumber >= 3) {
+                            showCaemDuplicateMessage(
+                                chapterPrefix,
+                                columnNumber,
+                                selectedCaemColumns[
+                                caem
+                                ]
+                            );
+                        }
+                    } else {
+                        selectedCaemColumns[
+                            caem
+                        ] = columnNumber;
+                    }
+                }
+            }
+
+            function validateAllCaemDuplicatesInline() {
+                validateCaemDuplicatesInline(
+                    'CAP1'
+                );
+
+                var trimValue = Number(
+                    jQuery(
+                        'select[name="TRIM"]'
+                    ).val()
+                );
+
+                if (trimValue === 3) {
+                    validateCaemDuplicatesInline(
+                        'CAP2'
+                    );
+                } else {
+                    removeCaemDuplicateMessages(
+                        'CAP2'
+                    );
+                }
+            }
+
+            // Verificare imediată în Capitolul I.
+            $form
+                .once(
+                    'm1-cap1-caem-inline-duplicate'
+                )
+                .on(
+                    'change select2:select select2:unselect',
+                    'select[name^="CAP1_CAEM_C"]',
+                    function () {
+                        validateCaemDuplicatesInline(
+                            'CAP1'
+                        );
+                    }
+                );
+
+            // Verificare imediată în Capitolul II.
+            $form
+                .once(
+                    'm1-cap2-caem-inline-duplicate'
+                )
+                .on(
+                    'change select2:select select2:unselect',
+                    'select[name^="CAP2_CAEM_C"]',
+                    function () {
+                        validateCaemDuplicatesInline(
+                            'CAP2'
+                        );
+                    }
+                );
+
+            // Verificare la sincronizarea internă în Capitolul I.
+            $form.on(
+                'mywebform:sync',
+                'select[name^="CAP1_CAEM_C"]',
+                function () {
+                    validateCaemDuplicatesInline(
+                        'CAP1'
+                    );
+                }
+            );
+
+            // Verificare la sincronizarea internă în Capitolul II.
+            $form.on(
+                'mywebform:sync',
+                'select[name^="CAP2_CAEM_C"]',
+                function () {
+                    validateCaemDuplicatesInline(
+                        'CAP2'
+                    );
+                }
+            );
+
+            // =====================================================
+            // End verificare inline CAEM2 duplicate în Cap.1 și Cap.2
+            // =====================================================
+
+            // =====================================================
+            // End verificare inline CAEM2 duplicate în Cap.1
+            // =====================================================
+
+
+            // =====================================================
+            // Hide Cap2 Start
+            // =====================================================
+
+            function toggleCap2(trimValue) {
+                if (
+                    trimValue == 1 ||
+                    trimValue == 2 ||
+                    trimValue == 4
+                ) {
+                    jQuery('#header-1-2').hide();
+                    jQuery('#CAP2').hide();
+
+                    jQuery(
+                        '#row-header-1, ' +
+                        '#row-header-2, ' +
+                        '#row-header-3, ' +
+                        '#row-10, ' +
+                        '#row-20, ' +
+                        '#row-30, ' +
+                        '#row-40, ' +
+                        '#row-50, ' +
+                        '#row-60, ' +
+                        '#row-70, ' +
+                        '#row-80, ' +
+                        '#row-90, ' +
+                        '#row-100, ' +
+                        '#row-110, ' +
+                        '#row-120, ' +
+                        '#row-160, ' +
+                        '#Caption_Cap2'
+                    ).hide();
+
+                    jQuery(
+                        'input[name^="CAP2"]'
+                    ).val('');
+
+                    jQuery(
+                        'select[name^="CAP2_CAEM"]'
+                    ).each(function () {
+                        jQuery(this)
+                            .val('')
+                            .trigger('change');
+
+                        jQuery(this)
+                            .next(
+                                '.select2-container'
+                            )
+                            .find(
+                                '.select2-selection--single'
+                            )
+                            .attr(
+                                'tabindex',
+                                '0'
+                            );
+                    });
+                } else if (trimValue == 3) {
+                    jQuery('#header-1-2').show();
+                    jQuery('#CAP2').show();
+
+                    jQuery(
+                        '#row-header-1, ' +
+                        '#row-header-2, ' +
+                        '#row-header-3, ' +
+                        '#row-10, ' +
+                        '#row-20, ' +
+                        '#row-30, ' +
+                        '#row-40, ' +
+                        '#row-50, ' +
+                        '#row-60, ' +
+                        '#row-70, ' +
+                        '#row-80, ' +
+                        '#row-90, ' +
+                        '#row-100, ' +
+                        '#row-110, ' +
+                        '#row-120, ' +
+                        '#row-160, ' +
+                        '#Caption_Cap2'
+                    ).show();
+                }
+            }
+
+            jQuery('select[name="TRIM"]')
+                .once('m1-trim-change')
+                .on(
+                    'change',
+                    function () {
+                        var trimValue =
+                            jQuery(this).val();
+
+                        toggleCap2(
+                            trimValue
+                        );
+
+                        fillMainCaemFieldsM1();
+
+                        if (
+                            Number(trimValue) === 3
+                        ) {
+                            syncAllCap1CaemToCap2();
+                        }
+
+                        validateCap1CaemDuplicatesInline();
+                    }
+                );
+
+            var initialTrimValue =
+                jQuery(
+                    'select[name="TRIM"]'
+                ).val();
+
+            toggleCap2(
+                initialTrimValue
+            );
+
+            fillMainCaemFieldsM1();
+
+            if (
+                Number(initialTrimValue) === 3
+            ) {
+                syncAllCap1CaemToCap2();
+            }
+
+            validateCap1CaemDuplicatesInline();
+
+            // =====================================================
+            // Hide Cap2 End
+            // =====================================================
         }
+        //--------------------
+     //--- 
+
+
     }
 })(jQuery)
 
@@ -934,7 +1517,7 @@ webform.validators.m1 = function (v, allowOverpass) {
 
         // Start 05-021 \ 07-00(7, 9, 16, 18)
         var arr_CAP2_inputs_1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-        var arr_CAP2_L = ['10', '20', '30', '40', '60', '70', '80', '90', '100', '110', '120'];
+        var arr_CAP2_L = ['10', '20', '30', '40', '60', '70', '80', '90', '100', '110'];
         var valid_ = 0;
         for (var j = 0; j < arr_CAP2_inputs_1.length; j++) {
             for (var l = 0; l < arr_CAP2_L.length; l++) {
@@ -1127,113 +1710,112 @@ webform.validators.m1 = function (v, allowOverpass) {
                 // End 07-007
 
                 // Start 07-009
+
+                // Start 07-009
                 if (CAP2_R10 > 0) {
-                    var min_CAP2_R20 = 0 * CAP2_R20;
-                    var min_CAP2_R30 = 6300 * CAP2_R30;
-                    var min_CAP2_R40 = 6300 * CAP2_R40;
-                    var min_CAP2_R60 = 7000 * CAP2_R60;
-                    var min_CAP2_R70 = 8000 * CAP2_R70;
-                    var min_CAP2_R80 = 10000 * CAP2_R80;
-                    var min_CAP2_R90 = 15000 * CAP2_R90;
-                    var min_CAP2_R100 = 20000 * CAP2_R100;
-                    var min_CAP2_R110 = 25000 * CAP2_R110;
-                    var min_CAP2_R120 = 30000 * CAP2_R120;
-                    var min_CAP2_R160 = 0;
-                    min_CAP2_R160 = (min_CAP2_R20 + min_CAP2_R30 + min_CAP2_R40 + min_CAP2_R60 + min_CAP2_R70 + min_CAP2_R80 + min_CAP2_R90 + min_CAP2_R100 + min_CAP2_R110 + min_CAP2_R120 + min_CAP2_R160) / 1000;
-                    // min_CAP2_R160 = parseFloat(min_CAP2_R160).toFixed(1);
+
+                    var min_CAP2_R160 = (
+                        0 * CAP2_R20 +
+                        6300.01 * CAP2_R30 +
+                        6300.01 * CAP2_R40 +
+                        7000.01 * CAP2_R50 +
+                        8000.01 * CAP2_R60 +
+                        10000.01 * CAP2_R70 +
+                        15000.01 * CAP2_R80 +
+                        20000.01 * CAP2_R90 +
+                        25000.01 * CAP2_R100 +
+                        30000.01 * CAP2_R110
+                    ) / 1000;
+
+                    var max_CAP2_R160 = (
+                        6300 * CAP2_R20 +
+                        6300 * CAP2_R30 +
+                        7000 * CAP2_R40 +
+                        8000 * CAP2_R50 +
+                        10000 * CAP2_R60 +
+                        15000 * CAP2_R70 +
+                        20000 * CAP2_R80 +
+                        25000 * CAP2_R90 +
+                        30000 * CAP2_R100 +
+                        40000 * CAP2_R110
+                    ) / 1000;
+
+                    var rounded_CAP2_R160 = roundToDecimal(CAP2_R160, 1);
                     min_CAP2_R160 = roundToDecimal(min_CAP2_R160, 1);
-                    var max_CAP2_R20 = 6300 * CAP2_R20;
-                    var max_CAP2_R30 = 6300 * CAP2_R30;
-                    var max_CAP2_R40 = 7000 * CAP2_R40;
-                    var max_CAP2_R60 = 8000 * CAP2_R60;
-                    var max_CAP2_R70 = 10000 * CAP2_R70;
-                    var max_CAP2_R80 = 15000 * CAP2_R80;
-                    var max_CAP2_R90 = 20000 * CAP2_R90;
-                    var max_CAP2_R100 = 25000 * CAP2_R100;
-                    var max_CAP2_R110 = 30000 * CAP2_R110;
-                    var max_CAP2_R120 = 40000 * CAP2_R120;
-                    var max_CAP2_R160 = 0;
-                    max_CAP2_R160 = (max_CAP2_R20 + max_CAP2_R30 + max_CAP2_R40 + max_CAP2_R60 + max_CAP2_R70 + max_CAP2_R80 + max_CAP2_R90 + max_CAP2_R100 + max_CAP2_R110 + max_CAP2_R120 + max_CAP2_R160) / 1000;
-                    //max_CAP2_R160 = parseFloat(max_CAP2_R160).toFixed(1);
                     max_CAP2_R160 = roundToDecimal(max_CAP2_R160, 1);
-                    if ((CAP2_R160 < min_CAP2_R160) || (CAP2_R160 > max_CAP2_R160)) {
+
+                    if (
+                        rounded_CAP2_R160 < min_CAP2_R160 ||
+                        rounded_CAP2_R160 > max_CAP2_R160
+                    ) {
                         webform.warnings.push({
                             'fieldName': 'CAP2_R160_C' + arr_CAP2_inputs_2[i],
                             'weight': 9,
-                            'msg': Drupal.t('Cod atenționare: 07-009 - Cap.2: Verificarea la minimum și maximum. -> Cap.2 R.160 = [@CAP2_R160], minim = [@min_CAP2_R160] și maxim = [@max_CAP2_R160]', { '@CAP2_R160': CAP2_R160, '@min_CAP2_R160': min_CAP2_R160, '@max_CAP2_R160': max_CAP2_R160 })
-                        });
-                    }
-                }
-//                 // End 07-009
-// // -- Modifica validarea dupa noua conditie
-//                 //Cap.2 Verificarea la maximum dacă lipsește R.110 
-//                 // Start 07-016
-//                 if (CAP2_R120 == 0 && CAP2_R10 > 0) {
-//                     var max_CAP2_R20 = 6300 * CAP2_R20;
-//                     var max_CAP2_R30 = 6300 * CAP2_R30;
-//                     var max_CAP2_R40 = 7000 * CAP2_R40;
-//                     var max_CAP2_R60 = 8000 * CAP2_R60;
-//                     var max_CAP2_R70 = 10000 * CAP2_R70;
-//                     var max_CAP2_R80 = 15000 * CAP2_R80;
-//                     var max_CAP2_R90 = 20000 * CAP2_R90;
-//                     var max_CAP2_R100 = 25000 * CAP2_R100;
-//                     var max_CAP2_R110 = 30000 * CAP2_R110;
-//                     var max_CAP2_R160 = 0;
-//                     max_CAP2_R160 = (max_CAP2_R20 + max_CAP2_R30 + max_CAP2_R40 + max_CAP2_R60 + max_CAP2_R70 + max_CAP2_R80 + max_CAP2_R90 + max_CAP2_R100 + max_CAP2_R110 + max_CAP2_R160) / 1000;
-//                     //max_CAP2_R160 = parseFloat(max_CAP2_R160).toFixed(1);
-//                     max_CAP2_R160 = roundToDecimal(max_CAP2_R160, 1);
-//                     if ((CAP2_R160 > max_CAP2_R160)) {
-//                         webform.errors.push({
-//                             'fieldName': 'CAP2_R160_C' + arr_CAP2_inputs_2[i],
-//                             'weight': 16,
-//                             'msg': Drupal.t('Cod eroare: 07-016 - Cap.2: Verificarea la maximum dacă lipsește R.120 -> Cap.2 R.160 = [@CAP2_R160], maxim = [@max_CAP2_R160]', { '@CAP2_R160': CAP2_R160, '@max_CAP2_R160': max_CAP2_R160 })
-//                         });
-//                     }
-//                 }
-//                 // End 07-016
-
-                // Cap.2: Verificarea valorii maxime pentru R.160
-                // Start 07-016
-                if (CAP2_R10 > 0) {
-                    var max_CAP2_R20 = 6300 * CAP2_R20;
-                    var max_CAP2_R30 = 6300 * CAP2_R30;
-                    var max_CAP2_R40 = 7000 * CAP2_R40;
-                    var max_CAP2_R60 = 8000 * CAP2_R60;
-                    var max_CAP2_R70 = 10000 * CAP2_R70;
-                    var max_CAP2_R80 = 15000 * CAP2_R80;
-                    var max_CAP2_R90 = 20000 * CAP2_R90;
-                    var max_CAP2_R100 = 25000 * CAP2_R100;
-                    var max_CAP2_R110 = 30000 * CAP2_R110;
-
-                    var max_CAP2_R160 = (
-                        max_CAP2_R20 +
-                        max_CAP2_R30 +
-                        max_CAP2_R40 +
-                        max_CAP2_R60 +
-                        max_CAP2_R70 +
-                        max_CAP2_R80 +
-                        max_CAP2_R90 +
-                        max_CAP2_R100 +
-                        max_CAP2_R110
-                    ) / 1000;
-
-                    max_CAP2_R160 = roundToDecimal(max_CAP2_R160, 1);
-
-                    if (CAP2_R160 > max_CAP2_R160) {
-                        webform.errors.push({
-                            fieldName: 'CAP2_R160_C' + arr_CAP2_inputs_2[i],
-                            weight: 16,
-                            msg: Drupal.t(
-                                'Cod eroare: 07-016 - Cap.2: R.160 = [@CAP2_R160] depășește valoarea maximă permisă [@max_CAP2_R160]',
+                            'msg': Drupal.t(
+                                'Cod atenționare: 07-009 - Cap.2: Verificarea la minimum și maximum. -> Col.[@col] ([@CAP2_R160] mii lei) nu aparține intervalului [@min_CAP2_R160 - @max_CAP2_R160]',
                                 {
-                                    '@CAP2_R160': CAP2_R160,
+                                    '@col': arr_CAP2_inputs_2[i],
+                                    '@CAP2_R160': rounded_CAP2_R160,
+                                    '@min_CAP2_R160': min_CAP2_R160,
                                     '@max_CAP2_R160': max_CAP2_R160
                                 }
                             )
                         });
                     }
                 }
+                // End 07-009
+                // End 07-009 
+                
+
+                // Start 07-016
+                // Cap.2: Verificarea la maximum dacă lipsește R.110
+
+                if (CAP2_R10 > 0) {
+
+                    var max_CAP2_R160_016 = (
+                        6300 * CAP2_R20 +
+                        6300 * CAP2_R30 +
+                        7000 * CAP2_R40 +
+                        8000 * CAP2_R50 +
+                        10000 * CAP2_R60 +
+                        15000 * CAP2_R70 +
+                        20000 * CAP2_R80 +
+                        25000 * CAP2_R90 +
+                        30000 * CAP2_R100 +
+                        40000 * CAP2_R110
+                    ) / 1000;
+
+                    var rounded_CAP2_R160_016 =
+                        roundToDecimal(CAP2_R160, 1);
+
+                    max_CAP2_R160_016 =
+                        roundToDecimal(max_CAP2_R160_016, 1);
+
+                    if (
+                        CAP2_R110 === 0 &&
+                        rounded_CAP2_R160_016 > max_CAP2_R160_016
+                    ) {
+                        webform.errors.push({
+                            'fieldName':
+                                'CAP2_R160_C' + arr_CAP2_inputs_2[i],
+
+                            'weight': 16,
+
+                            'msg': Drupal.t(
+                                'Cod eroare: 07-016 - Cap.2: Verificarea la maximum dacă lipsește R.110. -> Col.[@col] R.160 = [@CAP2_R160] depășește maximul [@max_CAP2_R160]',
+                                {
+                                    '@col': arr_CAP2_inputs_2[i],
+                                    '@CAP2_R160': rounded_CAP2_R160_016,
+                                    '@max_CAP2_R160': max_CAP2_R160_016
+                                }
+                            )
+                        });
+                    }
+                }
+
                 // End 07-016
+
+                
 
                 // Start 07-018
                 if (CAP2_R20 > 0) {
@@ -1339,7 +1921,51 @@ webform.validators.m1 = function (v, allowOverpass) {
         // End 07-010
         
         
-        
+        // Start 07-023
+
+var CAP1_R120_C1 = 0;
+if (!isNaN(parseFloat(values['CAP1_R120_C1']))) {
+    CAP1_R120_C1 = parseFloat(values['CAP1_R120_C1']);
+}
+
+var CAP2_R10_C1 = 0;
+if (!isNaN(parseFloat(values['CAP2_R10_C1']))) {
+    CAP2_R10_C1 = parseFloat(values['CAP2_R10_C1']);
+}
+
+var CAP2_R160_C1 = 0;
+if (!isNaN(parseFloat(values['CAP2_R160_C1']))) {
+    CAP2_R160_C1 = parseFloat(values['CAP2_R160_C1']);
+}
+
+/*
+ * Validarea se execută numai dacă ambii divizori au valori mai mari ca zero.
+ * În caz contrar, formula nu poate fi calculată corect.
+ */
+if (CAP2_R10_C1 > 0 && CAP1_R120_C1 > 0) {
+
+    var calcul8 =
+        ((CAP2_R160_C1 * 1000) / CAP2_R10_C1) /
+        CAP1_R120_C1 *
+        100;
+
+    calcul8 = roundToDecimal(calcul8, 1);
+
+    if (isFinite(calcul8) && (calcul8 < 85 || calcul8 > 130)) {
+        webform.warnings.push({
+            'fieldName': 'CAP2_R160_C1',
+            'weight': 23,
+            'msg': Drupal.t(
+                'Cod atenționare: 07-023 - (Cap.2 R.160 Col.1 * 1000 / R.10 Col.1) / Cap.1 R.120 Col.1 * 100 = [85-130]% -> [@calcul8]%',
+                {
+                    '@calcul8': calcul8
+                }
+            )
+        });
+    }
+}
+
+// End 07-023
 
         //Modify here as well
 

@@ -1,0 +1,79 @@
+Explicația validării 07-016 pentru statistician
+
+Validarea 07-016 – „Cap.2: Verificarea la maximum dacă lipsește R.110” controlează dacă suma remunerațiilor declarată la rândul 160 este plauzibilă în raport cu numărul de salariați repartizați pe intervale salariale.
+
+Pentru fiecare interval se folosește limita lui superioară:
+
+R.20  –  6300 lei
+R.30  –  6300 lei
+R.40  –  7000 lei
+R.50  –  8000 lei
+R.60  – 10000 lei
+R.70  – 15000 lei
+R.80  – 20000 lei
+R.90  – 25000 lei
+R.100 – 30000 lei
+R.110 – 40000 lei
+
+Se înmulțește numărul de salariați din fiecare rând cu limita maximă corespunzătoare, apoi toate rezultatele se adună. Suma se împarte la 1000, deoarece R.160 este exprimat în mii lei.
+
+Formula este:
+
+Maxim =
+(
+R.20 × 6300 +
+R.30 × 6300 +
+R.40 × 7000 +
+R.50 × 8000 +
+R.60 × 10000 +
+R.70 × 15000 +
+R.80 × 20000 +
+R.90 × 25000 +
+R.100 × 30000 +
+R.110 × 40000
+) / 1000
+
+Validarea apare numai când sunt îndeplinite simultan trei condiții:
+
+R.10 > 0
+R.110 = 0
+R.160 > maximul calculat
+
+În cuvinte:
+
+Dacă în coloana respectivă există salariați, dar nu există salariați declarați la rândul 110, atunci suma remunerațiilor din rândul 160 nu trebuie să depășească valoarea maximă calculată pe baza grupelor salariale completate.
+
+Exemplu:
+
+R.20 = 2 salariați
+R.30 = 1 salariat
+R.40 = 1 salariat
+R.50 = 1 salariat
+R.90 = 2 salariați
+R.110 = 0
+
+Maximul posibil este:
+
+2 × 6300  = 12600
+1 × 6300  =  6300
+1 × 7000  =  7000
+1 × 8000  =  8000
+2 × 25000 = 50000
+------------------
+Total      = 83900 lei
+
+În mii lei:
+
+83900 / 1000 = 83,9 mii lei
+
+Dacă la R.160 este declarat:
+
+90,0 mii lei
+
+atunci apare eroarea, deoarece:
+
+90,0 > 83,9
+
+Dacă R.160 = 80,0, validarea nu apare.
+
+Scopul statistic al regulii este să identifice cazurile în care suma salarială declarată este prea mare în raport cu distribuția salariaților pe intervale salariale, în condiția în care R.110 nu este completat.
