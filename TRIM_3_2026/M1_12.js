@@ -682,13 +682,6 @@
     }
 })(jQuery)
 
-// function fill_section2_caem_fields($element) {
-//     var caem = $element.val();
-
-//     jQuery('select.Section2-caem')
-//         .myWebformSelect2SetVal(caem)
-//         .trigger('change');
-// }
 
 function validate_76_008(values) {
     for (var col = 1; col <= 12; col++) {
@@ -854,7 +847,7 @@ function validate_05_028(values) {
         }
 
         if (CAP1_R30 > CAP1_R10) {
-            webform.errors.push({
+            webform.warnings.push({
                 'fieldName': 'CAP1_R30_C' + col,
                 'weight': 28,
                 'msg': Drupal.t(
@@ -1003,6 +996,102 @@ function validate_05_036(values) {
         }
     }
 }
+
+//--------------------------------
+
+function validate_05_037(values) {
+    for (var col = 1; col <= 12; col++) {
+
+        var CAP1_R31 = parseFloat(
+            values['CAP1_R31_C' + col]
+        );
+
+        var CAP1_R74 = parseFloat(
+            values['CAP1_R74_C' + col]
+        );
+
+        if (isNaN(CAP1_R31)) {
+            CAP1_R31 = 0;
+        }
+
+        if (isNaN(CAP1_R74)) {
+            CAP1_R74 = 0;
+        }
+
+        if (CAP1_R31 > 0) {
+
+            var calcul3 =
+                ((CAP1_R74 * 1000) / CAP1_R31) / 3;
+
+            calcul3 = Math.round(calcul3 * 10) / 10;
+
+            if (
+                calcul3 < 10000 ||
+                calcul3 > 20000
+            ) {
+                webform.warnings.push({
+                    'fieldName': 'CAP1_R74_C' + col,
+                    'weight': 37,
+                    'msg': Drupal.t(
+                        'Cod atenționare: 05-037 - Cap.I: (R.74 * 1000 / R.31) / 3 trebuie să fie între 10000 și 20000, Col.@col. -> [@sum]',
+                        {
+                            '@col': col,
+                            '@sum': calcul3
+                        }
+                    )
+                });
+            }
+        }
+    }
+}
+//--------------------------------
+
+function validate_05_039(values) {
+    for (var col = 1; col <= 12; col++) {
+
+        var CAP1_R40 = parseFloat(
+            values['CAP1_R40_C' + col]
+        );
+
+        var CAP1_R73 = parseFloat(
+            values['CAP1_R73_C' + col]
+        );
+
+        if (isNaN(CAP1_R40)) {
+            CAP1_R40 = 0;
+        }
+
+        if (isNaN(CAP1_R73)) {
+            CAP1_R73 = 0;
+        }
+
+        if (CAP1_R40 > 0) {
+
+            var calcul4 =
+                ((CAP1_R73 * 1000) / CAP1_R40) / 3;
+
+            calcul4 = Math.round(calcul4 * 10) / 10;
+
+            if (
+                calcul4 < 6300 ||
+                calcul4 > 20000
+            ) {
+                webform.warnings.push({
+                    'fieldName': 'CAP1_R73_C' + col,
+                    'weight': 39,
+                    'msg': Drupal.t(
+                        'Cod atenționare: 05-039 - Cap.I: (R.73 * 1000 / R.40) / 3 trebuie să fie între 6300 și 20000, Col.@col. -> [@sum]',
+                        {
+                            '@col': col,
+                            '@sum': calcul4
+                        }
+                    )
+                });
+            }
+        }
+    }
+}
+//--------------------------------
 webform.validators.m1 = function (v, allowOverpass) {
     var values = Drupal.settings.mywebform.values;
    // var values = drupalSettings.mywebform.values;
@@ -1014,6 +1103,8 @@ webform.validators.m1 = function (v, allowOverpass) {
     validate_05_028(values);
     validate_05_043(values);
     validate_05_036(values);
+    validate_05_039(values);
+    validate_05_037(values);
     //    
     function roundToDecimal(value, decimals) {
         if (!isNaN(value)) {
@@ -1366,39 +1457,6 @@ webform.validators.m1 = function (v, allowOverpass) {
                 });
             }
             // End 05-030
-
-
-
-
-            // Start 05-037
-            if (CAP1_R31 > 0) {
-                var calcul3 = ((CAP1_R74 * 1000) / (CAP1_R31)) / 3;
-                //calcul3 = parseFloat(calcul3).toFixed(1);
-                calcul3 = roundToDecimal(calcul3, 1);
-                if ((calcul3 < 8000) || (calcul3 > 18000)) {
-                    webform.warnings.push({
-                        'fieldName': 'CAP1_R74_C' + arr_CAP1_inputs_2[i],
-                        'weight': 37,
-                        'msg': Drupal.t('Cod atenționare: 05-037 - Cap. 1: (R.74 * 1000 / R.31) / 3 > 8000 și < 18000 pe fiecare coloană. -> [@sum]', { '@sum': calcul3 })
-                    });
-                }
-            }
-            // End 05-037
-
-            // Start 05-039
-            if (CAP1_R40 > 0) {
-                var calcul4 = ((CAP1_R73 * 1000) / (CAP1_R40)) / 3;
-                //calcul4 = parseFloat(calcul4).toFixed(1);
-                calcul4 = roundToDecimal(calcul4, 1);
-                if ((calcul4 < 5500) || (calcul4 > 20000)) {
-                    webform.warnings.push({
-                        'fieldName': 'CAP1_R73_C' + arr_CAP1_inputs_2[i],
-                        'weight': 39,
-                        'msg': Drupal.t('Cod atenționare: 05-039 - Cap. 1: (R.73 * 1000 / R.40) / 3 > 5500 și < 20000 pe fiecare coloană. -> [@sum]', { '@sum': calcul4 })
-                    });
-                }
-            }
-            // End 05-039
 
             // Start 05-040
             if (CAP1_R10 > 0 && CAP1_R30 == 0) {
