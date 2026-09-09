@@ -440,6 +440,8 @@ webform.validators.m1 = function (v, allowOverpass) {
             }
             // End 05-012
 
+            //Aceasta validare trebuie de ajustat dupa validarea sql 
+            //si de creat o functie separat pentru aceasta validare cere se va dauga in 
             // Start 05-013
             if (CAP1_R30 > 0 && CAP1_R70 == 0) {
                 webform.warnings.push({

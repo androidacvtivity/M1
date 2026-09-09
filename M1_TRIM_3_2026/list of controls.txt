@@ -1,103 +1,71 @@
-SELECT DISTINCT 
-  'Col.'||C.COL||' ('||
-  ROUND(SUM(CASE WHEN D.RIND     IN('160') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END),1)              ||' mii lei) nu apartine intervalului ['||
-  ROUND(SUM(CASE WHEN D.RIND NOT IN('160') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END * R.MINV)/1000,1)||' - '||
-  ROUND(SUM(CASE WHEN D.RIND NOT IN('160') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END * R.MAXV)/1000,1)||']'
-  AS REZULTAT
-FROM
-  CIS2.VW_DATA_ALL_TEMP D,
-  (
---    SELECT 1  AS COL FROM DUAL UNION
-    SELECT 2  AS COL FROM DUAL UNION
-    SELECT 3  AS COL FROM DUAL UNION
-    SELECT 4  AS COL FROM DUAL UNION
-    SELECT 5  AS COL FROM DUAL UNION
-    SELECT 6  AS COL FROM DUAL UNION
-    SELECT 7  AS COL FROM DUAL UNION
-    SELECT 8  AS COL FROM DUAL UNION
-    SELECT 9  AS COL FROM DUAL UNION
-    SELECT 10 AS COL FROM DUAL UNION
-    SELECT 11 AS COL FROM DUAL UNION
-    SELECT 12 AS COL FROM DUAL
-  ) C,
-  (
-    SELECT '20'  AS RIND, 0 MINV,         6300.00 MAXV FROM DUAL UNION
-    SELECT '30'  AS RIND, 6300.01  MINV,  6300.00 MAXV FROM DUAL UNION
-    SELECT '40'  AS RIND, 6300.01  MINV,  7000.00 MAXV FROM DUAL UNION
-    SELECT '50'  AS RIND, 7000.01  MINV,  8000.00 MAXV FROM DUAL UNION
-    SELECT '60'  AS RIND, 8000.01  MINV,  10000.00 MAXV FROM DUAL UNION
-    SELECT '70'  AS RIND, 10000.01 MINV,  15000.00 MAXV FROM DUAL UNION
-    SELECT '80'  AS RIND, 15000.01 MINV,  20000.00 MAXV FROM DUAL UNION
-    SELECT '90'  AS RIND, 20000.01 MINV,  25000.00 MAXV FROM DUAL UNION
-    SELECT '100' AS RIND, 25000.01 MINV,  30000.00 MAXV FROM DUAL UNION
-    SELECT '110' AS RIND, 30000.01 MINV,  40000.00 MAXV FROM DUAL UNION   
-    
-    SELECT '160' AS RIND,    0 MINV, 40000.00 MAXV FROM DUAL
-  ) R
+76-008	Cap.I Dacă există R.30 ar trebui să fie R.70 și invers
+Validare SQL 
+SELECT DISTINCT
+
+CASE WHEN  CIS2.NVAL(SUM(CASE WHEN D.RIND IN('30') 
+THEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6, 
+                         '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12)  ELSE 0 END)) = 0
+THEN 
+'Completati Rind.30, Col.' ||N.NR_COLUMN
+ELSE
+'Completati Rind.70, Col.' ||N.NR_COLUMN
+end
+AS REZULTAT
+FROM CIS2.VW_DATA_ALL_TEMP D,
+(
+SELECT '1' AS NR_COLUMN FROM DUAL UNION
+SELECT '2' AS NR_COLUMN FROM DUAL UNION
+SELECT '3' AS NR_COLUMN FROM DUAL UNION
+SELECT '4' AS NR_COLUMN FROM DUAL UNION
+SELECT '5' AS NR_COLUMN FROM DUAL UNION
+SELECT '6' AS NR_COLUMN FROM DUAL UNION
+SELECT '7' AS NR_COLUMN FROM DUAL UNION
+SELECT '8' AS NR_COLUMN FROM DUAL UNION
+SELECT '9' AS NR_COLUMN FROM DUAL UNION
+SELECT '10' AS NR_COLUMN FROM DUAL UNION
+SELECT '11' AS NR_COLUMN FROM DUAL UNION
+SELECT '12' AS NR_COLUMN FROM DUAL
+) N
+
 WHERE
-  (D.PERIOADA=:PERIOADA         OR :PERIOADA = -1) AND
-  (D.CUIIO=:CUIIO               OR :CUIIO = -1) AND
-  (D.CUIIO_VERS=:CUIIO_VERS     OR :CUIIO_VERS = -1) AND
-  (D.FORM = :FORM               OR :FORM = -1) AND
+  (D.PERIOADA=:PERIOADA)  AND
+  (D.CUIIO=:CUIIO               OR :CUIIO = -1)     AND
+  (D.CUIIO_VERS=:CUIIO_VERS     OR :CUIIO_VERS = -1)AND
+  (D.FORM = :FORM )       AND 
   (D.FORM_VERS=:FORM_VERS       OR :FORM_VERS = -1) AND
-  (D.CAPITOL=:CAPITOL           OR :CAPITOL = -1) AND
+  (D.CAPITOL=:CAPITOL           OR :CAPITOL = -1)   AND
   (D.CAPITOL_VERS=:CAPITOL_VERS OR :CAPITOL_VERS = -1) AND
-  (D.ID_MD=:ID_MD               OR :ID_MD = -1) AND
+  (D.ID_MD=:ID_MD               OR :ID_MD = -1)     AND 
+  
   
   D.FORM IN (76)  AND
-  D.CAPITOL IN (28) AND
-  D.RIND = R.RIND  AND D.NUM IN (3)
-GROUP BY
-  C.COL  
+  D.CAPITOL IN (27) AND
+  D.RIND IN ('30','70')
+
+GROUP BY N.NR_COLUMN
 HAVING
-  ROUND(SUM(CASE WHEN D.RIND     IN('160') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END),1) >
-  ROUND(SUM(CASE WHEN D.RIND NOT IN('160') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END * R.MAXV)/1000,1)
-  AND
-  CIS2.NVAL(SUM(CASE WHEN D.RIND IN('110') THEN DECODE(C.COL, 1,D.COL1, 2,D.COL2, 3,D.COL3, 4,D.COL4, 5,D.COL5, 6,D.COL6, 7,D.COL7, 8,D.COL8, 9,D.COL9, 10,D.COL10, 11,D.COL11, 12,D.COL12) ELSE 0 END))=0
+(CIS2.NVAL(SUM(CASE WHEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6, 
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) IS NOT NULL AND D.RIND IN ('70') 
+          THEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6, 
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) ELSE 0 END)) <> 0 AND
+CIS2.NVAL(SUM(CASE WHEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6,
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) <> 0 AND D.RIND IN ('30') 
+          THEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6, 
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) ELSE 0 END)) = 0) 
+  OR
+  
+(CIS2.NVAL(SUM(CASE WHEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6, 
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) IS NOT NULL AND D.RIND IN ('70') 
+          THEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6,
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) ELSE 0 END)) = 0 AND
+CIS2.NVAL(SUM(CASE WHEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6,
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) <> 0 AND D.RIND IN ('30') 
+          THEN DECODE(N.NR_COLUMN, '1', D.COL1, '2', D.COL2, '3', D.COL3, '4', D.COL4, '5', D.COL5, '6', D.COL6,
+                                   '7', D.COL7, '8', D.COL8, '9', D.COL9, '10', D.COL10, '11', D.COL11, '12', D.COL12) ELSE 0 END)) <> 0)
 
-
-  Modifica  07-016
-sa corespunda la validarea din sql 
-
- Cap.2: Verificarea valorii maxime pentru R.160
-                // Start 07-016
-                if (CAP2_R10 > 0) {
-                    var max_CAP2_R20 = 0 * CAP2_R20;
-                    var max_CAP2_R30 = 6300 * CAP2_R30;
-                    var max_CAP2_R40 = 7000 * CAP2_R40;
-                    var max_CAP2_R60 = 8000 * CAP2_R60;
-                    var max_CAP2_R70 = 10000 * CAP2_R70;
-                    var max_CAP2_R80 = 15000 * CAP2_R80;
-                    var max_CAP2_R90 = 20000 * CAP2_R90;
-                    var max_CAP2_R100 = 25000 * CAP2_R100;
-                    var max_CAP2_R110 = 30000 * CAP2_R110;
-
-                    var max_CAP2_R160 = (
-                        max_CAP2_R20 +
-                        max_CAP2_R30 +
-                        max_CAP2_R40 +
-                        max_CAP2_R60 +
-                        max_CAP2_R70 +
-                        max_CAP2_R80 +
-                        max_CAP2_R90 +
-                        max_CAP2_R100 +
-                        max_CAP2_R110
-                    ) / 1000;
-
-                    max_CAP2_R160 = roundToDecimal(max_CAP2_R160, 1);
-
-                    if (CAP2_R160 > max_CAP2_R160) {
-                        webform.errors.push({
-                            fieldName: 'CAP2_R160_C' + arr_CAP2_inputs_2[i],
-                            weight: 16,
-                            msg: Drupal.t(
-                                'Cod eroare: 07-016 - Cap.2: R.160 = [@CAP2_R160] depășește valoarea maximă permisă [@max_CAP2_R160]',
-                                {
-                                    '@CAP2_R160': CAP2_R160,
-                                    '@max_CAP2_R160': max_CAP2_R160
-                                }
-                            )
-                        });
-                    }
-                }
-                // End 07-016
+  
+  
+  
+  
+  
+  

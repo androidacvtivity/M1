@@ -1,7 +1,7 @@
 (function ($) {
     Drupal.behaviors.m1 = {
-        
-      //--------------------  
+
+        //--------------------  
         //--------------------
         attach: function (context, settings) {
             var $form = jQuery('#mywebform-edit-form');
@@ -676,7 +676,7 @@
             // =====================================================
         }
         //--------------------
-     //--- 
+        //--- 
 
 
     }
@@ -1765,7 +1765,7 @@ webform.validators.m1 = function (v, allowOverpass) {
                 }
                 // End 07-009
                 // End 07-009 
-                
+
 
                 // Start 07-016
                 // Cap.2: Verificarea la maximum dacă lipsește R.110
@@ -1815,7 +1815,7 @@ webform.validators.m1 = function (v, allowOverpass) {
 
                 // End 07-016
 
-                
+
 
                 // Start 07-018
                 if (CAP2_R20 > 0) {
@@ -1919,53 +1919,53 @@ webform.validators.m1 = function (v, allowOverpass) {
             }
         }
         // End 07-010
-        
-        
+
+
         // Start 07-023
 
-var CAP1_R120_C1 = 0;
-if (!isNaN(parseFloat(values['CAP1_R120_C1']))) {
-    CAP1_R120_C1 = parseFloat(values['CAP1_R120_C1']);
-}
+        var CAP1_R120_C1 = 0;
+        if (!isNaN(parseFloat(values['CAP1_R120_C1']))) {
+            CAP1_R120_C1 = parseFloat(values['CAP1_R120_C1']);
+        }
 
-var CAP2_R10_C1 = 0;
-if (!isNaN(parseFloat(values['CAP2_R10_C1']))) {
-    CAP2_R10_C1 = parseFloat(values['CAP2_R10_C1']);
-}
+        var CAP2_R10_C1 = 0;
+        if (!isNaN(parseFloat(values['CAP2_R10_C1']))) {
+            CAP2_R10_C1 = parseFloat(values['CAP2_R10_C1']);
+        }
 
-var CAP2_R160_C1 = 0;
-if (!isNaN(parseFloat(values['CAP2_R160_C1']))) {
-    CAP2_R160_C1 = parseFloat(values['CAP2_R160_C1']);
-}
+        var CAP2_R160_C1 = 0;
+        if (!isNaN(parseFloat(values['CAP2_R160_C1']))) {
+            CAP2_R160_C1 = parseFloat(values['CAP2_R160_C1']);
+        }
 
-/*
- * Validarea se execută numai dacă ambii divizori au valori mai mari ca zero.
- * În caz contrar, formula nu poate fi calculată corect.
- */
-if (CAP2_R10_C1 > 0 && CAP1_R120_C1 > 0) {
+        /*
+         * Validarea se execută numai dacă ambii divizori au valori mai mari ca zero.
+         * În caz contrar, formula nu poate fi calculată corect.
+         */
+        if (CAP2_R10_C1 > 0 && CAP1_R120_C1 > 0) {
 
-    var calcul8 =
-        ((CAP2_R160_C1 * 1000) / CAP2_R10_C1) /
-        CAP1_R120_C1 *
-        100;
+            var calcul8 =
+                ((CAP2_R160_C1 * 1000) / CAP2_R10_C1) /
+                CAP1_R120_C1 *
+                100;
 
-    calcul8 = roundToDecimal(calcul8, 1);
+            calcul8 = roundToDecimal(calcul8, 1);
 
-    if (isFinite(calcul8) && (calcul8 < 85 || calcul8 > 130)) {
-        webform.warnings.push({
-            'fieldName': 'CAP2_R160_C1',
-            'weight': 23,
-            'msg': Drupal.t(
-                'Cod atenționare: 07-023 - (Cap.2 R.160 Col.1 * 1000 / R.10 Col.1) / Cap.1 R.120 Col.1 * 100 = [85-130]% -> [@calcul8]%',
-                {
-                    '@calcul8': calcul8
-                }
-            )
-        });
-    }
-}
+            if (isFinite(calcul8) && (calcul8 < 85 || calcul8 > 130)) {
+                webform.warnings.push({
+                    'fieldName': 'CAP2_R160_C1',
+                    'weight': 23,
+                    'msg': Drupal.t(
+                        'Cod atenționare: 07-023 - (Cap.2 R.160 Col.1 * 1000 / R.10 Col.1) / Cap.1 R.120 Col.1 * 100 = [85-130]% -> [@calcul8]%',
+                        {
+                            '@calcul8': calcul8
+                        }
+                    )
+                });
+            }
+        }
 
-// End 07-023
+        // End 07-023
 
         //Modify here as well
 
