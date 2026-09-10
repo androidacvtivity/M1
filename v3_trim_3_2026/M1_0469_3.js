@@ -1145,7 +1145,7 @@ webform.validators.m1new = function (v, allowOverpass) {
         webform.errors.push({
             'fieldName': 'CAP1_R200_C1',
             'weight': 52,
-            'msg': Drupal.t('Cod atenИ›ionare: 05-052 - Cap.1: R.200 в‰Ґ 0 вЂ“ asiguraИ›i-vДѓ cДѓ nu aveИ›i locuri vacante (dacДѓ nu, atunci 0). -> [@CAP1_R200_C1] в‰Ґ [0]', { '@CAP1_R200_C1': values.CAP1_R200_C1 })
+            'msg': Drupal.t('Cod atenționare: 05-052 - Cap.1: R.200 ≥ 0 – asigurați-vă că nu aveți locuri vacante (dacă nu, atunci 0). -> [@CAP1_R200_C1] ≥ [0]', { '@CAP1_R200_C1': values.CAP1_R200_C1 })
         });
     }
     // End 05-052
