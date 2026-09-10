@@ -1,0 +1,231 @@
+name: M1 V3 sync CAEM patch
+
+on:
+  push:
+    branches:
+      - feature/m1-drupal11-sync
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/m1-drupal11-sync
+          fetch-depth: 0
+
+      - name: Patch M1_0469_3.js
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('v3_trim_3_2026/M1_0469_3.js')
+          text = path.read_text(encoding='utf-8')
+
+          marker = '''            // =====================================================
+            // End sincronizare CAEM din foaia de titlu
+            // =====================================================
+            // Hide Cap2  Start'''
+
+          sync_block = '''            // =====================================================
+            // End sincronizare CAEM din foaia de titlu
+            // =====================================================
+
+            // =====================================================
+            // Start sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+            function syncCap1CaemToCap2(columnNumber) {
+                var trimValue = Number(
+                    jQuery('select[name="TRIM"]').val()
+                );
+
+                // Cap.2 este activ numai pentru trimestrul III.
+                if (trimValue !== 3) {
+                    return;
+                }
+
+                var sourceFieldName =
+                    'CAP1_CAEM_C' + columnNumber;
+
+                var targetFieldName =
+                    'CAP2_CAEM_C' + columnNumber;
+
+                var caem =
+                    jQuery('#' + sourceFieldName).val() || '';
+
+                setSelect2Value(
+                    '#' + targetFieldName,
+                    caem
+                );
+
+                updateInternalFieldValue(
+                    targetFieldName,
+                    caem
+                );
+            }
+
+            function syncAllCap1CaemToCap2() {
+                for (
+                    var columnNumber = 2;
+                    columnNumber <= 12;
+                    columnNumber++
+                ) {
+                    syncCap1CaemToCap2(columnNumber);
+                }
+            }
+
+            function getCap1CaemColumn($element) {
+                var fieldName =
+                    $element.attr('name') ||
+                    $element.attr('id') ||
+                    $element.attr('field') ||
+                    '';
+
+                var matches = fieldName.match(
+                    /^CAP1_CAEM_C(\\d+)$/
+                );
+
+                if (!matches) {
+                    return null;
+                }
+
+                return Number(matches[1]);
+            }
+
+            var $m1Form = jQuery('#mywebform-edit-form');
+
+            var cap1CaemSelector =
+                'select[name^="CAP1_CAEM_C"]';
+
+            // În Drupal 11 jQuery.fn.once nu este disponibil.
+            // Eliminăm handler-ele noastre înainte de reatașare.
+            $m1Form.off(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
+
+            $m1Form.on(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            $m1Form.off(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
+
+            $m1Form.on(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            // =====================================================
+            // End sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+            // Hide Cap2  Start'''
+
+          if 'Start sincronizare CAEM Cap.1 -> Cap.2' not in text:
+              if marker not in text:
+                  raise SystemExit('Insert marker not found')
+              text = text.replace(marker, sync_block, 1)
+
+          old_trim = '''            jQuery('select[name="TRIM"]').change(function () {
+                var trimValue = jQuery(this).val();
+
+                toggleCap2(trimValue);
+
+                // Actualizăm CAEM după schimbarea trimestrului.
+                fillMainCaemFieldsM1();
+            });'''
+
+          new_trim = '''            jQuery('select[name="TRIM"]').change(function () {
+                var trimValue = jQuery(this).val();
+
+                toggleCap2(trimValue);
+
+                fillMainCaemFieldsM1();
+
+                if (Number(trimValue) === 3) {
+                    syncAllCap1CaemToCap2();
+                }
+            });'''
+
+          if old_trim in text:
+              text = text.replace(old_trim, new_trim, 1)
+
+          old_init = '''            // Sincronizare CAEM la deschiderea formularului.
+            fillMainCaemFieldsM1();'''
+
+          new_init = '''            // Sincronizare CAEM la deschiderea formularului.
+            fillMainCaemFieldsM1();
+
+            if (Number(initialTrimValue) === 3) {
+                syncAllCap1CaemToCap2();
+            }'''
+
+          if old_init in text and 'if (Number(initialTrimValue) === 3)' not in text:
+              text = text.replace(old_init, new_init, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Check JavaScript
+        run: |
+          git diff --check
+          node --check v3_trim_3_2026/M1_0469_3.js
+
+      - name: Commit patch
+        run: |
+          if git diff --quiet -- v3_trim_3_2026/M1_0469_3.js; then
+            echo "No changes required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v3_trim_3_2026/M1_0469_3.js
+          git commit -m "Add Cap1 to Cap2 CAEM synchronization"
+          git push origin HEAD:feature/m1-drupal11-sync
