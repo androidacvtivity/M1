@@ -1054,7 +1054,7 @@ webform.validators.m1new = function (v, allowOverpass) {
                 webform.errors.push({
                     'fieldName': 'CAP1_R30_C' + arr_CAP1_inputs_2[i],
                     'weight': 40,
-                    'msg': Drupal.t('Cod eroare: 05-040 - Cap.1: DacДѓ existДѓ R.10 ar trebui sДѓ fie R.30, pe toate coloanele.')
+                    'msg': Drupal.t('Cod eroare: 05-040 - Cap.1: Dacă există R.10 ar trebui să fie R.30, pe toate coloanele.')
                 });
             }
             // End 05-040
