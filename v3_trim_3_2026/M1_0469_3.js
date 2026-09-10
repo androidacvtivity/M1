@@ -355,12 +355,6 @@
             var cap1CaemSelector =
                 'select[name^="CAP1_CAEM_C"]';
 
-            $form.off(
-                'change.m1Cap1Cap2Caem ' +
-                'select2:select.m1Cap1Cap2Caem ' +
-                'select2:unselect.m1Cap1Cap2Caem',
-                cap1CaemSelector
-            );
 
             $form.on(
                 'change.m1Cap1Cap2Caem ' +
