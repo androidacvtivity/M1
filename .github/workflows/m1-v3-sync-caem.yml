@@ -159,7 +159,6 @@ jobs:
                   (indent + line) if line else ''
                   for line in raw_block.splitlines()
               )
-
               hide_marker = indent + '// Hide Cap2  Start'
               if hide_marker not in text:
                   raise SystemExit('Hide Cap2 marker not found')
@@ -170,39 +169,49 @@ jobs:
           trim_start = text.find(trim_marker, search_from)
           if trim_start == -1:
               raise SystemExit('TRIM handler not found')
-          trim_end_marker = '            });'
-          trim_end = text.find(trim_end_marker, trim_start)
+          trim_end = text.find('            });', trim_start)
           if trim_end == -1:
               raise SystemExit('TRIM handler end not found')
-          trim_end += len(trim_end_marker)
+          trim_end += len('            });')
           trim_block = text[trim_start:trim_end]
 
           if 'syncAllCap1CaemToCap2();' not in trim_block:
-              old = '''                // Actualizăm CAEM după schimbarea trimestrului.
-          fillMainCaemFieldsM1();'''
-              replacement = '''                fillMainCaemFieldsM1();
-
-          if (Number(trimValue) === 3) {
-              syncAllCap1CaemToCap2();
-          }'''
-              if old not in trim_block:
-                  raise SystemExit('TRIM fillMain block not found')
-              trim_block = trim_block.replace(old, replacement, 1)
+              fill_line = '                fillMainCaemFieldsM1();'
+              if fill_line not in trim_block:
+                  raise SystemExit('fillMainCaemFieldsM1 not found in TRIM handler')
+              trim_block = trim_block.replace(
+                  fill_line,
+                  fill_line + '\n\n' +
+                  '                if (Number(trimValue) === 3) {\n' +
+                  '                    syncAllCap1CaemToCap2();\n' +
+                  '                }',
+                  1
+              )
               text = text[:trim_start] + trim_block + text[trim_end:]
 
-          init_marker = '''            // Sincronizare CAEM la deschiderea formularului.
-          fillMainCaemFieldsM1();'''
-          init_replacement = '''            // Sincronizare CAEM la deschiderea formularului.
-          fillMainCaemFieldsM1();
+          init_start = text.find('            var initialTrimValue =', trim_end)
+          if init_start == -1:
+              raise SystemExit('initialTrimValue not found')
+          init_end = text.find('\n\n\n', init_start)
+          if init_end == -1:
+              init_end = text.find('\n\n        }', init_start)
+          if init_end == -1:
+              raise SystemExit('initial block end not found')
+          init_block = text[init_start:init_end]
 
-          if (Number(initialTrimValue) === 3) {
-              syncAllCap1CaemToCap2();
-          }'''
-
-          if 'if (Number(initialTrimValue) === 3)' not in text:
-              if init_marker not in text:
-                  raise SystemExit('Initial CAEM sync block not found')
-              text = text.replace(init_marker, init_replacement, 1)
+          if 'syncAllCap1CaemToCap2();' not in init_block:
+              fill_line = '            fillMainCaemFieldsM1();'
+              if fill_line not in init_block:
+                  raise SystemExit('fillMainCaemFieldsM1 not found in initial block')
+              init_block = init_block.replace(
+                  fill_line,
+                  fill_line + '\n\n' +
+                  '            if (Number(initialTrimValue) === 3) {\n' +
+                  '                syncAllCap1CaemToCap2();\n' +
+                  '            }',
+                  1
+              )
+              text = text[:init_start] + init_block + text[init_end:]
 
           path.write_text(text, encoding='utf-8')
 
