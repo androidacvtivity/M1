@@ -17,23 +17,58 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Inspect M1 sources
+      - name: Port latest M1 logic to Drupal 11
+        run: python3 .github/scripts/port_m1_to_drupal11.py
+
+      - name: Check JavaScript syntax
+        run: node --check v3_trim_3_2026/M1_0469.js
+
+      - name: Check generated diff
         shell: bash
         run: |
+          git diff --check
+          echo "Changed files:"
+          git status --short
+          echo "Target stats:"
+          wc -l -c v3_trim_3_2026/M1_0469.js
+          echo "Active legacy API scan:"
           python3 - <<'PY'
           from pathlib import Path
-          import re
 
-          files = [
-              Path('TRIM_3_2026/M1_12.js'),
-              Path('v3_trim_3_2026/M1_0469.js'),
-          ]
-
-          for path in files:
-              text = path.read_text(encoding='utf-8')
-              lines = text.splitlines()
-              print(f'FILE {path}: lines={len(lines)} chars={len(text)} jQuery={text.count("jQuery")} Drupal.settings={text.count("Drupal.settings")} drupalSettings={text.count("drupalSettings")}')
-              for i, line in enumerate(lines, 1):
-                  if 'jQuery' in line and not line.lstrip().startswith('//'):
-                      print(f'JQ {path}:{i}: {line.strip()}')
+          path = Path('v3_trim_3_2026/M1_0469.js')
+          text = path.read_text(encoding='utf-8')
+          active = []
+          in_block = False
+          for number, line in enumerate(text.splitlines(), 1):
+              stripped = line.strip()
+              if in_block:
+                  if '*/' in stripped:
+                      in_block = False
+                  continue
+              if stripped.startswith('/*'):
+                  if '*/' not in stripped:
+                      in_block = True
+                  continue
+              code = line.split('//', 1)[0]
+              if 'jQuery' in code or 'Drupal.settings' in code:
+                  active.append((number, line.strip()))
+          if active:
+              for item in active:
+                  print(item)
+              raise SystemExit('Legacy jQuery/Drupal.settings API remains in active code')
+          print('OK: no active jQuery or Drupal.settings references')
           PY
+
+      - name: Commit generated Drupal 11 report
+        shell: bash
+        run: |
+          if git diff --quiet -- v3_trim_3_2026/M1_0469.js; then
+            echo "M1_0469.js is already up to date."
+            exit 0
+          fi
+
+          git config user.name "Vitalie Bancu"
+          git config user.email "64257883+androidacvtivity@users.noreply.github.com"
+          git add v3_trim_3_2026/M1_0469.js
+          git commit -m "Port latest M1 logic to Drupal 11 without jQuery"
+          git push origin HEAD:feature/m1-drupal11-sync
