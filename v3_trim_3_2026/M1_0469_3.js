@@ -173,17 +173,34 @@
                 }
             }
 
-            // Eveniment pentru a detecta schimbarea valorii select TRIM
+            // // Eveniment pentru a detecta schimbarea valorii select TRIM
+            // jQuery('select[name="TRIM"]').change(function () {
+            //     var trimValue = jQuery(this).val();
+            //     toggleCap2(trimValue);
+            // });
+
+            // // ApeleazДѓ funcИ›ia toggleCap2 iniИ›ial dacДѓ este nevoie
+            // var initialTrimValue = jQuery('select[name="TRIM"]').val();
+            // toggleCap2(initialTrimValue);
+
+            // // Hide Cap2  End
+
             jQuery('select[name="TRIM"]').change(function () {
                 var trimValue = jQuery(this).val();
+
                 toggleCap2(trimValue);
+
+                // Actualizăm CAEM după schimbarea trimestrului.
+                fillMainCaemFieldsM1();
             });
 
-            // ApeleazДѓ funcИ›ia toggleCap2 iniИ›ial dacДѓ este nevoie
             var initialTrimValue = jQuery('select[name="TRIM"]').val();
+
             toggleCap2(initialTrimValue);
 
-            // Hide Cap2  End
+            // Sincronizare CAEM la deschiderea formularului.
+            fillMainCaemFieldsM1();
+
 
 
         }
