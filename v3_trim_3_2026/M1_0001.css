@@ -1,0 +1,11 @@
+#STREET {
+    width: 100ch;
+}
+
+#IDNO {
+    text-align: left !important;
+}
+
+.container-scroll-x {
+    overflow-x: scroll;
+}
