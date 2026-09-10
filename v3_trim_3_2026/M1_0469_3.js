@@ -1,81 +1,194 @@
 (function ($) {
     Drupal.behaviors.m1new = {
         attach: function (context, settings) {
-            jQuery('#mywebform-edit-form').on('mywebform:gridRefreshField', 'input.dynamic-region', function () {
-                var val = jQuery(this).val();  // Get the value without converting to String first
 
-                // Ensure val is not null or undefined before proceeding
-                if (val !== null && val !== undefined) {
-                    var processed_val = String(val).trim();  // Safely convert to string and trim
+            var $form = jQuery('#mywebform-edit-form');
 
-                    // Use strict comparison to avoid type coercion
-                    if (val !== processed_val) {
-                        jQuery(this).val(processed_val).trigger('change');
-                    }
-                } else {
-                    console.warn("Input value is null or undefined");
-                }
-            });
+            if (!$form.length) {
+                return;
+            }
 
-            jQuery('#mywebform-edit-form', context).on('keypress', 'input.numeric, input.money, input.float', function (event) {
-                if (isNumberPressed(this, event) === false) {
-                    event.preventDefault();
-                }
-            });
+            // =====================================================
+            // Input numeric - grid refresh
+            // =====================================================
 
-            //
-            jQuery('#mywebform-edit-form', context).on('paste', 'input.numeric, input.money, input.float', function (event) {
-                var obj = event.originalEvent || event;
+            $form.off(
+                'mywebform:gridRefreshField.m1Numeric',
+                'input.dynamic-region'
+            );
 
-                if (typeof obj.clipboardData !== 'undefined') {
-                    var value = obj.clipboardData.getData('text/plain').trim();  // Trim whitespace to handle cases like " 123 "
+            $form.on(
+                'mywebform:gridRefreshField.m1Numeric',
+                'input.dynamic-region',
+                function () {
+                    var val = jQuery(this).val();
 
-                    // Use regex to validate if the pasted value is a valid number (allows decimals)
-                    var isNumeric = /^[+-]?\d+(\.\d+)?$/.test(value);
-                    var number = isNumeric ? Number(value) : NaN;  // Convert to number if valid, otherwise set to NaN
+                    if (val !== null && val !== undefined) {
+                        var processedVal = String(val).trim();
 
-                    if (!isNumeric || isNaN(number) || is_negative(number)) {  // Prevent invalid number or negative values
-                        event.preventDefault();
-                        console.warn("Pasted value is not a valid number or is negative:", value);
+                        if (String(val) !== processedVal) {
+                            jQuery(this)
+                                .val(processedVal)
+                                .trigger('change');
+                        }
                     } else {
-                        jQuery(this).val(number);  // Set valid number to input field
+                        console.warn(
+                            'Input value is null or undefined'
+                        );
                     }
                 }
-            });
+            );
 
-            //
+            // =====================================================
+            // Validare caractere introduse în câmpuri numerice
+            // =====================================================
 
-            jQuery('#mywebform-edit-form').on('mywebform:sync', 'input', function () {
-                var $this = jQuery(this);
-                var fieldName = $this.attr('field');
-            });
+            $form.off(
+                'keypress.m1Numeric',
+                'input.numeric, input.money, input.float'
+            );
 
-            jQuery('#mywebform-edit-form').on('mywebform:sync', 'select.Section-caem', function () {
-                //fill_section2_caem_fields(jQuery(this));
-            });
+            $form.on(
+                'keypress.m1Numeric',
+                'input.numeric, input.money, input.float',
+                function (event) {
+                    if (
+                        isNumberPressed(
+                            this,
+                            event
+                        ) === false
+                    ) {
+                        event.preventDefault();
+                    }
+                }
+            );
+
+            // =====================================================
+            // Validare Paste pentru câmpuri numerice
+            // =====================================================
+
+            $form.off(
+                'paste.m1Numeric',
+                'input.numeric, input.money, input.float'
+            );
+
+            $form.on(
+                'paste.m1Numeric',
+                'input.numeric, input.money, input.float',
+                function (event) {
+                    var obj =
+                        event.originalEvent ||
+                        event;
+
+                    if (
+                        typeof obj.clipboardData !==
+                        'undefined'
+                    ) {
+                        var value =
+                            obj.clipboardData
+                                .getData('text/plain')
+                                .trim();
+
+                        var isNumeric =
+                            /^[+-]?\d+(\.\d+)?$/.test(
+                                value
+                            );
+
+                        var number =
+                            isNumeric
+                                ? Number(value)
+                                : NaN;
+
+                        if (
+                            !isNumeric ||
+                            isNaN(number) ||
+                            is_negative(number)
+                        ) {
+                            event.preventDefault();
+
+                            console.warn(
+                                'Pasted value is not a valid number or is negative:',
+                                value
+                            );
+                        } else {
+                            jQuery(this).val(number);
+                        }
+                    }
+                }
+            );
+
+            // =====================================================
+            // Evenimente interne mywebform
+            // =====================================================
+
+            $form.off(
+                'mywebform:sync.m1InputSync',
+                'input'
+            );
+
+            $form.on(
+                'mywebform:sync.m1InputSync',
+                'input',
+                function () {
+                    var $this =
+                        jQuery(this);
+
+                    var fieldName =
+                        $this.attr('field');
+                }
+            );
+
+            $form.off(
+                'mywebform:sync.m1SectionCaem',
+                'select.Section-caem'
+            );
+
+            $form.on(
+                'mywebform:sync.m1SectionCaem',
+                'select.Section-caem',
+                function () {
+                    // fill_section2_caem_fields(
+                    //     jQuery(this)
+                    // );
+                }
+            );
+
             // =====================================================
             // Funcții generale pentru Select2 și valorile interne
             // =====================================================
 
-            function setSelect2Value(fieldSelector, value) {
-                var $field = jQuery(fieldSelector);
+            function setSelect2Value(
+                fieldSelector,
+                value
+            ) {
+                var $field =
+                    jQuery(fieldSelector);
 
                 if (!$field.length) {
                     return;
                 }
 
                 $field
-                    .myWebformSelect2SetVal(value)
+                    .myWebformSelect2SetVal(
+                        value
+                    )
                     .trigger('change');
             }
 
-            function updateInternalFieldValue(fieldName, value) {
+            function updateInternalFieldValue(
+                fieldName,
+                value
+            ) {
                 if (
-                    drupalSettings &&
+                    typeof drupalSettings !==
+                    'undefined' &&
                     drupalSettings.mywebform &&
                     drupalSettings.mywebform.values
                 ) {
-                    drupalSettings.mywebform.values[fieldName] = value;
+                    drupalSettings
+                        .mywebform
+                        .values[fieldName] =
+                        value;
                 }
             }
 
@@ -84,13 +197,18 @@
             // =====================================================
 
             function fillMainCaemFieldsM1() {
-                var caem = jQuery('#CAEM').val() || '';
+                var caem =
+                    jQuery('#CAEM').val() ||
+                    '';
 
-                var trimValue = Number(
-                    jQuery('select[name="TRIM"]').val()
-                );
+                var trimValue =
+                    Number(
+                        jQuery(
+                            'select[name="TRIM"]'
+                        ).val()
+                    );
 
-                // CAEM principal -> Cap.1, col.2
+                // CAEM principal -> Cap.1 Col.2
                 setSelect2Value(
                     '#CAP1_CAEM_C2',
                     caem
@@ -101,7 +219,8 @@
                     caem
                 );
 
-                // Pentru TRIM 3 -> și Cap.2, col.2
+                // Pentru trimestrul III:
+                // CAEM principal -> Cap.2 Col.2
                 if (trimValue === 3) {
                     setSelect2Value(
                         '#CAP2_CAEM_C2',
@@ -115,11 +234,14 @@
                 }
             }
 
-            var $mainCaem = jQuery('#CAEM');
+            var $mainCaem =
+                jQuery('#CAEM');
 
-            // Drupal behaviors.attach poate fi apelat de mai multe ori.
-            // Folosim namespace în loc de .once(), care nu există în V3.
-            $mainCaem.off('.m1MainCaem');
+            // jQuery.fn.once nu există în Drupal 11.
+            // Folosim evenimente cu namespace.
+            $mainCaem.off(
+                '.m1MainCaem'
+            );
 
             $mainCaem.on(
                 'mywebform:sync.m1MainCaem',
@@ -129,9 +251,12 @@
             );
 
             $mainCaem.on(
-                'change.m1MainCaem select2:select.m1MainCaem',
+                'change.m1MainCaem ' +
+                'select2:select.m1MainCaem',
                 function () {
-                    var caem = jQuery(this).val() || '';
+                    var caem =
+                        jQuery(this).val() ||
+                        '';
 
                     updateInternalFieldValue(
                         'CAEM',
@@ -145,75 +270,320 @@
             // =====================================================
             // End sincronizare CAEM din foaia de titlu
             // =====================================================
-            // Hide Cap2  Start
-            // FuncИ›ie pentru a ascunde sau afiИ™a capitolul 1.2 Г®n funcИ›ie de TRIM
-            function toggleCap2(trimValue) {
-                if (trimValue == 1 || trimValue == 2 || trimValue == 4) {
-                    // Ascundere capitol 1.2 dacДѓ TRIM nu este 3
-                    jQuery('#header-1-2').hide();  // Ascunde headerul capitolului 1.2
-                    jQuery('#CAP2').hide();        // Ascunde tabelul corespunzДѓtor capitolului 1.2
-                    jQuery('#row-header-1, #row-header-2, #row-header-3, #row-10, #row-30, #row-40, #row-50, #row-60, #row-70, #row-80, #row-90, #row-100, #row-110, #row-120, #row-160, #Caption_Cap2').hide();
 
-                    // CurДѓИ›Дѓm toate valorile input-urilor din capitolul 1.2
-                    jQuery('input[name^="CAP2"]').val('');
 
-                    // DeselectДѓm valorile select2 И™i setДѓm tabindex la 0
-                    jQuery('select[name^="CAP2_CAEM"]').each(function () {
-                        jQuery(this).val('').trigger('change');  // DeselectДѓm valorile CAEM2
-                        jQuery(this).next('.select2-container').find('.select2-selection--single').attr('tabindex', '0');  // SetДѓm tabindex la 0
-                    });
+            // =====================================================
+            // Start sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
 
-                } else if (trimValue == 3) {
-                    // AfiИ™Дѓm capitolul 1.2 dacДѓ TRIM este 3
-                    jQuery('#header-1-2').show();  // AfiИ™eazДѓ headerul capitolului 1.2
-                    jQuery('#CAP2').show();        // AfiИ™eazДѓ tabelul corespunzДѓtor capitolului 1.2
-                    jQuery('#row-header-1, #row-header-2, #row-header-3, #row-10, #row-30, #row-40, #row-50, #row-60, #row-70, #row-80, #row-90, #row-100, #row-110, #row-120, #row-160, #Caption_Cap2').show();
+            function syncCap1CaemToCap2(
+                columnNumber
+            ) {
+                var trimValue =
+                    Number(
+                        jQuery(
+                            'select[name="TRIM"]'
+                        ).val()
+                    );
 
-                    // AfiИ™Дѓm И™i lДѓsДѓm formularul sДѓ funcИ›ioneze implicit fДѓrДѓ a face modificДѓri
+                // Cap.2 există numai pentru TRIM 3.
+                if (trimValue !== 3) {
+                    return;
+                }
+
+                var sourceFieldName =
+                    'CAP1_CAEM_C' +
+                    columnNumber;
+
+                var targetFieldName =
+                    'CAP2_CAEM_C' +
+                    columnNumber;
+
+                var caem =
+                    jQuery(
+                        '#' +
+                        sourceFieldName
+                    ).val() || '';
+
+                setSelect2Value(
+                    '#' +
+                    targetFieldName,
+                    caem
+                );
+
+                updateInternalFieldValue(
+                    targetFieldName,
+                    caem
+                );
+            }
+
+            function syncAllCap1CaemToCap2() {
+                for (
+                    var columnNumber = 2;
+                    columnNumber <= 12;
+                    columnNumber++
+                ) {
+                    syncCap1CaemToCap2(
+                        columnNumber
+                    );
                 }
             }
 
-            // // Eveniment pentru a detecta schimbarea valorii select TRIM
-            // jQuery('select[name="TRIM"]').change(function () {
-            //     var trimValue = jQuery(this).val();
-            //     toggleCap2(trimValue);
-            // });
+            function getCap1CaemColumn(
+                $element
+            ) {
+                var fieldName =
+                    $element.attr('name') ||
+                    $element.attr('id') ||
+                    $element.attr('field') ||
+                    '';
 
-            // // ApeleazДѓ funcИ›ia toggleCap2 iniИ›ial dacДѓ este nevoie
-            // var initialTrimValue = jQuery('select[name="TRIM"]').val();
-            // toggleCap2(initialTrimValue);
+                var matches =
+                    fieldName.match(
+                        /^CAP1_CAEM_C(\d+)$/
+                    );
 
-            // // Hide Cap2  End
+                if (!matches) {
+                    return null;
+                }
 
-            jQuery('select[name="TRIM"]').change(function () {
-                var trimValue = jQuery(this).val();
+                return Number(
+                    matches[1]
+                );
+            }
 
-                toggleCap2(trimValue);
+            var cap1CaemSelector =
+                'select[name^="CAP1_CAEM_C"]';
 
-                // Actualizăm CAEM după schimbarea trimestrului.
-                fillMainCaemFieldsM1();
-            });
+            $form.off(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
 
-            var initialTrimValue = jQuery('select[name="TRIM"]').val();
+            $form.on(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
 
-            toggleCap2(initialTrimValue);
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
 
-            // Sincronizare CAEM la deschiderea formularului.
+            $form.off(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
+
+            $form.on(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            // =====================================================
+            // End sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+
+            // =====================================================
+            // Start afișare / ascundere Cap.2 după TRIM
+            // =====================================================
+
+            function toggleCap2(
+                trimValue
+            ) {
+                var cap2Rows =
+                    '#row-header-1, ' +
+                    '#row-header-2, ' +
+                    '#row-header-3, ' +
+                    '#row-10, ' +
+                    '#row-20, ' +
+                    '#row-30, ' +
+                    '#row-40, ' +
+                    '#row-50, ' +
+                    '#row-60, ' +
+                    '#row-70, ' +
+                    '#row-80, ' +
+                    '#row-90, ' +
+                    '#row-100, ' +
+                    '#row-110, ' +
+                    '#row-120, ' +
+                    '#row-160, ' +
+                    '#Caption_Cap2';
+
+                if (
+                    trimValue == 1 ||
+                    trimValue == 2 ||
+                    trimValue == 4
+                ) {
+                    jQuery(
+                        '#header-1-2'
+                    ).hide();
+
+                    jQuery(
+                        '#CAP2'
+                    ).hide();
+
+                    jQuery(
+                        cap2Rows
+                    ).hide();
+
+                    // Curățăm input-urile din Cap.2.
+                    jQuery(
+                        'input[name^="CAP2"]'
+                    ).val('');
+
+                    // Curățăm CAEM-urile din Cap.2.
+                    jQuery(
+                        'select[name^="CAP2_CAEM"]'
+                    ).each(function () {
+                        var $field =
+                            jQuery(this);
+
+                        var fieldName =
+                            $field.attr(
+                                'name'
+                            );
+
+                        $field
+                            .val('')
+                            .trigger(
+                                'change'
+                            );
+
+                        if (fieldName) {
+                            updateInternalFieldValue(
+                                fieldName,
+                                ''
+                            );
+                        }
+
+                        $field
+                            .next(
+                                '.select2-container'
+                            )
+                            .find(
+                                '.select2-selection--single'
+                            )
+                            .attr(
+                                'tabindex',
+                                '0'
+                            );
+                    });
+
+                } else if (
+                    trimValue == 3
+                ) {
+                    jQuery(
+                        '#header-1-2'
+                    ).show();
+
+                    jQuery(
+                        '#CAP2'
+                    ).show();
+
+                    jQuery(
+                        cap2Rows
+                    ).show();
+                }
+            }
+
+            // =====================================================
+            // Eveniment schimbare TRIM
+            // =====================================================
+
+            var $trim =
+                jQuery(
+                    'select[name="TRIM"]'
+                );
+
+            $trim.off(
+                '.m1Trim'
+            );
+
+            $trim.on(
+                'change.m1Trim',
+                function () {
+                    var trimValue =
+                        jQuery(this).val();
+
+                    toggleCap2(
+                        trimValue
+                    );
+
+                    // CAEM principal -> Cap.1 / Cap.2.
+                    fillMainCaemFieldsM1();
+
+                    // Pentru TRIM 3 copiem toate
+                    // CAEM-urile din Cap.1 în Cap.2.
+                    if (
+                        Number(
+                            trimValue
+                        ) === 3
+                    ) {
+                        syncAllCap1CaemToCap2();
+                    }
+                }
+            );
+
+            // =====================================================
+            // Inițializare formular
+            // =====================================================
+
+            var initialTrimValue =
+                $trim.val();
+
+            toggleCap2(
+                initialTrimValue
+            );
+
             fillMainCaemFieldsM1();
 
+            if (
+                Number(
+                    initialTrimValue
+                ) === 3
+            ) {
+                syncAllCap1CaemToCap2();
+            }
 
-
+            // =====================================================
+            // End inițializare
+            // =====================================================
         }
-    }
-})(jQuery)
-
-// function fill_section2_caem_fields($element) {
-//     var caem = $element.val();
-
-//     jQuery('select.Section2-caem')
-//         .myWebformSelect2SetVal(caem)
-//         .trigger('change');
-// }
+    };
+})(jQuery);
 
 webform.validators.m1new = function (v, allowOverpass) {
     var values = drupalSettings.mywebform.values;
