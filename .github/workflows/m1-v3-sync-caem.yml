@@ -2,27 +2,23 @@ name: M1 V3 sync CAEM patch
 
 on:
   push:
-    branches:
-      - feature/m1-drupal11-sync
+    paths:
+      - '.github/workflows/m1-v3-sync-caem.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   patch:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout branch
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: feature/m1-drupal11-sync
-          fetch-depth: 0
 
       - name: Patch M1_0469_3.js
-        shell: bash
+        shell: python
         run: |
-          python3 - <<'PY'
           from pathlib import Path
 
           path = Path('v3_trim_3_2026/M1_0469_3.js')
@@ -30,133 +26,133 @@ jobs:
 
           if 'Start sincronizare CAEM Cap.1 -> Cap.2' not in text:
               raw_block = '''// =====================================================
-// Start sincronizare CAEM Cap.1 -> Cap.2
-// =====================================================
+          // Start sincronizare CAEM Cap.1 -> Cap.2
+          // =====================================================
 
-function syncCap1CaemToCap2(columnNumber) {
-    var trimValue = Number(
-        jQuery('select[name="TRIM"]').val()
-    );
+          function syncCap1CaemToCap2(columnNumber) {
+              var trimValue = Number(
+                  jQuery('select[name="TRIM"]').val()
+              );
 
-    // Cap.2 este activ numai pentru trimestrul III.
-    if (trimValue !== 3) {
-        return;
-    }
+              // Cap.2 este activ numai pentru trimestrul III.
+              if (trimValue !== 3) {
+                  return;
+              }
 
-    var sourceFieldName =
-        'CAP1_CAEM_C' + columnNumber;
+              var sourceFieldName =
+                  'CAP1_CAEM_C' + columnNumber;
 
-    var targetFieldName =
-        'CAP2_CAEM_C' + columnNumber;
+              var targetFieldName =
+                  'CAP2_CAEM_C' + columnNumber;
 
-    var caem =
-        jQuery('#' + sourceFieldName).val() || '';
+              var caem =
+                  jQuery('#' + sourceFieldName).val() || '';
 
-    setSelect2Value(
-        '#' + targetFieldName,
-        caem
-    );
+              setSelect2Value(
+                  '#' + targetFieldName,
+                  caem
+              );
 
-    updateInternalFieldValue(
-        targetFieldName,
-        caem
-    );
-}
+              updateInternalFieldValue(
+                  targetFieldName,
+                  caem
+              );
+          }
 
-function syncAllCap1CaemToCap2() {
-    for (
-        var columnNumber = 2;
-        columnNumber <= 12;
-        columnNumber++
-    ) {
-        syncCap1CaemToCap2(columnNumber);
-    }
-}
+          function syncAllCap1CaemToCap2() {
+              for (
+                  var columnNumber = 2;
+                  columnNumber <= 12;
+                  columnNumber++
+              ) {
+                  syncCap1CaemToCap2(columnNumber);
+              }
+          }
 
-function getCap1CaemColumn($element) {
-    var fieldName =
-        $element.attr('name') ||
-        $element.attr('id') ||
-        $element.attr('field') ||
-        '';
+          function getCap1CaemColumn($element) {
+              var fieldName =
+                  $element.attr('name') ||
+                  $element.attr('id') ||
+                  $element.attr('field') ||
+                  '';
 
-    var matches = fieldName.match(
-        /^CAP1_CAEM_C(\\d+)$/
-    );
+              var matches = fieldName.match(
+                  /^CAP1_CAEM_C(\\d+)$/
+              );
 
-    if (!matches) {
-        return null;
-    }
+              if (!matches) {
+                  return null;
+              }
 
-    return Number(matches[1]);
-}
+              return Number(matches[1]);
+          }
 
-var $m1Form = jQuery('#mywebform-edit-form');
+          var $m1Form = jQuery('#mywebform-edit-form');
 
-var cap1CaemSelector =
-    'select[name^="CAP1_CAEM_C"]';
+          var cap1CaemSelector =
+              'select[name^="CAP1_CAEM_C"]';
 
-// În Drupal 11 jQuery.fn.once nu este disponibil.
-// Eliminăm handler-ele noastre înainte de reatașare.
-$m1Form.off(
-    'change.m1Cap1Cap2Caem ' +
-    'select2:select.m1Cap1Cap2Caem ' +
-    'select2:unselect.m1Cap1Cap2Caem',
-    cap1CaemSelector
-);
+          // În Drupal 11 jQuery.fn.once nu este disponibil.
+          // Eliminăm handler-ele noastre înainte de reatașare.
+          $m1Form.off(
+              'change.m1Cap1Cap2Caem ' +
+              'select2:select.m1Cap1Cap2Caem ' +
+              'select2:unselect.m1Cap1Cap2Caem',
+              cap1CaemSelector
+          );
 
-$m1Form.on(
-    'change.m1Cap1Cap2Caem ' +
-    'select2:select.m1Cap1Cap2Caem ' +
-    'select2:unselect.m1Cap1Cap2Caem',
-    cap1CaemSelector,
-    function () {
-        var columnNumber =
-            getCap1CaemColumn(
-                jQuery(this)
-            );
+          $m1Form.on(
+              'change.m1Cap1Cap2Caem ' +
+              'select2:select.m1Cap1Cap2Caem ' +
+              'select2:unselect.m1Cap1Cap2Caem',
+              cap1CaemSelector,
+              function () {
+                  var columnNumber =
+                      getCap1CaemColumn(
+                          jQuery(this)
+                      );
 
-        if (
-            columnNumber !== null &&
-            columnNumber >= 2 &&
-            columnNumber <= 12
-        ) {
-            syncCap1CaemToCap2(
-                columnNumber
-            );
-        }
-    }
-);
+                  if (
+                      columnNumber !== null &&
+                      columnNumber >= 2 &&
+                      columnNumber <= 12
+                  ) {
+                      syncCap1CaemToCap2(
+                          columnNumber
+                      );
+                  }
+              }
+          );
 
-$m1Form.off(
-    'mywebform:sync.m1Cap1Cap2Caem',
-    cap1CaemSelector
-);
+          $m1Form.off(
+              'mywebform:sync.m1Cap1Cap2Caem',
+              cap1CaemSelector
+          );
 
-$m1Form.on(
-    'mywebform:sync.m1Cap1Cap2Caem',
-    cap1CaemSelector,
-    function () {
-        var columnNumber =
-            getCap1CaemColumn(
-                jQuery(this)
-            );
+          $m1Form.on(
+              'mywebform:sync.m1Cap1Cap2Caem',
+              cap1CaemSelector,
+              function () {
+                  var columnNumber =
+                      getCap1CaemColumn(
+                          jQuery(this)
+                      );
 
-        if (
-            columnNumber !== null &&
-            columnNumber >= 2 &&
-            columnNumber <= 12
-        ) {
-            syncCap1CaemToCap2(
-                columnNumber
-            );
-        }
-    }
-);
+                  if (
+                      columnNumber !== null &&
+                      columnNumber >= 2 &&
+                      columnNumber <= 12
+                  ) {
+                      syncCap1CaemToCap2(
+                          columnNumber
+                      );
+                  }
+              }
+          );
 
-// =====================================================
-// End sincronizare CAEM Cap.1 -> Cap.2
-// ====================================================='''
+          // =====================================================
+          // End sincronizare CAEM Cap.1 -> Cap.2
+          // ====================================================='''
 
               indent = ' ' * 12
               block = '\n'.join(
@@ -167,15 +163,11 @@ $m1Form.on(
               hide_marker = indent + '// Hide Cap2  Start'
               if hide_marker not in text:
                   raise SystemExit('Hide Cap2 marker not found')
-              text = text.replace(
-                  hide_marker,
-                  block + '\n\n' + hide_marker,
-                  1
-              )
+              text = text.replace(hide_marker, block + '\n\n' + hide_marker, 1)
 
-          trim_start_marker = "            jQuery('select[name=\"TRIM\"]').change(function () {"
+          trim_marker = "            jQuery('select[name=\"TRIM\"]').change(function () {"
           search_from = text.index('Start sincronizare CAEM Cap.1 -> Cap.2')
-          trim_start = text.find(trim_start_marker, search_from)
+          trim_start = text.find(trim_marker, search_from)
           if trim_start == -1:
               raise SystemExit('TRIM handler not found')
           trim_end_marker = '            });'
@@ -187,25 +179,25 @@ $m1Form.on(
 
           if 'syncAllCap1CaemToCap2();' not in trim_block:
               old = '''                // Actualizăm CAEM după schimbarea trimestrului.
-                fillMainCaemFieldsM1();'''
+          fillMainCaemFieldsM1();'''
               replacement = '''                fillMainCaemFieldsM1();
 
-                if (Number(trimValue) === 3) {
-                    syncAllCap1CaemToCap2();
-                }'''
+          if (Number(trimValue) === 3) {
+              syncAllCap1CaemToCap2();
+          }'''
               if old not in trim_block:
                   raise SystemExit('TRIM fillMain block not found')
               trim_block = trim_block.replace(old, replacement, 1)
               text = text[:trim_start] + trim_block + text[trim_end:]
 
           init_marker = '''            // Sincronizare CAEM la deschiderea formularului.
-            fillMainCaemFieldsM1();'''
+          fillMainCaemFieldsM1();'''
           init_replacement = '''            // Sincronizare CAEM la deschiderea formularului.
-            fillMainCaemFieldsM1();
+          fillMainCaemFieldsM1();
 
-            if (Number(initialTrimValue) === 3) {
-                syncAllCap1CaemToCap2();
-            }'''
+          if (Number(initialTrimValue) === 3) {
+              syncAllCap1CaemToCap2();
+          }'''
 
           if 'if (Number(initialTrimValue) === 3)' not in text:
               if init_marker not in text:
@@ -213,7 +205,6 @@ $m1Form.on(
               text = text.replace(init_marker, init_replacement, 1)
 
           path.write_text(text, encoding='utf-8')
-          PY
 
       - name: Check JavaScript
         run: |
@@ -222,12 +213,12 @@ $m1Form.on(
 
       - name: Commit patch
         run: |
-          if git diff --quiet -- v3_trim_3_2026/M1_0469_3.js; then
-            echo "No changes required"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add v3_trim_3_2026/M1_0469_3.js
-          git commit -m "Add Cap1 to Cap2 CAEM synchronization"
-          git push origin HEAD:feature/m1-drupal11-sync
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add Cap1 to Cap2 CAEM synchronization"
+            git push
+          fi
