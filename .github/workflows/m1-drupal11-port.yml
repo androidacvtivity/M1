@@ -1,0 +1,39 @@
+name: M1 Drupal 11 port helper
+
+on:
+  push:
+    branches:
+      - feature/m1-drupal11-sync
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-and-port:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Inspect M1 sources
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = [
+              Path('TRIM_3_2026/M1_12.js'),
+              Path('v3_trim_3_2026/M1_0469.js'),
+          ]
+
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              lines = text.splitlines()
+              print(f'FILE {path}: lines={len(lines)} chars={len(text)} jQuery={text.count("jQuery")} Drupal.settings={text.count("Drupal.settings")} drupalSettings={text.count("drupalSettings")}')
+              for i, line in enumerate(lines, 1):
+                  if 'jQuery' in line and not line.lstrip().startswith('//'):
+                      print(f'JQ {path}:{i}: {line.strip()}')
+          PY
