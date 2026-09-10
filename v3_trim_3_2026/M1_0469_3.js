@@ -145,6 +145,135 @@
             // =====================================================
             // End sincronizare CAEM din foaia de titlu
             // =====================================================
+            // =====================================================
+            // Start sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
+            function syncCap1CaemToCap2(columnNumber) {
+                var trimValue = Number(
+                    jQuery('select[name="TRIM"]').val()
+                );
+
+                // Cap.2 este activ numai pentru trimestrul III.
+                if (trimValue !== 3) {
+                    return;
+                }
+
+                var sourceFieldName =
+                    'CAP1_CAEM_C' + columnNumber;
+
+                var targetFieldName =
+                    'CAP2_CAEM_C' + columnNumber;
+
+                var caem =
+                    jQuery('#' + sourceFieldName).val() || '';
+
+                setSelect2Value(
+                    '#' + targetFieldName,
+                    caem
+                );
+
+                updateInternalFieldValue(
+                    targetFieldName,
+                    caem
+                );
+            }
+
+            function syncAllCap1CaemToCap2() {
+                for (
+                    var columnNumber = 2;
+                    columnNumber <= 12;
+                    columnNumber++
+                ) {
+                    syncCap1CaemToCap2(columnNumber);
+                }
+            }
+
+            function getCap1CaemColumn($element) {
+                var fieldName =
+                    $element.attr('name') ||
+                    $element.attr('id') ||
+                    $element.attr('field') ||
+                    '';
+
+                var matches = fieldName.match(
+                    /^CAP1_CAEM_C(\d+)$/
+                );
+
+                if (!matches) {
+                    return null;
+                }
+
+                return Number(matches[1]);
+            }
+
+            var $m1Form = jQuery('#mywebform-edit-form');
+
+            var cap1CaemSelector =
+                'select[name^="CAP1_CAEM_C"]';
+
+            // În Drupal 11 jQuery.fn.once nu este disponibil.
+            // Eliminăm handler-ele noastre înainte de reatașare.
+            $m1Form.off(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
+
+            $m1Form.on(
+                'change.m1Cap1Cap2Caem ' +
+                'select2:select.m1Cap1Cap2Caem ' +
+                'select2:unselect.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            $m1Form.off(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector
+            );
+
+            $m1Form.on(
+                'mywebform:sync.m1Cap1Cap2Caem',
+                cap1CaemSelector,
+                function () {
+                    var columnNumber =
+                        getCap1CaemColumn(
+                            jQuery(this)
+                        );
+
+                    if (
+                        columnNumber !== null &&
+                        columnNumber >= 2 &&
+                        columnNumber <= 12
+                    ) {
+                        syncCap1CaemToCap2(
+                            columnNumber
+                        );
+                    }
+                }
+            );
+
+            // =====================================================
+            // End sincronizare CAEM Cap.1 -> Cap.2
+            // =====================================================
+
             // Hide Cap2  Start
             // FuncИ›ie pentru a ascunde sau afiИ™a capitolul 1.2 Г®n funcИ›ie de TRIM
             function toggleCap2(trimValue) {
@@ -192,6 +321,10 @@
 
                 // Actualizăm CAEM după schimbarea trimestrului.
                 fillMainCaemFieldsM1();
+
+                if (Number(trimValue) === 3) {
+                    syncAllCap1CaemToCap2();
+                }
             });
 
             var initialTrimValue = jQuery('select[name="TRIM"]').val();
@@ -200,6 +333,10 @@
 
             // Sincronizare CAEM la deschiderea formularului.
             fillMainCaemFieldsM1();
+
+            if (Number(initialTrimValue) === 3) {
+                syncAllCap1CaemToCap2();
+            }
 
 
 
