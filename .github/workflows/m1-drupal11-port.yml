@@ -18,7 +18,10 @@ jobs:
           fetch-depth: 0
 
       - name: Port latest M1 logic to Drupal 11
-        run: python3 .github/scripts/port_m1_to_drupal11.py
+        shell: bash
+        run: |
+          python3 .github/scripts/port_m1_to_drupal11.py
+          sed -i 's/[[:space:]]\+$//' v3_trim_3_2026/M1_0469.js
 
       - name: Check JavaScript syntax
         run: node --check v3_trim_3_2026/M1_0469.js
