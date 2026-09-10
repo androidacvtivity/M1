@@ -1111,7 +1111,7 @@ webform.validators.m1new = function (v, allowOverpass) {
                 webform.warnings.push({
                     'fieldName': 'CAP1_R20_C' + arr_CAP1_inputs_2[i],
                     'weight': 50,
-                    'msg': Drupal.t('Cod atenИ›ionare: 05-050 - Cap.1: R.10 в‰  R.20, pe fiecare coloanДѓ. -> [@CAP1_R10] в‰  [@CAP1_R20]', { '@CAP1_R10': CAP1_R10, '@CAP1_R20': CAP1_R20 })
+                    'msg': Drupal.t('Cod atenționare: 05-050 - Cap.1: R.10 ≠ R.20, pe fiecare coloană. -> [@CAP1_R10] ≠ [@CAP1_R20]', { '@CAP1_R10': CAP1_R10, '@CAP1_R20': CAP1_R20 })
                 });
             }
             // End 05-050
